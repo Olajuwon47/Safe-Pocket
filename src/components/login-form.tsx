@@ -4,15 +4,32 @@ import { Card, CardContent } from "../components/ui/card"
 import { Input } from "../components/ui/input"
 import { Label } from "../components/ui/label"
 import { Link, useNavigate } from "react-router-dom"
-import { supabase } from '../lib/supabase.ts'
+import { useState } from "react"
+import { supabase } from "../lib/supabase.ts"
+
 export function LoginForm({ className, ...props }: React.ComponentProps<"div">) {
   const navigate = useNavigate()
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
-    // Simulate successful login
-    localStorage.setItem("token", "true")
-    navigate("/kyc-profile")
+    setLoading(true)
+    setError(null)
+
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    })
+
+    setLoading(false)
+    if (error) {
+      setError(error.message)
+    } else {
+      navigate("/kyc-profile")
+    }
   }
 
   return (
@@ -24,7 +41,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome back</h1>
                 <p className="text-muted-foreground text-balance">
-                  Login to your Wonsafe Inc. account
+                  Login to your Acme Inc account
                 </p>
               </div>
               <div className="grid gap-3">
@@ -34,6 +51,8 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
                   type="email"
                   placeholder="m@example.com"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="grid gap-3">
@@ -46,9 +65,15 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
                     Forgot your password?
                   </Link>
                 </div>
-                <Input id="password" type="password" required />
+                <Input
+                  id="password"
+                  type="password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
               </div>
-
+              {error && <p className="text-red-500 text-sm">{error}</p>}
               <Button
                 type="submit"
                 className="
@@ -62,8 +87,9 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
                   hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
                   active:shadow-[0_0px_0_#57cc99] active:top-[5px]
                 "
+                disabled={loading}
               >
-                Login
+                {loading ? "Logging in..." : "Login"}
               </Button>
 
               <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
@@ -72,7 +98,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
                 </span>
               </div>
               <div className="#">
-                <Button variant="outline" type="button" className="w-full">
+                <Button variant="outline" type="button" className="w-full" disabled>
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                     <path
                       fill="#4285F4"

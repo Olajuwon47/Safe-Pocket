@@ -4,15 +4,37 @@ import { Card, CardContent } from "./ui/card"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
 import { Link, useNavigate } from "react-router-dom"
+import { useState } from "react"
+import { supabase } from "../lib/supabase.ts"
 
 export function SignUp({ className, ...props }: React.ComponentProps<"div">) {
   const navigate = useNavigate()
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault()
-    // Simulate successful sign-up
-    localStorage.setItem("token", "true")
-    navigate("/kyc-profile")
+    if (password !== confirmPassword) {
+      setError("Passwords do not match")
+      return
+    }
+    setLoading(true)
+    setError(null)
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+    })
+
+    setLoading(false)
+    if (error) {
+      setError(error.message)
+    } else {
+      navigate("/")
+    }
   }
 
   return (
@@ -24,7 +46,7 @@ export function SignUp({ className, ...props }: React.ComponentProps<"div">) {
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Create an account</h1>
                 <p className="text-muted-foreground text-balance">
-                  Sign up for your Wonsafe Inc. account
+                  Sign up for your Acme Inc account
                 </p>
               </div>
               <div className="grid gap-3">
@@ -34,17 +56,31 @@ export function SignUp({ className, ...props }: React.ComponentProps<"div">) {
                   type="email"
                   placeholder="m@example.com"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" required />
+                <Input
+                  id="password"
+                  type="password"
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="confirmPassword">Confirm Password</Label>
-                <Input id="confirmPassword" type="password" required />
+                <Input
+                  id="confirmPassword"
+                  type="password"
+                  required
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
               </div>
-
+              {error && <p className="text-red-500 text-sm">{error}</p>}
               <Button
                 type="submit"
                 className="
@@ -58,8 +94,9 @@ export function SignUp({ className, ...props }: React.ComponentProps<"div">) {
                   hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
                   active:shadow-[0_0px_0_#57cc99] active:top-[5px]
                 "
+                disabled={loading}
               >
-                Sign Up
+                {loading ? "Signing up..." : "Sign Up"}
               </Button>
               <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
                 <span className="bg-card text-muted-foreground relative z-10 px-2">
@@ -70,8 +107,7 @@ export function SignUp({ className, ...props }: React.ComponentProps<"div">) {
                 <Button
                   variant="outline"
                   type="button"
-                  className="w-full 
-                  "
+                  className="w-full cursor-pointer"
                 >
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                     <path

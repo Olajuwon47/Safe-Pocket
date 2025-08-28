@@ -1,10 +1,10 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
-const supabaseAnonKey = process.env.REACT_APP_SUPABASE_ANON_KEY
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string
 
 // Check if we're in development mode
-const isDevelopment = process.env.NODE_ENV === 'development'
+const isDevelopment = import.meta.env.MODE === 'development'
 
 // Create mock client for development when Supabase is not configured
 const createMockClient = () => ({
@@ -24,9 +24,7 @@ const createMockClient = () => ({
     getSession: () => Promise.resolve({ data: { session: null } }),
     onAuthStateChange: () => ({ 
       data: { 
-        subscription: { 
-          unsubscribe: () => {} 
-        } 
+        subscription: { unsubscribe: () => {} } 
       } 
     })
   }
