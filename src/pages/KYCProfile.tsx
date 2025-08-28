@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-import { ChevronDownIcon, PencilIcon } from "@heroicons/react/16/solid";
 import { PhotoIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
 
@@ -18,12 +17,6 @@ const KYCProfile = () => {
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       setImage(e.target.files[0]);
-    }
-  };
-
-  const handleEditIconClick = () => {
-    if (fileInputRef.current) {
-      fileInputRef.current.click();
     }
   };
 
@@ -88,12 +81,6 @@ const KYCProfile = () => {
                       className="absolute inset-0 w-full h-full object-cover rounded-full"
                     />
                   )}
-                  <div
-                    className="absolute bottom-1 right-4 p-1 rounded-full shadow-sm"
-                    onClick={handleEditIconClick}
-                  >
-                    <PencilIcon className="size-5 text-white bg-orange-600" />
-                  </div>
                 </div>
               </div>
 
@@ -144,19 +131,16 @@ const KYCProfile = () => {
                 <label className="block text-sm font-semibold text-gray-900">
                   Gender
                 </label>
-                <div className="relative mt-2.5">
-                  <select
-                    value={gender}
-                    onChange={(e) => setGender(e.target.value)}
-                    required
-                    className="w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-orange-300"
-                  >
-                    <option value="">Select Gender</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
-                  <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500" />
-                </div>
+                <select
+                  value={gender}
+                  onChange={(e) => setGender(e.target.value)}
+                  required
+                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-orange-300"
+                >
+                  <option value="">Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
               </div>
 
               {/* Means of Identification */}
@@ -164,23 +148,20 @@ const KYCProfile = () => {
                 <label className="block text-sm font-semibold text-gray-900">
                   Means of Identification
                 </label>
-                <div className="relative mt-2.5">
-                  <select
-                    value={idType}
-                    onChange={(e) => {
-                      setIdType(e.target.value);
-                      setIdValue("");
-                    }}
-                    required
-                    className="w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-orange-300"
-                  >
-                    <option value="">Choose one</option>
-                    <option value="BVN">BVN</option>
-                    <option value="National ID">National ID</option>
-                    <option value="Driver’s License">Driver’s License</option>
-                  </select>
-                  <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500" />
-                </div>
+                <select
+                  value={idType}
+                  onChange={(e) => {
+                    setIdType(e.target.value);
+                    setIdValue("");
+                  }}
+                  required
+                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-orange-300"
+                >
+                  <option value="">Choose one</option>
+                  <option value="BVN">BVN</option>
+                  <option value="National ID">National ID</option>
+                  <option value="Driver’s License">Driver’s License</option>
+                </select>
               </div>
 
               {/* Show input only when an ID type is selected */}
@@ -204,7 +185,16 @@ const KYCProfile = () => {
             <div className="mt-5">
               <button
                 type="submit"
-                className="block w-full rounded-md bg-orange-600 cursor-pointer px-3.5 py-2.5 text-center text-sm font-semibold text-white hover:bg-orange-700 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                className="
+                w-full min-w-[130px] h-10 
+                    text-white font-bold 
+                    px-2.5 py-1.5 
+                    relative inline-block 
+                    rounded-md border-none outline-none 
+                    cursor-pointer transition-all duration-300 ease-in-out 
+                    bg-[#80ed99] shadow-[0_5px_0_#57cc99]
+                    hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
+                    active:shadow-[0_0px_0_#57cc99] active:top-[5px]"
               >
                 Next
               </button>

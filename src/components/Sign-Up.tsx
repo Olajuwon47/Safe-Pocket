@@ -3,21 +3,23 @@ import { Button } from "./ui/button"
 import { Card, CardContent } from "./ui/card"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
+import { Link, useNavigate } from "react-router-dom"
 
-interface SignUpProps extends React.ComponentProps<"div"> {
-  onNavigateToLogin?: () => void
-}
+interface SignUpProps extends React.ComponentProps<"div"> {}
 
-export function SignUp({
-  className,
-  onNavigateToLogin,
-  ...props
-}: SignUpProps) {
+export function SignUp({ className, ...props }: SignUpProps) {
+  const navigate = useNavigate()
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    navigate("/kyc-profile")
+  }
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden p-0">
         <CardContent className="grid p-0 md:grid-cols-2">
-          <form className="p-6 md:p-8">
+          <form className="p-6 md:p-8" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Create an account</h1>
@@ -79,13 +81,12 @@ export function SignUp({
               </div>
               <div className="text-center text-sm">
                 Already have an account?{" "}
-                <button 
-                  type="button"
-                  onClick={onNavigateToLogin}
+                <Link
+                  to="/login"
                   className="underline underline-offset-4 cursor-pointer"
                 >
                   Sign in
-                </button>
+                </Link>
               </div>
             </div>
           </form>

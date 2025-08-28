@@ -3,16 +3,11 @@ import { Button } from "../components/ui/button"
 import { Card, CardContent } from "../components/ui/card"
 import { Input } from "../components/ui/input"
 import { Label } from "../components/ui/label"
+import { Link } from "react-router-dom"
 
-interface LoginFormProps extends React.ComponentProps<"div"> {
-  onNavigateToSignUp?: () => void
-}
+interface LoginFormProps extends React.ComponentProps<"div"> {}
 
-export function LoginForm({
-  className,
-  onNavigateToSignUp,
-  ...props
-}: LoginFormProps) {
+export function LoginForm({ className, ...props }: LoginFormProps) {
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden p-0">
@@ -37,12 +32,12 @@ export function LoginForm({
               <div className="grid gap-3">
                 <div className="flex items-center">
                   <Label htmlFor="password">Password</Label>
-                  <a
-                    href="/ForgotPassword"
+                  <Link
+                    to="/forgot-password"
                     className="ml-auto text-sm underline-offset-2 hover:underline"
                   >
                     Forgot your password?
-                  </a>
+                  </Link>
                 </div>
                 <Input id="password" type="password" required />
               </div>
@@ -63,7 +58,14 @@ export function LoginForm({
                   >
                   Login
               </Button>
-
+             {/*} <div className="text-center text-sm">
+                <Link
+                  to="/kyc-profile"
+                  className="underline underline-offset-4 cursor-pointer"
+                >
+                  Go to KYC Profile (Protected)
+                </Link>
+              </div>*/}
               <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
                 <span className="bg-card text-muted-foreground relative z-10 px-2">
                   Or continue with
@@ -83,13 +85,12 @@ export function LoginForm({
               </div>
               <div className="text-center text-sm">
                 Don&apos;t have an account?{" "}
-                <button 
-                  type="button"
-                  onClick={onNavigateToSignUp}
+                <Link
+                  to="/signup"
                   className="underline underline-offset-4 cursor-pointer"
                 >
                   Sign up
-                </button>
+                </Link>
               </div>
             </div>
           </form>
