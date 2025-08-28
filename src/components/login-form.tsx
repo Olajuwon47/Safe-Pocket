@@ -4,7 +4,7 @@ import { Card, CardContent } from "../components/ui/card"
 import { Input } from "../components/ui/input"
 import { Label } from "../components/ui/label"
 import { Link, useNavigate } from "react-router-dom"
-
+import { supabase } from '../lib/supabase.ts'
 export function LoginForm({ className, ...props }: React.ComponentProps<"div">) {
   const navigate = useNavigate()
 
@@ -24,7 +24,7 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome back</h1>
                 <p className="text-muted-foreground text-balance">
-                  Login to your Acme Inc account
+                  Login to your Wonsafe Inc. account
                 </p>
               </div>
               <div className="grid gap-3">
