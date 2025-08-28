@@ -1,142 +1,219 @@
-// src/pages/KYCProfile.tsx
-import { useState } from "react";
-import { Input } from "../components/ui/input";
-import { Button } from "../components/ui/button";
-import { Label } from "../components/ui/label";
+import { useState, useRef } from "react";
+import { ChevronDownIcon, PencilIcon } from "@heroicons/react/16/solid";
+import { PhotoIcon } from "@heroicons/react/24/solid";
+import { useNavigate } from "react-router-dom";
 
-export default function KYCProfile() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    dob: "",
-    contact: "",
-    bvn: "",
-    nationalId: "",
-    driversLicense: "",
-    facePhoto: null as File | null,
-  });
+const KYCProfile = () => {
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [date, setDate] = useState("");
+  const [gender, setGender] = useState("");
+  const [idType, setIdType] = useState(""); // BVN, National ID, Driver’s License
+  const [idValue, setIdValue] = useState("");
+  const [image, setImage] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, files } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: files ? files[0] : value,
-    }));
+  const navigate = useNavigate();
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setImage(e.target.files[0]);
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleEditIconClick = () => {
+    if (fileInputRef.current) {
+      fileInputRef.current.click();
+    }
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("KYC Submitted:", formData);
-    alert("KYC info submitted successfully ✅");
+    const Data = {
+      name,
+      username,
+      date,
+      gender,
+      idType,
+      idValue,
+      faceVerification: image,
+    };
+    console.log("KYC Data:", Data);
+    navigate("/CustomButton");
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
-      <div className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-lg">
-        <h1 className="text-2xl font-bold mb-4 text-center">
-          KYC Profile Verification
-        </h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Full Name */}
-          <div>
-            <Label htmlFor="fullName">Full Name</Label>
-            <Input
-              id="fullName"
-              name="fullName"
-              type="text"
-              value={formData.fullName}
-              onChange={handleChange}
-              placeholder="Enter your full name"
-              required
-            />
+    <div className="min-h-screen max-sm:px-2 max-md:px-3 bg-gray-100 flex items-center justify-center p-4">
+      <div className="grid max-sm:grid-cols-1 max-md:grid-cols-1 grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
+        
+        {/* Left side image */}
+        <div className="bg-gray-200 max-sm:p-4 max-md:p-6 flex items-center justify-center p-8">
+          <img alt="KYC" src="" className="h-full w-full object-cover" />
+        </div>
+
+        {/* Right side form */}
+        <div className="p-8 max-sm:p-4 max-md:p-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-balance text-4xl font-semibold tracking-tight text-black sm:text-5xl max-sm:text-3xl max-md:text-4xl">
+              Setup Your KYC Profile
+            </h2>
           </div>
 
-          {/* Date of Birth */}
-          <div>
-            <Label htmlFor="dob">Date of Birth</Label>
-            <Input
-              id="dob"
-              name="dob"
-              type="date"
-              value={formData.dob}
-              onChange={handleChange}
-              required
-            />
-          </div>
+          <form onSubmit={handleSubmit} className="mt-8">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+              
+              {/* Face Verification */}
+              <div className="text-center mt-2 flex justify-center sm:col-span-2">
+                <div className="relative w-32 h-32 rounded-full border-2 border-gray-300 flex items-center justify-center overflow-hidden">
+                  <label
+                    htmlFor="photo"
+                    className="block text-sm font-medium text-gray-900 cursor-pointer"
+                  >
+                    <PhotoIcon className="mx-auto size-12 text-gray-300" />
+                    <span className="text-sm text-gray-500">Upload Face ID</span>
+                  </label>
+                  <input
+                    ref={fileInputRef}
+                    id="photo"
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageChange}
+                    required
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                  />
+                  {image && (
+                    <img
+                      src={URL.createObjectURL(image)}
+                      alt="Uploaded Preview"
+                      className="absolute inset-0 w-full h-full object-cover rounded-full"
+                    />
+                  )}
+                  <div
+                    className="absolute bottom-1 right-4 p-1 rounded-full shadow-sm"
+                    onClick={handleEditIconClick}
+                  >
+                    <PencilIcon className="size-5 text-white bg-orange-600" />
+                  </div>
+                </div>
+              </div>
 
-          {/* Contact */}
-          <div>
-            <Label htmlFor="contact">Contact Number</Label>
-            <Input
-              id="contact"
-              name="contact"
-              type="text"
-              value={formData.contact}
-              onChange={handleChange}
-              placeholder="+234 801 234 5678"
-              required
-            />
-          </div>
+              {/* Full Name */}
+              <div className="sm:col-span-2">
+                <label className="block text-sm font-semibold text-gray-900">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-orange-300"
+                />
+              </div>
 
-          {/* BVN */}
-          <div>
-            <Label htmlFor="bvn">BVN</Label>
-            <Input
-              id="bvn"
-              name="bvn"
-              type="text"
-              value={formData.bvn}
-              onChange={handleChange}
-              placeholder="Enter your BVN"
-              required
-            />
-          </div>
+              {/* Username */}
+              <div className="sm:col-span-2">
+                <label className="block text-sm font-semibold text-gray-900">
+                  Username
+                </label>
+                <input
+                  type="text"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-orange-300"
+                />
+              </div>
 
-          {/* National ID */}
-          <div>
-            <Label htmlFor="nationalId">National ID</Label>
-            <Input
-              id="nationalId"
-              name="nationalId"
-              type="text"
-              value={formData.nationalId}
-              onChange={handleChange}
-              placeholder="Enter National ID Number"
-              required
-            />
-          </div>
+              {/* Date of Birth */}
+              <div className="sm:col-span-2">
+                <label className="block text-sm font-semibold text-gray-900">
+                  Date of Birth
+                </label>
+                <input
+                  type="date"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                  required
+                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-orange-300"
+                />
+              </div>
 
-          {/* Driver’s License */}
-          <div>
-            <Label htmlFor="driversLicense">Driver’s License</Label>
-            <Input
-              id="driversLicense"
-              name="driversLicense"
-              type="text"
-              value={formData.driversLicense}
-              onChange={handleChange}
-              placeholder="Enter Driver’s License Number"
-            />
-          </div>
+              {/* Gender */}
+              <div className="sm:col-span-2">
+                <label className="block text-sm font-semibold text-gray-900">
+                  Gender
+                </label>
+                <div className="relative mt-2.5">
+                  <select
+                    value={gender}
+                    onChange={(e) => setGender(e.target.value)}
+                    required
+                    className="w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-orange-300"
+                  >
+                    <option value="">Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                  <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500" />
+                </div>
+              </div>
 
-          {/* Face Verification */}
-          <div>
-            <Label htmlFor="facePhoto">Upload Face Photo</Label>
-            <Input
-              id="facePhoto"
-              name="facePhoto"
-              type="file"
-              accept="image/*"
-              onChange={handleChange}
-              required
-            />
-          </div>
+              {/* Means of Identification */}
+              <div className="sm:col-span-2">
+                <label className="block text-sm font-semibold text-gray-900">
+                  Means of Identification
+                </label>
+                <div className="relative mt-2.5">
+                  <select
+                    value={idType}
+                    onChange={(e) => {
+                      setIdType(e.target.value);
+                      setIdValue("");
+                    }}
+                    required
+                    className="w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-orange-300"
+                  >
+                    <option value="">Choose one</option>
+                    <option value="BVN">BVN</option>
+                    <option value="National ID">National ID</option>
+                    <option value="Driver’s License">Driver’s License</option>
+                  </select>
+                  <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500" />
+                </div>
+              </div>
 
-          {/* Submit */}
-          <Button type="submit" className="w-full">
-            Submit KYC
-          </Button>
-        </form>
+              {/* Show input only when an ID type is selected */}
+              {idType && (
+                <div className="sm:col-span-2">
+                  <label className="block text-sm font-semibold text-gray-900">
+                    {idType} Number
+                  </label>
+                  <input
+                    type="text"
+                    value={idValue}
+                    onChange={(e) => setIdValue(e.target.value)}
+                    required
+                    className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-orange-300"
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Submit */}
+            <div className="mt-5">
+              <button
+                type="submit"
+                className="block w-full rounded-md bg-orange-600 cursor-pointer px-3.5 py-2.5 text-center text-sm font-semibold text-white hover:bg-orange-700 focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+              >
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
-}
+};
+
+export default KYCProfile;

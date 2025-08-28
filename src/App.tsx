@@ -1,11 +1,9 @@
+
 /*import { } from 'react'
 import { LoginForm } from './components/login-form.tsx'
 import { SignUp } from './components/Sign-Up.tsx'
 import './index.css'
-
 function App() {
-
-
   return (
     <>
        <LoginForm />
@@ -13,39 +11,25 @@ function App() {
     </>
   )
 }
-
 export default App*/
-
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { LoginForm } from './components/login-form';
-import { SignUp } from './components/Sign-Up';
-import ForgotPassword from './pages/ForgotPassword';
-import KYCProfile from './pages/KYCProfile';
-import ProtectedRoute from './components/ProtectedRoute.tsx';
-import './index.css';
-
+import { useState } from 'react'
+import { LoginForm } from './components/login-form'
+import { SignUp } from './components/Sign-Up'
+import './index.css'
 function App() {
+  const [currentView, setCurrentView] = useState<'login' | 'signup'>('login')
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route
-          path="/kyc-profile"
-          element={
-            <ProtectedRoute>
-              <KYCProfile />
-            </ProtectedRoute>
-          }
+    <div className="#">
+      {currentView === 'login' ? (
+        <LoginForm 
+          onNavigateToSignUp={() => setCurrentView('signup')}
         />
-      </Routes>
-    </Router>
-  );
+      ) : (
+        <SignUp 
+          onNavigateToLogin={() => setCurrentView('login')}
+        />
+      )}
+    </div>
+  )
 }
-
-export default App;
-
-
-
+export default App

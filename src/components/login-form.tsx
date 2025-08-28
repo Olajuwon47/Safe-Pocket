@@ -3,53 +3,28 @@ import { Button } from "../components/ui/button"
 import { Card, CardContent } from "../components/ui/card"
 import { Input } from "../components/ui/input"
 import { Label } from "../components/ui/label"
-import { Link, useNavigate } from "react-router-dom"
-import { useState } from "react"
-import { supabase } from "../lib/supabase.ts"
 
-export function LoginForm({ className, ...props }: React.ComponentProps<"div">) {
-  const navigate = useNavigate()
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+interface LoginFormProps extends React.ComponentProps<"div"> {
+  onNavigateToSignUp?: () => void
+}
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault()
-    setLoading(true)
-    setError(null)
-
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    })
-
-    setLoading(false)
-    if (error) {
-      setError(error.message)
-    } else {
-      navigate("/kyc-profile")
-    }
-  }
-
+export function LoginForm({
+  className,
+  onNavigateToSignUp,
+  ...props
+}: LoginFormProps) {
   return (
-    <div className={cn("flex flex-col gap-6 max-sm:px-4 max-md:px-6", className)} {...props}>
-      <Card className="overflow-hidden p-0 w-full max-w-4xl mx-auto">
+    <div className={cn("flex flex-col gap-6", className)} {...props}>
+      <Card className="overflow-hidden p-0">
         <CardContent className="grid p-0 md:grid-cols-2">
-          {/* === Login Form Section === */}
-          <form 
-            onSubmit={handleSubmit} 
-            className="p-6 md:p-8 max-sm:p-4 max-md:p-6"
-          >
+          <form className="p-6 md:p-8">
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-2xl font-bold max-sm:text-xl">Welcome back</h1>
-                <p className="text-muted-foreground text-balance max-sm:text-sm">
-                  Login to your Wonsave Inc account
+                <h1 className="text-2xl font-bold">Welcome back</h1>
+                <p className="text-muted-foreground text-balance">
+                  Login to your Acme Inc account
                 </p>
               </div>
-
-              {/* Email */}
               <div className="grid gap-3">
                 <Label htmlFor="email">Email</Label>
                 <Input
@@ -57,73 +32,46 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
                   type="email"
                   placeholder="m@example.com"
                   required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="max-sm:text-sm"
                 />
               </div>
-
-              {/* Password */}
               <div className="grid gap-3">
                 <div className="flex items-center">
                   <Label htmlFor="password">Password</Label>
-                  <Link
-                    to="/forgot-password"
-                    className="ml-auto text-sm underline-offset-2 hover:underline max-sm:text-xs"
+                  <a
+                    href="/ForgotPassword"
+                    className="ml-auto text-sm underline-offset-2 hover:underline"
                   >
                     Forgot your password?
-                  </Link>
+                  </a>
                 </div>
-                <Input
-                  id="password"
-                  type="password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="max-sm:text-sm"
-                />
+                <Input id="password" type="password" required />
               </div>
 
-              {/* Error */}
-              {error && <p className="text-red-500 text-sm max-sm:text-xs">{error}</p>}
-
-              {/* Submit Button */}
               <Button
-                type="submit"
-                className="
-                  w-full min-w-[130px] h-10 
-                  text-white font-bold 
-                  px-2.5 py-1.5 
-                  relative inline-block 
-                  rounded-md border-none outline-none 
-                  cursor-pointer transition-all duration-300 ease-in-out 
-                  bg-[#80ed99] shadow-[0_5px_0_#57cc99]
-                  hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
-                  active:shadow-[0_0px_0_#57cc99] active:top-[5px]
-                  max-sm:text-sm
-                "
-              >
-                {loading ? "Logging in..." : "Login"}
+                  type="submit"
+                  className="
+                    w-full min-w-[130px] h-10 
+                    text-white font-bold 
+                    px-2.5 py-1.5 
+                    relative inline-block 
+                    rounded-md border-none outline-none 
+                    cursor-pointer transition-all duration-300 ease-in-out 
+                    bg-[#80ed99] shadow-[0_5px_0_#57cc99]
+                    hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
+                    active:shadow-[0_0px_0_#57cc99] active:top-[5px]
+                  "
+                  >
+                  Login
               </Button>
 
-              {/* Divider */}
-              <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t max-sm:text-xs">
+              <div className="after:border-border relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
                 <span className="bg-card text-muted-foreground relative z-10 px-2">
                   Or continue with
                 </span>
               </div>
-
-              {/* Google OAuth */}
-              <div>
-                <Button 
-                  variant="outline" 
-                  type="button" 
-                  className="w-full max-sm:text-sm"
-                  onClick={async () => {
-                    await supabase.auth.signInWithOAuth({ provider: 'google' })
-                  }}
-                >
-                  <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
+              <div className="#">
+                <Button variant="outline" type="button" className="w-full">
+                    <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                     <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                     <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
@@ -131,34 +79,30 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
                   </svg>
                   <span className="sr-only">Login with Google</span>
                 </Button>
+                
               </div>
-
-              {/* Sign up link */}
-              <div className="text-center text-sm max-sm:text-xs">
+              <div className="text-center text-sm">
                 Don&apos;t have an account?{" "}
-                <Link
-                  to="/signup"
+                <button 
+                  type="button"
+                  onClick={onNavigateToSignUp}
                   className="underline underline-offset-4 cursor-pointer"
                 >
                   Sign up
-                </Link>
+                </button>
               </div>
             </div>
           </form>
-
-          {/* === Right Image Section === */}
           <div className="bg-muted relative hidden md:block">
             <img
               src="https://spenny.com/images/appScreens.png"
-              alt="App preview"
+              alt="Image"
               className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
             />
           </div>
         </CardContent>
       </Card>
-
-      {/* Footer Note */}
-      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4 max-sm:px-2 max-sm:text-[10px]">
+      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
         By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
         and <a href="#">Privacy Policy</a>.
       </div>
