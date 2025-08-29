@@ -3,16 +3,24 @@ import { Button } from "../components/ui/button"
 import { Card, CardContent } from "../components/ui/card"
 import { Input } from "../components/ui/input"
 import { Label } from "../components/ui/label"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import React from "react"
 
 interface LoginFormProps extends React.ComponentProps<"div"> {}
 
 export function LoginForm({ className, ...props }: LoginFormProps) {
+  const navigate = useNavigate()
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault()
+    navigate("/dashboard")
+  }
+
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden p-0">
         <CardContent className="grid p-0 md:grid-cols-2">
-          <form className="p-6 md:p-8">
+          <form className="p-6 md:p-8" onSubmit={handleSubmit}>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome back</h1>

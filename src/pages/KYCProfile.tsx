@@ -32,7 +32,6 @@ const KYCProfile = () => {
       faceVerification: image,
     };
     console.log("KYC Data:", Data);
-    navigate("/CustomButton");
     navigate("/dashboard"); 
   };
 

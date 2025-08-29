@@ -40,11 +40,16 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
+      title: "KYC Profile",
+      url: "/kyc-profile",
+      icon: IconUsers,
+    },
+    {
+      title: "Saving",
       url: "#",
       icon: IconListDetails,
     },
@@ -54,7 +59,7 @@ const data = {
       icon: IconChartBar,
     },
     {
-      title: "Projects",
+      title: "Stock",
       url: "#",
       icon: IconFolder,
     },
