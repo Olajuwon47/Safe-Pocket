@@ -34,6 +34,7 @@ import './index.css'
 import ForgotPassword from './pages/ForgotPassword'
 import KYCProfile  from './pages/KYCProfile'
 import ResetPassword from './pages/ResetPassword.tsx'
+import Page from './app/dashboard/page.tsx'
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route element={<ProtectedRoute />}>
           <Route path="/kyc-profile" element={<KYCProfile />} />
+          <Route path="/dashboard" element={<Page />} />
         </Route>
       </Routes>
     </div>

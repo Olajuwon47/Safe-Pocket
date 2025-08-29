@@ -41,7 +41,15 @@ export default function ResetPassword() {
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
             />
-            <Button type="submit" className="w-full">
+            <Button type="submit" className=" w-full min-w-[130px] h-10 
+                    text-white font-bold 
+                    px-2.5 py-1.5 
+                    relative inline-block 
+                    rounded-md border-none outline-none 
+                    cursor-pointer transition-all duration-300 ease-in-out 
+                    bg-[#80ed99] shadow-[0_5px_0_#57cc99]
+                    hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
+                    active:shadow-[0_0px_0_#57cc99] active:top-[5px]">
               Reset Password
             </Button>
           </form>

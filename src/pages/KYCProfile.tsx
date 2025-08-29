@@ -33,6 +33,7 @@ const KYCProfile = () => {
     };
     console.log("KYC Data:", Data);
     navigate("/CustomButton");
+    navigate("/dashboard"); 
   };
 
   return (
