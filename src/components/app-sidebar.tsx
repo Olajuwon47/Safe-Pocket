@@ -44,17 +44,17 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "KYC Profile",
-      url: "/kyc-profile",
+      title: "Savings",
+      url: "/wallet-balance",
       icon: IconUsers,
     },
     {
-      title: "Saving",
+      title: "Wallet balance",
       url: "#",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
+      title: "Progress tracker",
       url: "#",
       icon: IconChartBar,
     },
@@ -64,7 +64,7 @@ const data = {
       icon: IconFolder,
     },
     {
-      title: "Team",
+      title: "Goals overview",
       url: "#",
       icon: IconUsers,
     },

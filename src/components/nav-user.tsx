@@ -1,13 +1,13 @@
-import { IconCirclePlusFilled, IconMail } from "@tabler/icons-react"
+//import { IconCirclePlusFilled, IconMail } from "@tabler/icons-react"
 //import { Link } from "react-router-dom"
 
-import { Button } from "../components/ui/button"
+//import { Button } from "../components/ui/button"
 import {
   SidebarGroup,
   SidebarGroupContent,
-  SidebarMenu,
+  /*SidebarMenu,
   SidebarMenuButton,
-  SidebarMenuItem,
+  SidebarMenuItem,*/
 } from "../components/ui/sidebar"
 
 type NavUserProps = {
