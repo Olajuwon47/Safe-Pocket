@@ -1,11 +1,11 @@
 import * as React from "react"
 import {
-  IconCamera,
+  //IconCamera,
   IconChartBar,
   IconDashboard,
   IconDatabase,
-  IconFileAi,
-  IconFileDescription,
+  //IconFileAi,
+  //IconFileDescription,
   IconFileWord,
   IconFolder,
   IconHelp,
@@ -31,136 +31,72 @@ import {
   SidebarMenuItem,
 } from "../components/ui/sidebar"
 
-const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
-  navMain: [
-    {
-      title: "Dashboard",
-      url: "/page.tsx",
-      icon: IconDashboard,
-    },
-  {
-      title: "Savings",
-      url: "/section-cards",
-      icon: IconUsers,
-    },
-    {
-      title: "Wallet balance",
-      url: "/walletBalance",
-      icon: IconListDetails,
-    },
-       {
-      title: "Goals",
-      url: "/Progress",
-      icon: IconUsers,
-    },
-    {
-      title: "Progress tracker",
-      url: "/chart-area-interactive",
-      icon: IconChartBar,
-    },
-    {
-      title: "Chart",
-      url: "#",
-      icon: IconFolder,
-    },
-  
-    {
-      title: "Team",
-      url: "#",
-      icon: IconUsers,
-    },
-  ],
-  navClouds: [
-    {
-      title: "Capture",
-      icon: IconCamera,
-      isActive: true,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Proposal",
-      icon: IconFileDescription,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Prompts",
-      icon: IconFileAi,
-      url: "#",
-      items: [
-        {
-          title: "Active Proposals",
-          url: "#",
-        },
-        {
-          title: "Archived",
-          url: "#",
-        },
-      ],
-    },
-  ],
-
-  navSecondary: [
-    {
-      title: "Settings",
-      url: "#",
-      icon: IconSettings,
-    },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: IconHelp,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
-    },
-  ],
-  documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: IconDatabase,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: IconReport,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: IconFileWord,
-    },
-  ],
-}
-
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const [users, setUsers] = React.useState<any[]>([])
+  const [selectedUser, setSelectedUser] = React.useState<any | null>(null)
+
+  React.useEffect(() => {
+    async function fetchUsers() {
+      try {
+        const res = await fetch("/data.json")
+        const data = await res.json()
+        const cleaned = Array.isArray(data) ? data : []
+
+        setUsers(cleaned)
+
+        // default to first user
+        if (cleaned.length > 0) {
+          setSelectedUser({
+            name: cleaned[0].name,
+            email: cleaned[0].email,
+            avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(
+              cleaned[0].name
+            )}`,
+          })
+        }
+      } catch (err) {
+        console.error("Failed to fetch users:", err)
+      }
+    }
+    fetchUsers()
+  }, [])
+
+  const handleUserChange = (id: string) => {
+    const user = users.find((u) => u.id.toString() === id)
+    if (user) {
+      setSelectedUser({
+        name: user.name,
+        email: user.email,
+        avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(
+          user.name
+        )}`,
+      })
+    }
+  }
+
+  // Sidebar navigation data
+  const navMain = [
+    { title: "Dashboard", url: "/page.tsx", icon: IconDashboard },
+    { title: "Savings", url: "/section-cards", icon: IconUsers },
+    { title: "Wallet balance", url: "/walletBalance", icon: IconListDetails },
+    { title: "Goals", url: "/Progress", icon: IconUsers },
+    { title: "Progress tracker", url: "/chart-area-interactive", icon: IconChartBar },
+    { title: "Chart", url: "#", icon: IconFolder },
+    { title: "Team", url: "#", icon: IconUsers },
+  ]
+
+  const navSecondary = [
+    { title: "Settings", url: "#", icon: IconSettings },
+    { title: "Get Help", url: "#", icon: IconHelp },
+    { title: "Search", url: "#", icon: IconSearch },
+  ]
+
+  const documents = [
+    { name: "Data Library", url: "#", icon: IconDatabase },
+    { name: "Reports", url: "#", icon: IconReport },
+    { name: "Word Assistant", url: "#", icon: IconFileWord },
+  ]
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -178,13 +114,30 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
+
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <NavMain items={navMain} />
+        <NavDocuments items={documents} />
+        <NavSecondary items={navSecondary} className="mt-auto" />
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
+
+      <SidebarFooter className="flex flex-col gap-3">
+        {/* Dropdown to switch users */}
+        {users.length > 0 && (
+          <select
+            onChange={(e) => handleUserChange(e.target.value)}
+            className="w-full rounded-md border p-2 text-sm"
+          >
+            {users.map((u) => (
+              <option key={u.id} value={u.id}>
+                {u.name}
+              </option>
+            ))}
+          </select>
+        )}
+
+        {/* Display selected user */}
+        {selectedUser && <NavUser user={selectedUser} />}
       </SidebarFooter>
     </Sidebar>
   )

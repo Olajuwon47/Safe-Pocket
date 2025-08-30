@@ -16,6 +16,7 @@ interface GoalsProgressProps {
   goals: Goal[]
 }
 
+// ✅ Named export
 export function GoalsProgress({ goals }: GoalsProgressProps) {
   return (
     <div className="px-4 lg:px-6">
