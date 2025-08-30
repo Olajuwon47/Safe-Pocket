@@ -40,31 +40,37 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "/dashboard",
+      url: "/page.tsx",
       icon: IconDashboard,
     },
-    {
+  {
       title: "Savings",
-      url: "/wallet-balance",
+      url: "/section-cards",
       icon: IconUsers,
     },
     {
       title: "Wallet balance",
-      url: "#",
+      url: "/walletBalance",
       icon: IconListDetails,
+    },
+       {
+      title: "Goals",
+      url: "/Progress",
+      icon: IconUsers,
     },
     {
       title: "Progress tracker",
-      url: "#",
+      url: "/chart-area-interactive",
       icon: IconChartBar,
     },
     {
-      title: "Stock",
+      title: "Chart",
       url: "#",
       icon: IconFolder,
     },
+  
     {
-      title: "Goals overview",
+      title: "Team",
       url: "#",
       icon: IconUsers,
     },
@@ -117,6 +123,7 @@ const data = {
       ],
     },
   ],
+
   navSecondary: [
     {
       title: "Settings",

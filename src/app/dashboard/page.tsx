@@ -1,6 +1,7 @@
 import { AppSidebar } from "../../components/app-sidebar"
 import { ChartAreaInteractive } from "../../components/chart-area-interactive"
-import { DataTable } from "../../components/data-table"
+//import { DataTable } from "../../components/data-table"
+import { GoalsProgress } from "../../components/Progress.tsx"
 import { SectionCards } from "../../components/section-cards"
 import { SiteHeader } from "../../components/site-header"
 import {
@@ -12,7 +13,7 @@ import {
 import data from "./data.json"
 
 export default function Page() {
-
+  const user = data[0]
 
   return (
     <SidebarProvider
@@ -29,11 +30,12 @@ export default function Page() {
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-              <SectionCards />
+              <SectionCards walletBalance={user.walletBalance} />
+              <GoalsProgress goals={user.goals} />
               <div className="px-4 lg:px-6">
-                <ChartAreaInteractive />
+                <ChartAreaInteractive breakdown={user.breakdown} />
               </div>
-              {/* Map your data to the expected shape for DataTable */}
+              {/* Map your data to the expected shape for DataTable
               <DataTable
                 data={data.map((item: any) => ({
                   id: item.id,
@@ -44,7 +46,7 @@ export default function Page() {
                   limit: "N/A",
                   reviewer: item.email,
                 }))}
-              />
+              /> */}
             </div>
           </div>
         </div>
