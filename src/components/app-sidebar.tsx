@@ -1,11 +1,8 @@
 import * as React from "react"
 import {
-  //IconCamera,
   IconChartBar,
   IconDashboard,
   IconDatabase,
-  //IconFileAi,
-  //IconFileDescription,
   IconFileWord,
   IconFolder,
   IconHelp,
@@ -31,7 +28,11 @@ import {
   SidebarMenuItem,
 } from "../components/ui/sidebar"
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
+  onSelectView: (view: string) => void
+}
+
+export function AppSidebar({ onSelectView, ...props }: AppSidebarProps) {
   const [users, setUsers] = React.useState<any[]>([])
   const [selectedUser, setSelectedUser] = React.useState<any | null>(null)
 
@@ -76,12 +77,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   // Sidebar navigation data
   const navMain = [
-    { title: "Dashboard", url: "/page.tsx", icon: IconDashboard },
-    { title: "Savings", url: "/section-cards", icon: IconUsers },
-    { title: "Wallet balance", url: "/walletBalance", icon: IconListDetails },
-    { title: "Goals", url: "/Progress", icon: IconUsers },
-    { title: "Progress tracker", url: "/chart-area-interactive", icon: IconChartBar },
-    { title: "Chart", url: "#", icon: IconFolder },
+    { title: "Dashboard", url: "#", icon: IconDashboard, action: () => onSelectView("dashboard") },
+    { title: "Savings", url: "#", icon: IconUsers, action: () => onSelectView("savings") },
+    { title: "Wallet balance", url: "#", icon: IconListDetails, action: () => onSelectView("wallet") },
+    { title: "Goals", url: "#", icon: IconUsers, action: () => onSelectView("goals") },
+    { title: "Progress tracker", url: "#", icon: IconChartBar, action: () => onSelectView("progress") },
+    { title: "Breakdown", url: "#", icon: IconFolder, action: () => onSelectView("breakdown") },
     { title: "Team", url: "#", icon: IconUsers },
   ]
 
@@ -137,7 +138,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         )}
 
         {/* Display selected user */}
-        {selectedUser && <NavUser user={selectedUser} />}
+        {selectedUser && <NavUser user={selectedUser} onSelectView={onSelectView} />}
       </SidebarFooter>
     </Sidebar>
   )
