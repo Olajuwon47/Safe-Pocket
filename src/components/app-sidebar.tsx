@@ -80,9 +80,8 @@ export function AppSidebar({ onSelectView, ...props }: AppSidebarProps) {
     { title: "Dashboard", url: "#", icon: IconDashboard, action: () => onSelectView("dashboard") },
     { title: "Savings", url: "#", icon: IconUsers, action: () => onSelectView("savings") },
     { title: "Wallet balance", url: "#", icon: IconListDetails, action: () => onSelectView("wallet") },
-    { title: "Goals", url: "#", icon: IconUsers, action: () => onSelectView("goals") },
-    { title: "Progress tracker", url: "#", icon: IconChartBar, action: () => onSelectView("progress") },
-    { title: "Breakdown", url: "#", icon: IconFolder, action: () => onSelectView("breakdown") },
+    { title: "Goals", url: "#", icon: IconChartBar, action: () => onSelectView("progress") },
+    { title: "Progress tracker", url: "#", icon: IconFolder, action: () => onSelectView("breakdown") },
     { title: "Team", url: "#", icon: IconUsers },
   ]
 
