@@ -24,7 +24,7 @@ export function GoalsProgress({ goals }: GoalsProgressProps) {
       <div className="grid grid-cols-1 gap-4 @xl/main:grid-cols-2 @5xl/main:grid-cols-3">
         {goals.map((goal) => (
           <Card key={goal.title}>
-            <CardHeader>
+            <CardHeader className="bg-lime-200">
               <CardTitle>{goal.title}</CardTitle>
               <CardDescription>
                 Target: ${goal.target.toLocaleString()}
@@ -41,7 +41,7 @@ export function GoalsProgress({ goals }: GoalsProgressProps) {
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                 <div
-                  className="bg-primary h-2.5 rounded-full"
+                  className="bg-lime-400 h-2.5 rounded-full"
                   style={{
                     width: `${(goal.progress / goal.target) * 100}%`,
                   }}

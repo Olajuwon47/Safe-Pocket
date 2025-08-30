@@ -25,7 +25,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
               <div className="flex flex-col items-center text-center">
                 <h1 className="text-2xl font-bold">Welcome back</h1>
                 <p className="text-muted-foreground text-balance">
-                  Login to your Acme Inc account
+                  Login to your SafePocket Inc account
                 </p>
               </div>
               <div className="grid gap-3">

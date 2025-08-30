@@ -41,7 +41,7 @@ const KYCProfile = () => {
         
         {/* Left side image */}
         <div className="bg-gray-200 max-sm:p-4 max-md:p-6 flex items-center justify-center p-8">
-          <img alt="KYC" src="" className="h-full w-full object-cover" />
+          <img alt="KYC" src="https://spenny.com/images/appScreens.png" className="h-full w-full object-cover" />
         </div>
 
         {/* Right side form */}
@@ -57,12 +57,12 @@ const KYCProfile = () => {
               
               {/* Face Verification */}
               <div className="text-center mt-2 flex justify-center sm:col-span-2">
-                <div className="relative w-32 h-32 rounded-full border-2 border-gray-300 flex items-center justify-center overflow-hidden">
+                <div className="relative w-32 h-32 rounded-full border-2 border-lime-300 flex items-center justify-center overflow-hidden">
                   <label
                     htmlFor="photo"
                     className="block text-sm font-medium text-gray-900 cursor-pointer"
                   >
-                    <PhotoIcon className="mx-auto size-12 text-gray-300" />
+                    <PhotoIcon className="mx-auto size-12 text-lime-300" />
                     <span className="text-sm text-gray-500">Upload Face ID</span>
                   </label>
                   <input
@@ -94,7 +94,7 @@ const KYCProfile = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-orange-300"
+                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-lime-300"
                 />
               </div>
 
@@ -108,7 +108,7 @@ const KYCProfile = () => {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
-                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-orange-300"
+                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-lime-300"
                 />
               </div>
 
@@ -122,7 +122,7 @@ const KYCProfile = () => {
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
                   required
-                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-orange-300"
+                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-lime-300"
                 />
               </div>
 
@@ -135,7 +135,7 @@ const KYCProfile = () => {
                   value={gender}
                   onChange={(e) => setGender(e.target.value)}
                   required
-                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-orange-300"
+                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-lime-300"
                 >
                   <option value="">Select Gender</option>
                   <option>Male</option>
@@ -155,7 +155,7 @@ const KYCProfile = () => {
                     setIdValue("");
                   }}
                   required
-                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-orange-300"
+                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-lime-300"
                 >
                   <option value="">Choose one</option>
                   <option value="BVN">BVN</option>
@@ -175,7 +175,7 @@ const KYCProfile = () => {
                     value={idValue}
                     onChange={(e) => setIdValue(e.target.value)}
                     required
-                    className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-orange-300"
+                    className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-lime-300"
                   />
                 </div>
               )}

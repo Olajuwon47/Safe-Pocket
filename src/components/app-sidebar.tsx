@@ -73,9 +73,9 @@ export function AppSidebar({
   }
 
   return (
-    <Sidebar collapsible="offcanvas" {...props}>
+    <Sidebar  collapsible="offcanvas" {...props}>
       <SidebarHeader>
-        <SidebarMenu>
+        <SidebarMenu >
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
@@ -83,17 +83,17 @@ export function AppSidebar({
             >
               <a href="#">
                 <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <span className="text-base font-semibold">SafePocket Inc.</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
 
-      <SidebarContent>
+      <SidebarContent className="bg-lime-200">
         <NavMain items={navMain} />
         <NavDocuments items={documents} />
-        <NavSecondary items={navSecondary} className="mt-auto" />
+        <NavSecondary items={navSecondary} className="mt-auto " />
       </SidebarContent>
 
       <SidebarFooter className="flex flex-col gap-3">
@@ -102,7 +102,7 @@ export function AppSidebar({
           <select
             value={selectedUser.id}
             onChange={(e) => onUserChange(e.target.value)}
-            className="w-full rounded-md border p-2 text-sm"
+            className="w-full rounded-md border p-2 text-sm "
           >
             {users.map((u) => (
               <option key={u.id} value={u.id}>
