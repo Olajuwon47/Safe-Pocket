@@ -34,6 +34,20 @@ export default function Page() {
     setSelectedView(view)
   }
 
+  const handleAddGoal = (title: string, target: number) => {
+    if (selectedUser) {
+      const newGoal = { title, target, progress: 0 }
+      const updatedUser = {
+        ...selectedUser,
+        goals: [...selectedUser.goals, newGoal],
+      }
+      setSelectedUser(updatedUser)
+      setUsers(
+        users.map((u) => (u.id === selectedUser.id ? updatedUser : u))
+      )
+    }
+  }
+
   if (!selectedUser) {
     return <div>Loading...</div>
   }
@@ -62,14 +76,14 @@ export default function Page() {
               {selectedView === "dashboard" && (
                 <>
                   <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />
-                  <GoalsProgress goals={selectedUser.goals} />
+                  <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
                   <div className="px-4 lg:px-6">
                     <ChartAreaInteractive breakdown={selectedUser.breakdown} />
                   </div>
                 </>
               )}
-              {selectedView === "goals" && <GoalsProgress goals={selectedUser.goals} />}
-              {selectedView === "progress" && <GoalsProgress goals={selectedUser.goals} />}
+              {selectedView === "goals" && <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />}
+              {selectedView === "progress" && <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />}
               {selectedView === "wallet" && <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />}
               {selectedView === "breakdown" && (
                 <div className="px-4 lg:px-6">
