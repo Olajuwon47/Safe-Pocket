@@ -12,11 +12,30 @@ import * as React from "react"
 import data from "./data.json"
 
 export default function Page() {
-  const [user] = React.useState(data[0])
+  const [users, setUsers] = React.useState<any[]>([])
+  const [selectedUser, setSelectedUser] = React.useState<any | null>(null)
   const [selectedView, setSelectedView] = React.useState("dashboard")
+
+  React.useEffect(() => {
+    setUsers(data)
+    if (data.length > 0) {
+      setSelectedUser(data[0])
+    }
+  }, [])
+
+  const handleUserChange = (id: string) => {
+    const user = users.find((u) => u.id.toString() === id)
+    if (user) {
+      setSelectedUser(user)
+    }
+  }
 
   const handleSelectView = (view: string) => {
     setSelectedView(view)
+  }
+
+  if (!selectedUser) {
+    return <div>Loading...</div>
   }
 
   return (
@@ -28,7 +47,13 @@ export default function Page() {
         } as React.CSSProperties
       }
     >
-      <AppSidebar variant="inset" onSelectView={handleSelectView} />
+      <AppSidebar
+        variant="inset"
+        users={users}
+        selectedUser={selectedUser}
+        onSelectView={handleSelectView}
+        onUserChange={handleUserChange}
+      />
       <SidebarInset>
         <SiteHeader />
         <div className="flex flex-1 flex-col">
@@ -36,22 +61,22 @@ export default function Page() {
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
               {selectedView === "dashboard" && (
                 <>
-                  <SectionCards walletBalance={user.walletBalance} savings={user.savings} />
-                  <GoalsProgress goals={user.goals} />
+                  <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />
+                  <GoalsProgress goals={selectedUser.goals} />
                   <div className="px-4 lg:px-6">
-                    <ChartAreaInteractive breakdown={user.breakdown} />
+                    <ChartAreaInteractive breakdown={selectedUser.breakdown} />
                   </div>
                 </>
               )}
-              {selectedView === "goals" && <GoalsProgress goals={user.goals} />}
-              {selectedView === "progress" && <GoalsProgress goals={user.goals} />}
-              {selectedView === "wallet" && <SectionCards walletBalance={user.walletBalance} savings={user.savings} />}
+              {selectedView === "goals" && <GoalsProgress goals={selectedUser.goals} />}
+              {selectedView === "progress" && <GoalsProgress goals={selectedUser.goals} />}
+              {selectedView === "wallet" && <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />}
               {selectedView === "breakdown" && (
                 <div className="px-4 lg:px-6">
-                  <ChartAreaInteractive breakdown={user.breakdown} />
+                  <ChartAreaInteractive breakdown={selectedUser.breakdown} />
                 </div>
               )}
-              {selectedView === "savings" && <SectionCards walletBalance={user.walletBalance} savings={user.savings} />}
+              {selectedView === "savings" && <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />}
             </div>
           </div>
         </div>
