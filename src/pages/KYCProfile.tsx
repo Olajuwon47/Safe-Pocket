@@ -41,7 +41,7 @@ const KYCProfile = () => {
         
         {/* Left side image */}
         <div className="bg-gray-200 max-sm:p-4 max-md:p-6 flex items-center justify-center p-8">
-          <img alt="KYC" src="https://spenny.com/images/appScreens.png" className="h-full w-full object-cover" />
+          <img alt="KYC" src="/public/image.png" className="h-full w-full object-cover" />
         </div>
 
         {/* Right side form */}

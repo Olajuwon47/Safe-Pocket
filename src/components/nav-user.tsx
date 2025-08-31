@@ -25,7 +25,7 @@ export function NavUser({ user, onSelectView }: NavUserProps) {
       <SidebarGroupContent>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <div className="flex items-center gap-3 p-3 cursor-pointer">
+            <div className="flex items-center gap-3 p-3 cursor-pointer bg-lime-300">
               <img
                 src={user.avatar}
                 alt={user.name}

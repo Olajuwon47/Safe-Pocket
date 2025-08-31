@@ -95,7 +95,23 @@
         }
       ]
     },
-    "savings": 820935
+    "savings": 820935,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-20",
+        "type": "deposit",
+        "amount": 5000,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-21",
+        "type": "withdrawal",
+        "amount": 200,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 2,
@@ -193,7 +209,44 @@
         }
       ]
     },
-    "savings": 685762
+    "savings": 685762,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 21702,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-05",
+        "type": "transfer",
+        "amount": 3411,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-21",
+        "type": "withdrawal",
+        "amount": 2558,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 8185,
+        "description": "Subscription"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 13832,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 3,
@@ -291,7 +344,30 @@
         }
       ]
     },
-    "savings": 736909
+    "savings": 736909,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-22",
+        "type": "transfer",
+        "amount": 26612,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 2163,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-21",
+        "type": "deposit",
+        "amount": 1922,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 4,
@@ -389,7 +465,37 @@
         }
       ]
     },
-    "savings": 696196
+    "savings": 696196,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 6463,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 6381,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "transfer",
+        "amount": 8330,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 5582,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 5,
@@ -487,7 +593,23 @@
         }
       ]
     },
-    "savings": 717285
+    "savings": 717285,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-07",
+        "type": "transfer",
+        "amount": 15528,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 27958,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 6,
@@ -585,7 +707,44 @@
         }
       ]
     },
-    "savings": 673558
+    "savings": 673558,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 50,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-04",
+        "type": "transfer",
+        "amount": 4369,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-02",
+        "type": "deposit",
+        "amount": 12800,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 3198,
+        "description": "Subscription"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-21",
+        "type": "withdrawal",
+        "amount": 2289,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 7,
@@ -683,7 +842,37 @@
         }
       ]
     },
-    "savings": 917829
+    "savings": 917829,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 24227,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-17",
+        "type": "deposit",
+        "amount": 28868,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-21",
+        "type": "deposit",
+        "amount": 37269,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 17095,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 8,
@@ -781,7 +970,30 @@
         }
       ]
     },
-    "savings": 994948
+    "savings": 994948,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 7451,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 21679,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 6291,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 9,
@@ -879,7 +1091,44 @@
         }
       ]
     },
-    "savings": 748301
+    "savings": 748301,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-05",
+        "type": "transfer",
+        "amount": 22179,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 5319,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-16",
+        "type": "deposit",
+        "amount": 19388,
+        "description": "Gift"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 12325,
+        "description": "Subscription"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 4486,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 10,
@@ -977,7 +1226,37 @@
         }
       ]
     },
-    "savings": 745364
+    "savings": 745364,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-12",
+        "type": "transfer",
+        "amount": 9271,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 7000,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 7291,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 2220,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 11,
@@ -1075,7 +1354,23 @@
         }
       ]
     },
-    "savings": 714708
+    "savings": 714708,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-02",
+        "type": "deposit",
+        "amount": 14153,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-26",
+        "type": "withdrawal",
+        "amount": 19067,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 12,
@@ -1173,7 +1468,37 @@
         }
       ]
     },
-    "savings": 631045
+    "savings": 631045,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 9846,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-03",
+        "type": "transfer",
+        "amount": 15042,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 28219,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-20",
+        "type": "transfer",
+        "amount": 10502,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 13,
@@ -1271,7 +1596,37 @@
         }
       ]
     },
-    "savings": 759263
+    "savings": 759263,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 28807,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 3662,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 5956,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 18962,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 14,
@@ -1369,7 +1724,44 @@
         }
       ]
     },
-    "savings": 619845
+    "savings": 619845,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 25369,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 4504,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 5933,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-10",
+        "type": "transfer",
+        "amount": 8506,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-11",
+        "type": "deposit",
+        "amount": 23868,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 15,
@@ -1467,7 +1859,44 @@
         }
       ]
     },
-    "savings": 672432
+    "savings": 672432,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 16849,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 15172,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 16056,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 7257,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-05",
+        "type": "transfer",
+        "amount": 12289,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 16,
@@ -1565,7 +1994,23 @@
         }
       ]
     },
-    "savings": 607932
+    "savings": 607932,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-24",
+        "type": "deposit",
+        "amount": 7229,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 3586,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 17,
@@ -1663,7 +2108,23 @@
         }
       ]
     },
-    "savings": 821952
+    "savings": 821952,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 1328,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 1648,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 18,
@@ -1761,7 +2222,37 @@
         }
       ]
     },
-    "savings": 674987
+    "savings": 674987,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-19",
+        "type": "deposit",
+        "amount": 5513,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 4026,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 199,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-19",
+        "type": "deposit",
+        "amount": 3712,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 19,
@@ -1859,7 +2350,37 @@
         }
       ]
     },
-    "savings": 811915
+    "savings": 811915,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 8060,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 10211,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 9953,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-21",
+        "type": "deposit",
+        "amount": 2059,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 20,
@@ -1957,7 +2478,44 @@
         }
       ]
     },
-    "savings": 667662
+    "savings": 667662,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 2608,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-10",
+        "type": "withdrawal",
+        "amount": 1456,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-10",
+        "type": "transfer",
+        "amount": 3164,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-27",
+        "type": "deposit",
+        "amount": 10551,
+        "description": "Paycheck"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 10407,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 21,
@@ -2055,7 +2613,30 @@
         }
       ]
     },
-    "savings": 765166
+    "savings": 765166,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-20",
+        "type": "deposit",
+        "amount": 4612,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 1538,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-04",
+        "type": "withdrawal",
+        "amount": 11094,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 22,
@@ -2153,7 +2734,30 @@
         }
       ]
     },
-    "savings": 616527
+    "savings": 616527,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "transfer",
+        "amount": 2096,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 2017,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-12",
+        "type": "withdrawal",
+        "amount": 264,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 23,
@@ -2251,7 +2855,30 @@
         }
       ]
     },
-    "savings": 759859
+    "savings": 759859,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "deposit",
+        "amount": 4311,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-27",
+        "type": "withdrawal",
+        "amount": 7700,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-12",
+        "type": "transfer",
+        "amount": 25101,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 24,
@@ -2349,7 +2976,30 @@
         }
       ]
     },
-    "savings": 670877
+    "savings": 670877,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-02",
+        "type": "transfer",
+        "amount": 3365,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-05",
+        "type": "withdrawal",
+        "amount": 9234,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-20",
+        "type": "deposit",
+        "amount": 632,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 25,
@@ -2447,7 +3097,44 @@
         }
       ]
     },
-    "savings": 687421
+    "savings": 687421,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 35313,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 14828,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 20119,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-28",
+        "type": "transfer",
+        "amount": 44240,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 28915,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 26,
@@ -2545,7 +3232,30 @@
         }
       ]
     },
-    "savings": 860895
+    "savings": 860895,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-07",
+        "type": "transfer",
+        "amount": 9437,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-20",
+        "type": "deposit",
+        "amount": 36740,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 40222,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 27,
@@ -2643,7 +3353,23 @@
         }
       ]
     },
-    "savings": 884317
+    "savings": 884317,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "deposit",
+        "amount": 16152,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 39712,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 28,
@@ -2741,7 +3467,30 @@
         }
       ]
     },
-    "savings": 759006
+    "savings": 759006,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 13723,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-11",
+        "type": "withdrawal",
+        "amount": 16102,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-03",
+        "type": "deposit",
+        "amount": 4903,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 29,
@@ -2839,7 +3588,23 @@
         }
       ]
     },
-    "savings": 866793
+    "savings": 866793,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 14915,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 15552,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 30,
@@ -2937,7 +3702,23 @@
         }
       ]
     },
-    "savings": 567988
+    "savings": 567988,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-08",
+        "type": "transfer",
+        "amount": 2719,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-04",
+        "type": "transfer",
+        "amount": 1054,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 31,
@@ -3035,7 +3816,23 @@
         }
       ]
     },
-    "savings": 783253
+    "savings": 783253,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-04",
+        "type": "transfer",
+        "amount": 18622,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 17413,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 32,
@@ -3133,7 +3930,30 @@
         }
       ]
     },
-    "savings": 719182
+    "savings": 719182,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 6254,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 1282,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-26",
+        "type": "transfer",
+        "amount": 10760,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 33,
@@ -3231,7 +4051,37 @@
         }
       ]
     },
-    "savings": 743972
+    "savings": 743972,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-05",
+        "type": "deposit",
+        "amount": 4636,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 2817,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-08",
+        "type": "transfer",
+        "amount": 5021,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-11",
+        "type": "deposit",
+        "amount": 1264,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 34,
@@ -3329,7 +4179,44 @@
         }
       ]
     },
-    "savings": 751841
+    "savings": 751841,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-10",
+        "type": "withdrawal",
+        "amount": 30094,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 42738,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-13",
+        "type": "deposit",
+        "amount": 30253,
+        "description": "Gift"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 5993,
+        "description": "Subscription"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-14",
+        "type": "deposit",
+        "amount": 30267,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 35,
@@ -3427,7 +4314,30 @@
         }
       ]
     },
-    "savings": 757834
+    "savings": 757834,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 20465,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-18",
+        "type": "deposit",
+        "amount": 21405,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-12",
+        "type": "withdrawal",
+        "amount": 12799,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 36,
@@ -3525,7 +4435,23 @@
         }
       ]
     },
-    "savings": 811065
+    "savings": 811065,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 11340,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-12",
+        "type": "withdrawal",
+        "amount": 8538,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 37,
@@ -3623,7 +4549,37 @@
         }
       ]
     },
-    "savings": 744915
+    "savings": 744915,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 2679,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 32676,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 6325,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 18569,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 38,
@@ -3721,7 +4677,44 @@
         }
       ]
     },
-    "savings": 909291
+    "savings": 909291,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 2010,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-24",
+        "type": "deposit",
+        "amount": 7750,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 9357,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-27",
+        "type": "deposit",
+        "amount": 16318,
+        "description": "Paycheck"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 7194,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 39,
@@ -3819,7 +4812,30 @@
         }
       ]
     },
-    "savings": 652105
+    "savings": 652105,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 19958,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "deposit",
+        "amount": 37322,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 10656,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 40,
@@ -3917,7 +4933,44 @@
         }
       ]
     },
-    "savings": 758503
+    "savings": 758503,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-11",
+        "type": "deposit",
+        "amount": 9542,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-20",
+        "type": "deposit",
+        "amount": 11061,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 15027,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 14796,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 1232,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 41,
@@ -4015,7 +5068,30 @@
         }
       ]
     },
-    "savings": 808662
+    "savings": 808662,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 5967,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-27",
+        "type": "transfer",
+        "amount": 2451,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 1427,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 42,
@@ -4113,7 +5189,23 @@
         }
       ]
     },
-    "savings": 608895
+    "savings": 608895,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 7691,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 9304,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 43,
@@ -4211,7 +5303,30 @@
         }
       ]
     },
-    "savings": 719647
+    "savings": 719647,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 9309,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-22",
+        "type": "deposit",
+        "amount": 8680,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-02",
+        "type": "transfer",
+        "amount": 6481,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 44,
@@ -4309,7 +5424,44 @@
         }
       ]
     },
-    "savings": 658257
+    "savings": 658257,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 6197,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 9912,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 1198,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 3700,
+        "description": "Paycheck"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 4572,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 45,
@@ -4407,7 +5559,44 @@
         }
       ]
     },
-    "savings": 738411
+    "savings": 738411,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 19411,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-26",
+        "type": "deposit",
+        "amount": 19373,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-19",
+        "type": "deposit",
+        "amount": 2690,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 3033,
+        "description": "Gift"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 13721,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 46,
@@ -4505,7 +5694,23 @@
         }
       ]
     },
-    "savings": 616471
+    "savings": 616471,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 21448,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-15",
+        "type": "transfer",
+        "amount": 15628,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 47,
@@ -4603,7 +5808,37 @@
         }
       ]
     },
-    "savings": 779202
+    "savings": 779202,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-23",
+        "type": "deposit",
+        "amount": 12042,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-13",
+        "type": "deposit",
+        "amount": 4430,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-25",
+        "type": "transfer",
+        "amount": 1583,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 9553,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 48,
@@ -4701,7 +5936,44 @@
         }
       ]
     },
-    "savings": 857788
+    "savings": 857788,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 1255,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-15",
+        "type": "deposit",
+        "amount": 1071,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "transfer",
+        "amount": 179,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-21",
+        "type": "withdrawal",
+        "amount": 1314,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-04",
+        "type": "transfer",
+        "amount": 1920,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 49,
@@ -4799,7 +6071,37 @@
         }
       ]
     },
-    "savings": 820237
+    "savings": 820237,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 18374,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-27",
+        "type": "withdrawal",
+        "amount": 16891,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 22471,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-15",
+        "type": "deposit",
+        "amount": 15903,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 50,
@@ -4897,7 +6199,30 @@
         }
       ]
     },
-    "savings": 755700
+    "savings": 755700,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-24",
+        "type": "transfer",
+        "amount": 37835,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-06",
+        "type": "transfer",
+        "amount": 4921,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 23030,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 51,
@@ -4995,7 +6320,30 @@
         }
       ]
     },
-    "savings": 691821
+    "savings": 691821,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 1028,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 8785,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-11",
+        "type": "deposit",
+        "amount": 12005,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 52,
@@ -5093,7 +6441,37 @@
         }
       ]
     },
-    "savings": 795865
+    "savings": 795865,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 27220,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 40263,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-16",
+        "type": "deposit",
+        "amount": 14988,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-15",
+        "type": "transfer",
+        "amount": 30995,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 53,
@@ -5191,7 +6569,44 @@
         }
       ]
     },
-    "savings": 883312
+    "savings": 883312,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-12",
+        "type": "withdrawal",
+        "amount": 10398,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-06",
+        "type": "deposit",
+        "amount": 10539,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 6403,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 28999,
+        "description": "Restaurant"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-21",
+        "type": "deposit",
+        "amount": 2290,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 54,
@@ -5289,7 +6704,37 @@
         }
       ]
     },
-    "savings": 876999
+    "savings": 876999,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-22",
+        "type": "deposit",
+        "amount": 29045,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 29787,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 1008,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 1762,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 55,
@@ -5387,7 +6832,44 @@
         }
       ]
     },
-    "savings": 988247
+    "savings": 988247,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-02",
+        "type": "transfer",
+        "amount": 5001,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-04",
+        "type": "withdrawal",
+        "amount": 2288,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-20",
+        "type": "transfer",
+        "amount": 2305,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 4363,
+        "description": "Subscription"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-03",
+        "type": "deposit",
+        "amount": 4059,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 56,
@@ -5485,7 +6967,37 @@
         }
       ]
     },
-    "savings": 770171
+    "savings": 770171,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 23382,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 9597,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-21",
+        "type": "transfer",
+        "amount": 19555,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 13582,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 57,
@@ -5583,7 +7095,30 @@
         }
       ]
     },
-    "savings": 733618
+    "savings": 733618,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 15148,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "transfer",
+        "amount": 25515,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 22536,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 58,
@@ -5681,7 +7216,30 @@
         }
       ]
     },
-    "savings": 910710
+    "savings": 910710,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 589,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-11",
+        "type": "transfer",
+        "amount": 1899,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 11133,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 59,
@@ -5779,7 +7337,23 @@
         }
       ]
     },
-    "savings": 757003
+    "savings": 757003,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-26",
+        "type": "withdrawal",
+        "amount": 36371,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 485,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 60,
@@ -5877,7 +7451,37 @@
         }
       ]
     },
-    "savings": 842926
+    "savings": 842926,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 6889,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 9398,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-22",
+        "type": "transfer",
+        "amount": 3756,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 8650,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 61,
@@ -5975,7 +7579,44 @@
         }
       ]
     },
-    "savings": 834000
+    "savings": 834000,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 28962,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 14630,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-15",
+        "type": "deposit",
+        "amount": 23079,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-21",
+        "type": "deposit",
+        "amount": 4513,
+        "description": "Gift"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 16710,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 62,
@@ -6073,7 +7714,23 @@
         }
       ]
     },
-    "savings": 792908
+    "savings": 792908,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 30740,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-19",
+        "type": "deposit",
+        "amount": 7976,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 63,
@@ -6171,7 +7828,44 @@
         }
       ]
     },
-    "savings": 815202
+    "savings": 815202,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 16277,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 28795,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 7014,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 26515,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-25",
+        "type": "transfer",
+        "amount": 106,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 64,
@@ -6269,7 +7963,37 @@
         }
       ]
     },
-    "savings": 658137
+    "savings": 658137,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 38578,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "transfer",
+        "amount": 18380,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 22915,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-11",
+        "type": "withdrawal",
+        "amount": 29118,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 65,
@@ -6367,7 +8091,23 @@
         }
       ]
     },
-    "savings": 675589
+    "savings": 675589,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-13",
+        "type": "transfer",
+        "amount": 4965,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 15854,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 66,
@@ -6465,7 +8205,23 @@
         }
       ]
     },
-    "savings": 830408
+    "savings": 830408,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 5879,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 31604,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 67,
@@ -6563,7 +8319,30 @@
         }
       ]
     },
-    "savings": 745594
+    "savings": 745594,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 4665,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-19",
+        "type": "deposit",
+        "amount": 7295,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 4832,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 68,
@@ -6661,7 +8440,37 @@
         }
       ]
     },
-    "savings": 804806
+    "savings": 804806,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-22",
+        "type": "transfer",
+        "amount": 990,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 6625,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 45837,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 32705,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 69,
@@ -6759,7 +8568,23 @@
         }
       ]
     },
-    "savings": 640832
+    "savings": 640832,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 12429,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 3969,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 70,
@@ -6857,7 +8682,37 @@
         }
       ]
     },
-    "savings": 722278
+    "savings": 722278,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 31972,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 14874,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-04",
+        "type": "transfer",
+        "amount": 46963,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 13473,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 71,
@@ -6955,7 +8810,44 @@
         }
       ]
     },
-    "savings": 586742
+    "savings": 586742,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 22663,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-17",
+        "type": "deposit",
+        "amount": 26167,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-17",
+        "type": "transfer",
+        "amount": 10421,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 2704,
+        "description": "Subscription"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 21930,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 72,
@@ -7053,7 +8945,30 @@
         }
       ]
     },
-    "savings": 524555
+    "savings": 524555,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 5227,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 1999,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-14",
+        "type": "deposit",
+        "amount": 5459,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 73,
@@ -7151,7 +9066,37 @@
         }
       ]
     },
-    "savings": 703350
+    "savings": 703350,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 874,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-17",
+        "type": "deposit",
+        "amount": 2389,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 2744,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-06",
+        "type": "transfer",
+        "amount": 2006,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 74,
@@ -7249,7 +9194,23 @@
         }
       ]
     },
-    "savings": 693672
+    "savings": 693672,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 41927,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 31556,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 75,
@@ -7347,7 +9308,23 @@
         }
       ]
     },
-    "savings": 741684
+    "savings": 741684,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 12138,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-24",
+        "type": "deposit",
+        "amount": 38011,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 76,
@@ -7445,7 +9422,23 @@
         }
       ]
     },
-    "savings": 875571
+    "savings": 875571,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "transfer",
+        "amount": 10783,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 8897,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 77,
@@ -7543,7 +9536,23 @@
         }
       ]
     },
-    "savings": 712205
+    "savings": 712205,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 4248,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 1062,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 78,
@@ -7641,7 +9650,30 @@
         }
       ]
     },
-    "savings": 584894
+    "savings": 584894,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 40841,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 28008,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-22",
+        "type": "deposit",
+        "amount": 2482,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 79,
@@ -7739,7 +9771,37 @@
         }
       ]
     },
-    "savings": 807269
+    "savings": 807269,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 2128,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-05",
+        "type": "deposit",
+        "amount": 12367,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 3554,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-12",
+        "type": "deposit",
+        "amount": 6943,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 80,
@@ -7837,7 +9899,44 @@
         }
       ]
     },
-    "savings": 669661
+    "savings": 669661,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-26",
+        "type": "withdrawal",
+        "amount": 14908,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 8328,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 24473,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-04",
+        "type": "transfer",
+        "amount": 26240,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 14548,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 81,
@@ -7935,7 +10034,37 @@
         }
       ]
     },
-    "savings": 894511
+    "savings": 894511,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 957,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-21",
+        "type": "deposit",
+        "amount": 188,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 992,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-05",
+        "type": "transfer",
+        "amount": 738,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 82,
@@ -8033,7 +10162,23 @@
         }
       ]
     },
-    "savings": 747577
+    "savings": 747577,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 3153,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 581,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 83,
@@ -8131,7 +10276,23 @@
         }
       ]
     },
-    "savings": 882058
+    "savings": 882058,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 6298,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-12",
+        "type": "deposit",
+        "amount": 4725,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 84,
@@ -8229,7 +10390,44 @@
         }
       ]
     },
-    "savings": 707240
+    "savings": 707240,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 3942,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-03",
+        "type": "deposit",
+        "amount": 2601,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-05",
+        "type": "withdrawal",
+        "amount": 5158,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-13",
+        "type": "transfer",
+        "amount": 13403,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-11",
+        "type": "withdrawal",
+        "amount": 8016,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 85,
@@ -8327,7 +10525,23 @@
         }
       ]
     },
-    "savings": 767441
+    "savings": 767441,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 25752,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 2973,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 86,
@@ -8425,7 +10639,44 @@
         }
       ]
     },
-    "savings": 727969
+    "savings": 727969,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 16390,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 14737,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 17943,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 18373,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-04",
+        "type": "withdrawal",
+        "amount": 4446,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 87,
@@ -8523,7 +10774,37 @@
         }
       ]
     },
-    "savings": 1071811
+    "savings": 1071811,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 35802,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 1201,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 26914,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 15653,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 88,
@@ -8621,7 +10902,37 @@
         }
       ]
     },
-    "savings": 871783
+    "savings": 871783,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 5241,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 14334,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-21",
+        "type": "transfer",
+        "amount": 11980,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 11517,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 89,
@@ -8719,7 +11030,23 @@
         }
       ]
     },
-    "savings": 630695
+    "savings": 630695,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-11",
+        "type": "deposit",
+        "amount": 360,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 851,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 90,
@@ -8817,7 +11144,37 @@
         }
       ]
     },
-    "savings": 742792
+    "savings": 742792,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "transfer",
+        "amount": 3097,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 4168,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 4790,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-25",
+        "type": "deposit",
+        "amount": 2247,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 91,
@@ -8915,7 +11272,44 @@
         }
       ]
     },
-    "savings": 838050
+    "savings": 838050,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 12266,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 19615,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 13986,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-17",
+        "type": "deposit",
+        "amount": 2476,
+        "description": "Paycheck"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 10056,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 92,
@@ -9013,7 +11407,44 @@
         }
       ]
     },
-    "savings": 698921
+    "savings": 698921,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-09",
+        "type": "transfer",
+        "amount": 26066,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "transfer",
+        "amount": 17813,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 13283,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-21",
+        "type": "transfer",
+        "amount": 2101,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 19248,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 93,
@@ -9111,7 +11542,44 @@
         }
       ]
     },
-    "savings": 894310
+    "savings": 894310,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-04",
+        "type": "transfer",
+        "amount": 5518,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 21192,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-21",
+        "type": "withdrawal",
+        "amount": 41719,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-25",
+        "type": "transfer",
+        "amount": 35553,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-06",
+        "type": "transfer",
+        "amount": 10912,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 94,
@@ -9209,7 +11677,37 @@
         }
       ]
     },
-    "savings": 907736
+    "savings": 907736,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 29633,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 39076,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 16299,
+        "description": "Gift"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 48517,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 95,
@@ -9307,7 +11805,30 @@
         }
       ]
     },
-    "savings": 690905
+    "savings": 690905,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 1154,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-28",
+        "type": "transfer",
+        "amount": 491,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 263,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 96,
@@ -9405,7 +11926,23 @@
         }
       ]
     },
-    "savings": 620570
+    "savings": 620570,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 6986,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 15176,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 97,
@@ -9503,7 +12040,37 @@
         }
       ]
     },
-    "savings": 836132
+    "savings": 836132,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-16",
+        "type": "deposit",
+        "amount": 1542,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "deposit",
+        "amount": 3630,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 820,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-11",
+        "type": "deposit",
+        "amount": 2355,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 98,
@@ -9601,7 +12168,44 @@
         }
       ]
     },
-    "savings": 773593
+    "savings": 773593,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 11585,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "deposit",
+        "amount": 9233,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 11986,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 6578,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-18",
+        "type": "deposit",
+        "amount": 7019,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 99,
@@ -9699,7 +12303,23 @@
         }
       ]
     },
-    "savings": 789765
+    "savings": 789765,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 34690,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 15376,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 100,
@@ -9797,7 +12417,44 @@
         }
       ]
     },
-    "savings": 752155
+    "savings": 752155,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-11",
+        "type": "transfer",
+        "amount": 2158,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-09",
+        "type": "transfer",
+        "amount": 5054,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 51,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 1364,
+        "description": "Subscription"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-10",
+        "type": "withdrawal",
+        "amount": 683,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 101,
@@ -9895,7 +12552,30 @@
         }
       ]
     },
-    "savings": 725752
+    "savings": 725752,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 781,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 14364,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 3492,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 102,
@@ -9993,7 +12673,44 @@
         }
       ]
     },
-    "savings": 828126
+    "savings": 828126,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 20027,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 23362,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 28081,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 2307,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-03",
+        "type": "deposit",
+        "amount": 12840,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 103,
@@ -10091,7 +12808,23 @@
         }
       ]
     },
-    "savings": 833825
+    "savings": 833825,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-24",
+        "type": "deposit",
+        "amount": 3561,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 298,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 104,
@@ -10189,7 +12922,44 @@
         }
       ]
     },
-    "savings": 756658
+    "savings": 756658,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-03",
+        "type": "transfer",
+        "amount": 16931,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 14175,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-12",
+        "type": "withdrawal",
+        "amount": 3960,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-16",
+        "type": "deposit",
+        "amount": 9797,
+        "description": "Paycheck"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-05",
+        "type": "deposit",
+        "amount": 6205,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 105,
@@ -10287,7 +13057,30 @@
         }
       ]
     },
-    "savings": 893779
+    "savings": 893779,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 3711,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-21",
+        "type": "withdrawal",
+        "amount": 7103,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 908,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 106,
@@ -10385,7 +13178,37 @@
         }
       ]
     },
-    "savings": 740549
+    "savings": 740549,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 28385,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 16340,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-04",
+        "type": "withdrawal",
+        "amount": 14165,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-11",
+        "type": "withdrawal",
+        "amount": 23821,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 107,
@@ -10483,7 +13306,37 @@
         }
       ]
     },
-    "savings": 887223
+    "savings": 887223,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "transfer",
+        "amount": 19379,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-27",
+        "type": "withdrawal",
+        "amount": 3831,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 26807,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-13",
+        "type": "deposit",
+        "amount": 4224,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 108,
@@ -10581,7 +13434,30 @@
         }
       ]
     },
-    "savings": 745323
+    "savings": 745323,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 23860,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 22984,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 25249,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 109,
@@ -10679,7 +13555,44 @@
         }
       ]
     },
-    "savings": 717052
+    "savings": 717052,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 9265,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-27",
+        "type": "deposit",
+        "amount": 39777,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 7235,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-04",
+        "type": "transfer",
+        "amount": 579,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 38399,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 110,
@@ -10777,7 +13690,37 @@
         }
       ]
     },
-    "savings": 856613
+    "savings": 856613,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 330,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 108,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 1074,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-21",
+        "type": "transfer",
+        "amount": 3107,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 111,
@@ -10875,7 +13818,37 @@
         }
       ]
     },
-    "savings": 832577
+    "savings": 832577,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 6855,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-04",
+        "type": "withdrawal",
+        "amount": 945,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 9191,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-03",
+        "type": "transfer",
+        "amount": 7603,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 112,
@@ -10973,7 +13946,37 @@
         }
       ]
     },
-    "savings": 827402
+    "savings": 827402,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-04",
+        "type": "transfer",
+        "amount": 5742,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-06",
+        "type": "transfer",
+        "amount": 9686,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 2351,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 207,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 113,
@@ -11071,7 +14074,37 @@
         }
       ]
     },
-    "savings": 745398
+    "savings": 745398,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 5695,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "transfer",
+        "amount": 14805,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 10133,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-14",
+        "type": "deposit",
+        "amount": 4287,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 114,
@@ -11169,7 +14202,37 @@
         }
       ]
     },
-    "savings": 742319
+    "savings": 742319,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "deposit",
+        "amount": 4594,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 6871,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 5829,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 4947,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 115,
@@ -11267,7 +14330,44 @@
         }
       ]
     },
-    "savings": 833150
+    "savings": 833150,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 300,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 10358,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "transfer",
+        "amount": 4603,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 9678,
+        "description": "Restaurant"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-25",
+        "type": "deposit",
+        "amount": 5881,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 116,
@@ -11365,7 +14465,37 @@
         }
       ]
     },
-    "savings": 812975
+    "savings": 812975,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 12997,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 650,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-26",
+        "type": "withdrawal",
+        "amount": 11942,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 8135,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 117,
@@ -11463,7 +14593,37 @@
         }
       ]
     },
-    "savings": 681886
+    "savings": 681886,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-13",
+        "type": "deposit",
+        "amount": 22929,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 21818,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 7992,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-21",
+        "type": "transfer",
+        "amount": 3156,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 118,
@@ -11561,7 +14721,44 @@
         }
       ]
     },
-    "savings": 764521
+    "savings": 764521,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "transfer",
+        "amount": 5778,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-10",
+        "type": "withdrawal",
+        "amount": 2366,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-24",
+        "type": "transfer",
+        "amount": 7025,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 3790,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-04",
+        "type": "withdrawal",
+        "amount": 5930,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 119,
@@ -11659,7 +14856,23 @@
         }
       ]
     },
-    "savings": 842032
+    "savings": 842032,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-12",
+        "type": "withdrawal",
+        "amount": 1874,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 12388,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 120,
@@ -11757,7 +14970,23 @@
         }
       ]
     },
-    "savings": 710588
+    "savings": 710588,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-15",
+        "type": "transfer",
+        "amount": 1403,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-11",
+        "type": "withdrawal",
+        "amount": 8400,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 121,
@@ -11855,7 +15084,37 @@
         }
       ]
     },
-    "savings": 772775
+    "savings": 772775,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "transfer",
+        "amount": 25551,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 38914,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 40832,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 27070,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 122,
@@ -11953,7 +15212,37 @@
         }
       ]
     },
-    "savings": 781988
+    "savings": 781988,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 15139,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 21499,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-13",
+        "type": "deposit",
+        "amount": 21642,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-10",
+        "type": "transfer",
+        "amount": 23058,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 123,
@@ -12051,7 +15340,37 @@
         }
       ]
     },
-    "savings": 730740
+    "savings": 730740,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-23",
+        "type": "deposit",
+        "amount": 14085,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-03",
+        "type": "deposit",
+        "amount": 10614,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 8664,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-11",
+        "type": "deposit",
+        "amount": 5657,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 124,
@@ -12149,7 +15468,30 @@
         }
       ]
     },
-    "savings": 580179
+    "savings": 580179,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-20",
+        "type": "deposit",
+        "amount": 2643,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-19",
+        "type": "transfer",
+        "amount": 3321,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-10",
+        "type": "transfer",
+        "amount": 4458,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 125,
@@ -12247,7 +15589,44 @@
         }
       ]
     },
-    "savings": 685400
+    "savings": 685400,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 9046,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-03",
+        "type": "transfer",
+        "amount": 5898,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-02",
+        "type": "transfer",
+        "amount": 6226,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 7535,
+        "description": "Groceries"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-28",
+        "type": "transfer",
+        "amount": 2307,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 126,
@@ -12345,7 +15724,30 @@
         }
       ]
     },
-    "savings": 703917
+    "savings": 703917,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 3029,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 30634,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 27879,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 127,
@@ -12443,7 +15845,37 @@
         }
       ]
     },
-    "savings": 763970
+    "savings": 763970,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-13",
+        "type": "transfer",
+        "amount": 1184,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 3980,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 3966,
+        "description": "Gift"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-15",
+        "type": "deposit",
+        "amount": 1514,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 128,
@@ -12541,7 +15973,30 @@
         }
       ]
     },
-    "savings": 802407
+    "savings": 802407,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 1044,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 3017,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 3931,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 129,
@@ -12639,7 +16094,30 @@
         }
       ]
     },
-    "savings": 747050
+    "savings": 747050,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 16873,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 9502,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "transfer",
+        "amount": 25103,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 130,
@@ -12737,7 +16215,23 @@
         }
       ]
     },
-    "savings": 838343
+    "savings": 838343,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-19",
+        "type": "transfer",
+        "amount": 5754,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 14575,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 131,
@@ -12835,7 +16329,44 @@
         }
       ]
     },
-    "savings": 840310
+    "savings": 840310,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-05",
+        "type": "transfer",
+        "amount": 14762,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-02",
+        "type": "transfer",
+        "amount": 12263,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 1291,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 12678,
+        "description": "Groceries"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-01",
+        "type": "transfer",
+        "amount": 7625,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 132,
@@ -12933,7 +16464,30 @@
         }
       ]
     },
-    "savings": 761499
+    "savings": 761499,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-22",
+        "type": "deposit",
+        "amount": 3549,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 3847,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-25",
+        "type": "transfer",
+        "amount": 9530,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 133,
@@ -13031,7 +16585,23 @@
         }
       ]
     },
-    "savings": 671785
+    "savings": 671785,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-10",
+        "type": "withdrawal",
+        "amount": 9152,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-09",
+        "type": "transfer",
+        "amount": 28337,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 134,
@@ -13129,7 +16699,30 @@
         }
       ]
     },
-    "savings": 832470
+    "savings": 832470,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 1301,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 2258,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 1463,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 135,
@@ -13227,7 +16820,37 @@
         }
       ]
     },
-    "savings": 609902
+    "savings": 609902,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 1973,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-20",
+        "type": "deposit",
+        "amount": 1084,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-25",
+        "type": "deposit",
+        "amount": 804,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-09",
+        "type": "transfer",
+        "amount": 2502,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 136,
@@ -13325,7 +16948,23 @@
         }
       ]
     },
-    "savings": 726107
+    "savings": 726107,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-02",
+        "type": "deposit",
+        "amount": 21549,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "deposit",
+        "amount": 8098,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 137,
@@ -13423,7 +17062,44 @@
         }
       ]
     },
-    "savings": 793949
+    "savings": 793949,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-21",
+        "type": "withdrawal",
+        "amount": 8059,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 762,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 11942,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 4982,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 6365,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 138,
@@ -13521,7 +17197,37 @@
         }
       ]
     },
-    "savings": 662744
+    "savings": 662744,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 9596,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 8656,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 8535,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 2560,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 139,
@@ -13619,7 +17325,37 @@
         }
       ]
     },
-    "savings": 777990
+    "savings": 777990,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-14",
+        "type": "deposit",
+        "amount": 1940,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "deposit",
+        "amount": 1359,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-19",
+        "type": "transfer",
+        "amount": 666,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 1845,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 140,
@@ -13717,7 +17453,37 @@
         }
       ]
     },
-    "savings": 749039
+    "savings": 749039,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-15",
+        "type": "transfer",
+        "amount": 32566,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "transfer",
+        "amount": 9624,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 4639,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 7644,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 141,
@@ -13815,7 +17581,44 @@
         }
       ]
     },
-    "savings": 755058
+    "savings": 755058,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 614,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-27",
+        "type": "deposit",
+        "amount": 10409,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 6764,
+        "description": "Gift"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 4707,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 296,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 142,
@@ -13913,7 +17716,37 @@
         }
       ]
     },
-    "savings": 943118
+    "savings": 943118,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 14078,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-09",
+        "type": "transfer",
+        "amount": 26671,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 20305,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 17530,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 143,
@@ -14011,7 +17844,23 @@
         }
       ]
     },
-    "savings": 613194
+    "savings": 613194,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 24006,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 21523,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 144,
@@ -14109,7 +17958,44 @@
         }
       ]
     },
-    "savings": 767947
+    "savings": 767947,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-15",
+        "type": "deposit",
+        "amount": 6064,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-05",
+        "type": "withdrawal",
+        "amount": 5962,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 7464,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-12",
+        "type": "deposit",
+        "amount": 2743,
+        "description": "Paycheck"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-22",
+        "type": "transfer",
+        "amount": 2885,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 145,
@@ -14207,7 +18093,23 @@
         }
       ]
     },
-    "savings": 701460
+    "savings": 701460,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-22",
+        "type": "deposit",
+        "amount": 37584,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-12",
+        "type": "deposit",
+        "amount": 33831,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 146,
@@ -14305,7 +18207,37 @@
         }
       ]
     },
-    "savings": 684312
+    "savings": 684312,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 2842,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-10",
+        "type": "transfer",
+        "amount": 22857,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 18843,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 20003,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 147,
@@ -14403,7 +18335,44 @@
         }
       ]
     },
-    "savings": 905399
+    "savings": 905399,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-27",
+        "type": "deposit",
+        "amount": 44374,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 34418,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 45291,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-05",
+        "type": "deposit",
+        "amount": 15116,
+        "description": "Refund"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 16472,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 148,
@@ -14501,7 +18470,30 @@
         }
       ]
     },
-    "savings": 630848
+    "savings": 630848,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 6053,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-07",
+        "type": "deposit",
+        "amount": 1121,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 4835,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 149,
@@ -14599,7 +18591,23 @@
         }
       ]
     },
-    "savings": 773399
+    "savings": 773399,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-11",
+        "type": "transfer",
+        "amount": 26557,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 21188,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 150,
@@ -14697,7 +18705,30 @@
         }
       ]
     },
-    "savings": 797943
+    "savings": 797943,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 6151,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 13308,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 20511,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 151,
@@ -14795,7 +18826,30 @@
         }
       ]
     },
-    "savings": 707435
+    "savings": 707435,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-25",
+        "type": "deposit",
+        "amount": 36794,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 33299,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 5669,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 152,
@@ -14893,7 +18947,37 @@
         }
       ]
     },
-    "savings": 600750
+    "savings": 600750,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "deposit",
+        "amount": 24338,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 8334,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 33116,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-07",
+        "type": "withdrawal",
+        "amount": 9256,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 153,
@@ -14991,7 +19075,37 @@
         }
       ]
     },
-    "savings": 678254
+    "savings": 678254,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-21",
+        "type": "transfer",
+        "amount": 8457,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-19",
+        "type": "transfer",
+        "amount": 20476,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-25",
+        "type": "deposit",
+        "amount": 5709,
+        "description": "Gift"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-12",
+        "type": "deposit",
+        "amount": 1445,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 154,
@@ -15089,7 +19203,23 @@
         }
       ]
     },
-    "savings": 723620
+    "savings": 723620,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 9764,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 746,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 155,
@@ -15187,7 +19317,30 @@
         }
       ]
     },
-    "savings": 810153
+    "savings": 810153,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "transfer",
+        "amount": 5514,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 6047,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-19",
+        "type": "deposit",
+        "amount": 1777,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 156,
@@ -15285,7 +19438,44 @@
         }
       ]
     },
-    "savings": 698798
+    "savings": 698798,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-10",
+        "type": "transfer",
+        "amount": 20095,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-10",
+        "type": "withdrawal",
+        "amount": 2890,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-05",
+        "type": "withdrawal",
+        "amount": 1915,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-02",
+        "type": "transfer",
+        "amount": 9421,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-12",
+        "type": "withdrawal",
+        "amount": 3064,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 157,
@@ -15383,7 +19573,23 @@
         }
       ]
     },
-    "savings": 728109
+    "savings": 728109,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-03",
+        "type": "withdrawal",
+        "amount": 28353,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "deposit",
+        "amount": 34437,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 158,
@@ -15481,7 +19687,37 @@
         }
       ]
     },
-    "savings": 794745
+    "savings": 794745,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 12057,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-26",
+        "type": "withdrawal",
+        "amount": 13143,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-10",
+        "type": "transfer",
+        "amount": 12735,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 15310,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 159,
@@ -15579,7 +19815,23 @@
         }
       ]
     },
-    "savings": 855073
+    "savings": 855073,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 6228,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 1844,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 160,
@@ -15677,7 +19929,44 @@
         }
       ]
     },
-    "savings": 636506
+    "savings": 636506,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-21",
+        "type": "withdrawal",
+        "amount": 12797,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 256,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 4892,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-06",
+        "type": "transfer",
+        "amount": 10635,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-15",
+        "type": "deposit",
+        "amount": 21513,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 161,
@@ -15775,7 +20064,23 @@
         }
       ]
     },
-    "savings": 758780
+    "savings": 758780,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-03",
+        "type": "transfer",
+        "amount": 43282,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-24",
+        "type": "deposit",
+        "amount": 29766,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 162,
@@ -15873,7 +20178,23 @@
         }
       ]
     },
-    "savings": 852085
+    "savings": 852085,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-21",
+        "type": "withdrawal",
+        "amount": 1003,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-27",
+        "type": "withdrawal",
+        "amount": 577,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 163,
@@ -15971,7 +20292,37 @@
         }
       ]
     },
-    "savings": 702277
+    "savings": 702277,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-27",
+        "type": "withdrawal",
+        "amount": 6416,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 20499,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-17",
+        "type": "withdrawal",
+        "amount": 23185,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-27",
+        "type": "withdrawal",
+        "amount": 21318,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 164,
@@ -16069,7 +20420,23 @@
         }
       ]
     },
-    "savings": 808214
+    "savings": 808214,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 2140,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-05",
+        "type": "transfer",
+        "amount": 347,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 165,
@@ -16167,7 +20534,23 @@
         }
       ]
     },
-    "savings": 813335
+    "savings": 813335,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 8762,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-19",
+        "type": "transfer",
+        "amount": 6942,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 166,
@@ -16265,7 +20648,37 @@
         }
       ]
     },
-    "savings": 805057
+    "savings": 805057,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 1596,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-12",
+        "type": "withdrawal",
+        "amount": 279,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 987,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 1567,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 167,
@@ -16363,7 +20776,23 @@
         }
       ]
     },
-    "savings": 681132
+    "savings": 681132,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 36219,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "transfer",
+        "amount": 27553,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 168,
@@ -16461,7 +20890,37 @@
         }
       ]
     },
-    "savings": 782102
+    "savings": 782102,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-26",
+        "type": "withdrawal",
+        "amount": 81,
+        "description": "Subscription"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-07",
+        "type": "transfer",
+        "amount": 1935,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 3825,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-23",
+        "type": "withdrawal",
+        "amount": 5089,
+        "description": "Restaurant"
+      }
+    ]
   },
   {
     "id": 169,
@@ -16559,7 +21018,44 @@
         }
       ]
     },
-    "savings": 706230
+    "savings": 706230,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-04",
+        "type": "withdrawal",
+        "amount": 3800,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 264,
+        "description": "Restaurant"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 14240,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-14",
+        "type": "deposit",
+        "amount": 8068,
+        "description": "Refund"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-14",
+        "type": "withdrawal",
+        "amount": 5530,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 170,
@@ -16657,7 +21153,23 @@
         }
       ]
     },
-    "savings": 845952
+    "savings": 845952,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 527,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-04",
+        "type": "deposit",
+        "amount": 5088,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 171,
@@ -16755,7 +21267,23 @@
         }
       ]
     },
-    "savings": 840330
+    "savings": 840330,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-24",
+        "type": "deposit",
+        "amount": 10750,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-05",
+        "type": "deposit",
+        "amount": 18495,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 172,
@@ -16853,7 +21381,23 @@
         }
       ]
     },
-    "savings": 798601
+    "savings": 798601,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 12408,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-10",
+        "type": "withdrawal",
+        "amount": 16737,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 173,
@@ -16951,7 +21495,23 @@
         }
       ]
     },
-    "savings": 715405
+    "savings": 715405,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-21",
+        "type": "deposit",
+        "amount": 1315,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 717,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 174,
@@ -17049,7 +21609,23 @@
         }
       ]
     },
-    "savings": 830119
+    "savings": 830119,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 4985,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-11",
+        "type": "withdrawal",
+        "amount": 1450,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 175,
@@ -17147,7 +21723,44 @@
         }
       ]
     },
-    "savings": 920041
+    "savings": 920041,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 7516,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-23",
+        "type": "deposit",
+        "amount": 11355,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-12",
+        "type": "transfer",
+        "amount": 34608,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-16",
+        "type": "transfer",
+        "amount": 16949,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-03",
+        "type": "deposit",
+        "amount": 22640,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 176,
@@ -17245,7 +21858,30 @@
         }
       ]
     },
-    "savings": 831843
+    "savings": 831843,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "transfer",
+        "amount": 15739,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-25",
+        "type": "withdrawal",
+        "amount": 34357,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-15",
+        "type": "deposit",
+        "amount": 11570,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 177,
@@ -17343,7 +21979,30 @@
         }
       ]
     },
-    "savings": 799366
+    "savings": 799366,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 578,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-20",
+        "type": "deposit",
+        "amount": 2375,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 9338,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 178,
@@ -17441,7 +22100,37 @@
         }
       ]
     },
-    "savings": 828315
+    "savings": 828315,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-10",
+        "type": "deposit",
+        "amount": 6854,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 1464,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-22",
+        "type": "deposit",
+        "amount": 9559,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-07",
+        "type": "transfer",
+        "amount": 11075,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 179,
@@ -17539,7 +22228,23 @@
         }
       ]
     },
-    "savings": 872112
+    "savings": 872112,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-13",
+        "type": "deposit",
+        "amount": 1452,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-05",
+        "type": "transfer",
+        "amount": 141,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 180,
@@ -17637,7 +22342,23 @@
         }
       ]
     },
-    "savings": 842397
+    "savings": 842397,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-21",
+        "type": "deposit",
+        "amount": 44845,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-02",
+        "type": "withdrawal",
+        "amount": 36096,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 181,
@@ -17735,7 +22456,30 @@
         }
       ]
     },
-    "savings": 722723
+    "savings": 722723,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 6517,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "deposit",
+        "amount": 6383,
+        "description": "Gift"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-24",
+        "type": "withdrawal",
+        "amount": 15303,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 182,
@@ -17833,7 +22577,44 @@
         }
       ]
     },
-    "savings": 764805
+    "savings": 764805,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-01",
+        "type": "deposit",
+        "amount": 1169,
+        "description": "Refund"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-03",
+        "type": "transfer",
+        "amount": 2197,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 7559,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-25",
+        "type": "deposit",
+        "amount": 3791,
+        "description": "Gift"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-09",
+        "type": "transfer",
+        "amount": 5126,
+        "description": "Received from Friend"
+      }
+    ]
   },
   {
     "id": 183,
@@ -17931,7 +22712,44 @@
         }
       ]
     },
-    "savings": 775854
+    "savings": 775854,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-14",
+        "type": "transfer",
+        "amount": 602,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-21",
+        "type": "transfer",
+        "amount": 6054,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-19",
+        "type": "deposit",
+        "amount": 10724,
+        "description": "Gift"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-23",
+        "type": "deposit",
+        "amount": 8141,
+        "description": "Paycheck"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-08",
+        "type": "transfer",
+        "amount": 10810,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 184,
@@ -18029,7 +22847,30 @@
         }
       ]
     },
-    "savings": 839463
+    "savings": 839463,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-02",
+        "type": "deposit",
+        "amount": 6971,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "deposit",
+        "amount": 5217,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "withdrawal",
+        "amount": 9239,
+        "description": "Utility Bill"
+      }
+    ]
   },
   {
     "id": 185,
@@ -18127,7 +22968,37 @@
         }
       ]
     },
-    "savings": 986392
+    "savings": 986392,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "transfer",
+        "amount": 3980,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-05",
+        "type": "transfer",
+        "amount": 8109,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 2081,
+        "description": "Subscription"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-10",
+        "type": "withdrawal",
+        "amount": 10697,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 186,
@@ -18225,7 +23096,23 @@
         }
       ]
     },
-    "savings": 694894
+    "savings": 694894,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-11",
+        "type": "deposit",
+        "amount": 26614,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-05",
+        "type": "deposit",
+        "amount": 31949,
+        "description": "Gift"
+      }
+    ]
   },
   {
     "id": 187,
@@ -18323,7 +23210,37 @@
         }
       ]
     },
-    "savings": 717295
+    "savings": 717295,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-24",
+        "type": "transfer",
+        "amount": 19998,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-25",
+        "type": "deposit",
+        "amount": 26318,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-11",
+        "type": "withdrawal",
+        "amount": 13181,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-10",
+        "type": "transfer",
+        "amount": 18388,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 188,
@@ -18421,7 +23338,37 @@
         }
       ]
     },
-    "savings": 837742
+    "savings": 837742,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 3052,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-10",
+        "type": "transfer",
+        "amount": 6825,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-11",
+        "type": "withdrawal",
+        "amount": 5985,
+        "description": "Groceries"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-26",
+        "type": "transfer",
+        "amount": 3564,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 189,
@@ -18519,7 +23466,23 @@
         }
       ]
     },
-    "savings": 845442
+    "savings": 845442,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-19",
+        "type": "transfer",
+        "amount": 412,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-14",
+        "type": "deposit",
+        "amount": 377,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 190,
@@ -18617,7 +23580,30 @@
         }
       ]
     },
-    "savings": 562636
+    "savings": 562636,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-18",
+        "type": "deposit",
+        "amount": 11949,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-22",
+        "type": "withdrawal",
+        "amount": 396,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 16536,
+        "description": "Subscription"
+      }
+    ]
   },
   {
     "id": 191,
@@ -18715,7 +23701,37 @@
         }
       ]
     },
-    "savings": 735267
+    "savings": 735267,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-08",
+        "type": "transfer",
+        "amount": 30324,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-15",
+        "type": "withdrawal",
+        "amount": 17888,
+        "description": "Subscription"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-14",
+        "type": "transfer",
+        "amount": 32537,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 41313,
+        "description": "Refund"
+      }
+    ]
   },
   {
     "id": 192,
@@ -18813,7 +23829,23 @@
         }
       ]
     },
-    "savings": 722667
+    "savings": 722667,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-26",
+        "type": "withdrawal",
+        "amount": 1935,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-17",
+        "type": "deposit",
+        "amount": 4143,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 193,
@@ -18911,7 +23943,37 @@
         }
       ]
     },
-    "savings": 737204
+    "savings": 737204,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-17",
+        "type": "deposit",
+        "amount": 19402,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-08",
+        "type": "withdrawal",
+        "amount": 33763,
+        "description": "Groceries"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 12945,
+        "description": "Refund"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-11",
+        "type": "deposit",
+        "amount": 27269,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 194,
@@ -19009,7 +24071,37 @@
         }
       ]
     },
-    "savings": 965468
+    "savings": 965468,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-28",
+        "type": "deposit",
+        "amount": 11303,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-25",
+        "type": "deposit",
+        "amount": 6264,
+        "description": "Paycheck"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-28",
+        "type": "withdrawal",
+        "amount": 32784,
+        "description": "Restaurant"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-20",
+        "type": "transfer",
+        "amount": 37450,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 195,
@@ -19107,7 +24199,44 @@
         }
       ]
     },
-    "savings": 902328
+    "savings": 902328,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 295,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-27",
+        "type": "transfer",
+        "amount": 3247,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-09",
+        "type": "deposit",
+        "amount": 198,
+        "description": "Gift"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-13",
+        "type": "withdrawal",
+        "amount": 4242,
+        "description": "Groceries"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 941,
+        "description": "Groceries"
+      }
+    ]
   },
   {
     "id": 196,
@@ -19205,7 +24334,37 @@
         }
       ]
     },
-    "savings": 695681
+    "savings": 695681,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-06",
+        "type": "withdrawal",
+        "amount": 13638,
+        "description": "Restaurant"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-03",
+        "type": "transfer",
+        "amount": 18671,
+        "description": "Sent to Friend"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-06",
+        "type": "deposit",
+        "amount": 12065,
+        "description": "Paycheck"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-20",
+        "type": "transfer",
+        "amount": 21728,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 197,
@@ -19303,7 +24462,23 @@
         }
       ]
     },
-    "savings": 747182
+    "savings": 747182,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-23",
+        "type": "deposit",
+        "amount": 871,
+        "description": "Gift"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-16",
+        "type": "withdrawal",
+        "amount": 8490,
+        "description": "Online Shopping"
+      }
+    ]
   },
   {
     "id": 198,
@@ -19401,7 +24576,30 @@
         }
       ]
     },
-    "savings": 704999
+    "savings": 704999,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-01",
+        "type": "withdrawal",
+        "amount": 2134,
+        "description": "Groceries"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-20",
+        "type": "withdrawal",
+        "amount": 1999,
+        "description": "Utility Bill"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-13",
+        "type": "deposit",
+        "amount": 1432,
+        "description": "Paycheck"
+      }
+    ]
   },
   {
     "id": 199,
@@ -19499,7 +24697,44 @@
         }
       ]
     },
-    "savings": 765115
+    "savings": 765115,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-05",
+        "type": "deposit",
+        "amount": 11384,
+        "description": "Paycheck"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-06",
+        "type": "deposit",
+        "amount": 25272,
+        "description": "Refund"
+      },
+      {
+        "id": 3,
+        "date": "2025-08-19",
+        "type": "withdrawal",
+        "amount": 26889,
+        "description": "Online Shopping"
+      },
+      {
+        "id": 4,
+        "date": "2025-08-18",
+        "type": "withdrawal",
+        "amount": 2449,
+        "description": "Groceries"
+      },
+      {
+        "id": 5,
+        "date": "2025-08-06",
+        "type": "transfer",
+        "amount": 14529,
+        "description": "Sent to Friend"
+      }
+    ]
   },
   {
     "id": 200,
@@ -19597,6 +24832,22 @@
         }
       ]
     },
-    "savings": 659731
+    "savings": 659731,
+    "transactions": [
+      {
+        "id": 1,
+        "date": "2025-08-05",
+        "type": "transfer",
+        "amount": 16839,
+        "description": "Received from Friend"
+      },
+      {
+        "id": 2,
+        "date": "2025-08-27",
+        "type": "withdrawal",
+        "amount": 15445,
+        "description": "Subscription"
+      }
+    ]
   }
 ]

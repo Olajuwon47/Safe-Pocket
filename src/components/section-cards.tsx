@@ -42,7 +42,7 @@ export function SectionCards({ walletBalance, savings }: SectionCardsProps) {
       </Card>
       <Card className="@container/card">
         <CardHeader className="bg-lime-200">
-          <CardDescription>Savings</CardDescription>
+          <CardDescription >Savings</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
             ${savings.toLocaleString()}
           </CardTitle>

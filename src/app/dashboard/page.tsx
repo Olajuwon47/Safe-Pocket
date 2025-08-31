@@ -4,6 +4,8 @@ import { ChartAreaInteractive } from "../../components/chart-area-interactive"
 import { GoalsProgress } from "../../components/Progress"
 import { SectionCards } from "../../components/section-cards"
 import { SiteHeader } from "../../components/site-header"
+import { AddTransaction } from "../../components/add-transaction"
+import { TransactionsView } from "../../components/transactions-view"
 import {
   SidebarInset,
   SidebarProvider,
@@ -11,15 +13,40 @@ import {
 import * as React from "react"
 import data from "./data.json"
 
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  walletBalance: number;
+  goals: {
+    title: string;
+    target: number;
+    progress: number;
+  }[];
+  transactions: {
+    id: number;
+    date: string;
+    type: "deposit" | "withdrawal";
+    amount: number;
+    description: string;
+  }[];
+  breakdown: {
+    daily: { date: string; amount: number }[];
+    weekly: { week: string; amount: number }[];
+    monthly: { month: string; amount: number }[];
+  };
+  savings: number;
+}
+
 export default function Page() {
-  const [users, setUsers] = React.useState<any[]>([])
-  const [selectedUser, setSelectedUser] = React.useState<any | null>(null)
+  const [users, setUsers] = React.useState<User[]>([])
+  const [selectedUser, setSelectedUser] = React.useState<User | null>(null)
   const [selectedView, setSelectedView] = React.useState("dashboard")
 
   React.useEffect(() => {
-    setUsers(data)
+    setUsers(data as User[])
     if (data.length > 0) {
-      setSelectedUser(data[0])
+      setSelectedUser(data[0] as User)
     }
   }, [])
 
@@ -47,6 +74,29 @@ export default function Page() {
       )
     }
   }
+
+   const handleAddTransaction = (transaction: { type: "deposit" | "withdrawal"; amount: number; description: string }) => {
+    if (selectedUser) {
+      const newTransaction = {
+        id: selectedUser.transactions.length + 1,
+        date: new Date().toISOString().split("T")[0],
+        ...transaction,
+      }
+      const updatedUser = {
+        ...selectedUser,
+        transactions: [...selectedUser.transactions, newTransaction],
+        walletBalance:
+          transaction.type === "deposit"
+            ? selectedUser.walletBalance + transaction.amount
+            : selectedUser.walletBalance - transaction.amount,
+      }
+      setSelectedUser(updatedUser)
+      setUsers(
+        users.map((u) => (u.id === selectedUser.id ? updatedUser : u))
+      )
+    }
+  }
+
 
   if (!selectedUser) {
     return <div>Loading...</div>
@@ -91,6 +141,12 @@ export default function Page() {
                 </div>
               )}
               {selectedView === "savings" && <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />}
+               {selectedView === "transactions" && (
+                <div className="grid gap-4 px-4 lg:px-6">
+                  <AddTransaction onAddTransaction={handleAddTransaction} />
+                  <TransactionsView data={selectedUser.transactions} />
+                </div>
+              )}
             </div>
           </div>
         </div>

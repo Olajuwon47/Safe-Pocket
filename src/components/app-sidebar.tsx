@@ -28,9 +28,34 @@ import {
   SidebarMenuItem,
 } from "../components/ui/sidebar"
 
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  walletBalance: number;
+  goals: {
+    title: string;
+    target: number;
+    progress: number;
+  }[];
+  transactions: {
+    id: number;
+    date: string;
+    type: "deposit" | "withdrawal";
+    amount: number;
+    description: string;
+  }[];
+  breakdown: {
+    daily: { date: string; amount: number }[];
+    weekly: { week: string; amount: number }[];
+    monthly: { month: string; amount: number }[];
+  };
+  savings: number;
+}
+
 interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
-  users: any[]
-  selectedUser: any
+  users: User[]
+  selectedUser: User
   onSelectView: (view: string) => void
   onUserChange: (id: string) => void
 }
@@ -47,6 +72,7 @@ export function AppSidebar({
     { title: "Dashboard", url: "#", icon: IconDashboard, action: () => onSelectView("dashboard") },
     { title: "Savings", url: "#", icon: IconUsers, action: () => onSelectView("savings") },
     { title: "Wallet balance", url: "#", icon: IconListDetails, action: () => onSelectView("wallet") },
+      { title: "Transactions", url: "#", icon: IconListDetails, action: () => onSelectView("transactions") },
     { title: "Goals", url: "#", icon: IconUsers, action: () => onSelectView("goals") },
     { title: "Progress tracker", url: "#", icon: IconFolder, action: () => onSelectView("breakdown") },
     { title: "Team", url: "#", icon: IconUsers },
@@ -81,9 +107,9 @@ export function AppSidebar({
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">SafePocket Inc.</span>
+              <a> 
+                <IconInnerShadowTop className="!size-5 " />
+                <span className="text-base font-semibold ">SafePocket Inc.</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -91,9 +117,9 @@ export function AppSidebar({
       </SidebarHeader>
 
       <SidebarContent className="bg-lime-200">
-        <NavMain items={navMain} />
-        <NavDocuments items={documents} />
-        <NavSecondary items={navSecondary} className="mt-auto " />
+        <NavMain items={navMain}  />
+        <NavDocuments items={documents}   />
+        <NavSecondary items={navSecondary} className="mt-auto" />
       </SidebarContent>
 
       <SidebarFooter className="flex flex-col gap-3">
