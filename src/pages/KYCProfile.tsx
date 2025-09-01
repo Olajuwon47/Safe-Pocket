@@ -32,22 +32,26 @@ const KYCProfile = () => {
       faceVerification: image,
     };
     console.log("KYC Data:", Data);
-    navigate("/dashboard"); 
+    navigate("/dashboard");
   };
 
   return (
-    <div className="min-h-screen max-sm:px-2 max-md:px-3 bg-gray-100 flex items-center justify-center p-4">
-      <div className="grid max-sm:grid-cols-1 max-md:grid-cols-1 grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 max-sm:px-3 max-md:px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
         
         {/* Left side image */}
-        <div className="bg-gray-200 max-sm:p-4 max-md:p-6 flex items-center justify-center p-8">
-          <img alt="KYC" src="/public/image.png" className="h-full w-full object-cover" />
+        <div className="bg-gray-200 flex items-center justify-center p-8 max-sm:p-3 max-md:p-5">
+          <img
+            alt="KYC"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4kyBp73_Rn5vtVsmcXdLZDZpokJtswoSENoRpMhyStMiYQ6gxCwz5Kd9rGkcABu4Ixb4&usqp=CAU"
+            className="h-f w-90 object-cover max-sm:h-60 max-md:h-80"
+          />
         </div>
 
         {/* Right side form */}
         <div className="p-8 max-sm:p-4 max-md:p-6">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-balance text-4xl font-semibold tracking-tight text-black sm:text-5xl max-sm:text-3xl max-md:text-4xl">
+            <h2 className="text-balance text-4xl font-semibold tracking-tight text-black sm:text-5xl max-sm:text-2xl max-md:text-3xl">
               Setup Your KYC Profile
             </h2>
           </div>
@@ -57,13 +61,15 @@ const KYCProfile = () => {
               
               {/* Face Verification */}
               <div className="text-center mt-2 flex justify-center sm:col-span-2">
-                <div className="relative w-32 h-32 rounded-full border-2 border-lime-300 flex items-center justify-center overflow-hidden">
+                <div className="relative w-32 h-32 max-sm:w-24 max-sm:h-24 max-md:w-28 max-md:h-28 rounded-full border-2 border-lime-300 flex items-center justify-center overflow-hidden">
                   <label
                     htmlFor="photo"
-                    className="block text-sm font-medium text-gray-900 cursor-pointer"
+                    className="block text-sm font-medium text-gray-900 cursor-pointer max-sm:text-xs max-md:text-sm"
                   >
-                    <PhotoIcon className="mx-auto size-12 text-lime-300" />
-                    <span className="text-sm text-gray-500">Upload Face ID</span>
+                    <PhotoIcon className="mx-auto size-12 max-sm:size-8 max-md:size-10 text-lime-300" />
+                    <span className="text-sm text-gray-500 max-sm:text-xs max-md:text-sm">
+                      Upload Face ID
+                    </span>
                   </label>
                   <input
                     ref={fileInputRef}
@@ -86,7 +92,7 @@ const KYCProfile = () => {
 
               {/* Full Name */}
               <div className="sm:col-span-2">
-                <label className="block text-sm font-semibold text-gray-900">
+                <label className="block text-sm font-semibold text-gray-900 max-sm:text-xs max-md:text-sm">
                   Full Name
                 </label>
                 <input
@@ -94,13 +100,13 @@ const KYCProfile = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-lime-300"
+                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 max-sm:px-2.5 max-sm:py-1.5 max-md:px-3 max-md:py-2 text-sm outline-none focus:ring-2 focus:ring-lime-300"
                 />
               </div>
 
               {/* Username */}
               <div className="sm:col-span-2">
-                <label className="block text-sm font-semibold text-gray-900">
+                <label className="block text-sm font-semibold text-gray-900 max-sm:text-xs max-md:text-sm">
                   Username
                 </label>
                 <input
@@ -108,13 +114,13 @@ const KYCProfile = () => {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
-                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-lime-300"
+                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 max-sm:px-2.5 max-sm:py-1.5 max-md:px-3 max-md:py-2 text-sm outline-none focus:ring-2 focus:ring-lime-300"
                 />
               </div>
 
               {/* Date of Birth */}
               <div className="sm:col-span-2">
-                <label className="block text-sm font-semibold text-gray-900">
+                <label className="block text-sm font-semibold text-gray-900 max-sm:text-xs max-md:text-sm">
                   Date of Birth
                 </label>
                 <input
@@ -122,20 +128,20 @@ const KYCProfile = () => {
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
                   required
-                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-lime-300"
+                  className="mt-2.5 block w-full rounded-md border px-3.5 py-2 max-sm:px-2.5 max-sm:py-1.5 max-md:px-3 max-md:py-2 text-sm outline-none focus:ring-2 focus:ring-lime-300"
                 />
               </div>
 
               {/* Gender */}
               <div className="sm:col-span-2">
-                <label className="block text-sm font-semibold text-gray-900">
+                <label className="block text-sm font-semibold text-gray-900 max-sm:text-xs max-md:text-sm">
                   Gender
                 </label>
                 <select
                   value={gender}
                   onChange={(e) => setGender(e.target.value)}
                   required
-                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-lime-300"
+                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 max-sm:px-2.5 max-sm:py-1.5 max-md:px-3 max-md:py-2 text-sm text-gray-500 focus:ring-2 focus:ring-lime-300"
                 >
                   <option value="">Select Gender</option>
                   <option>Male</option>
@@ -145,7 +151,7 @@ const KYCProfile = () => {
 
               {/* Means of Identification */}
               <div className="sm:col-span-2">
-                <label className="block text-sm font-semibold text-gray-900">
+                <label className="block text-sm font-semibold text-gray-900 max-sm:text-xs max-md:text-sm">
                   Means of Identification
                 </label>
                 <select
@@ -155,7 +161,7 @@ const KYCProfile = () => {
                     setIdValue("");
                   }}
                   required
-                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 text-gray-500 focus:ring-2 focus:ring-lime-300"
+                  className="mt-2.5 w-full rounded-md border px-3.5 py-2 max-sm:px-2.5 max-sm:py-1.5 max-md:px-3 max-md:py-2 text-sm text-gray-500 focus:ring-2 focus:ring-lime-300"
                 >
                   <option value="">Choose one</option>
                   <option value="BVN">BVN</option>
@@ -164,10 +170,10 @@ const KYCProfile = () => {
                 </select>
               </div>
 
-              {/* Show input only when an ID type is selected */}
+              {/* ID input */}
               {idType && (
                 <div className="sm:col-span-2">
-                  <label className="block text-sm font-semibold text-gray-900">
+                  <label className="block text-sm font-semibold text-gray-900 max-sm:text-xs max-md:text-sm">
                     {idType} Number
                   </label>
                   <input
@@ -175,7 +181,7 @@ const KYCProfile = () => {
                     value={idValue}
                     onChange={(e) => setIdValue(e.target.value)}
                     required
-                    className="mt-2.5 block w-full rounded-md border px-3.5 py-2 outline-none focus:ring-2 focus:ring-lime-300"
+                    className="mt-2.5 block w-full rounded-md border px-3.5 py-2 max-sm:px-2.5 max-sm:py-1.5 max-md:px-3 max-md:py-2 text-sm outline-none focus:ring-2 focus:ring-lime-300"
                   />
                 </div>
               )}
@@ -186,15 +192,17 @@ const KYCProfile = () => {
               <button
                 type="submit"
                 className="
-                w-full min-w-[130px] h-10 
-                    text-white font-bold 
-                    px-2.5 py-1.5 
-                    relative inline-block 
-                    rounded-md border-none outline-none 
-                    cursor-pointer transition-all duration-300 ease-in-out 
-                    bg-[#80ed99] shadow-[0_5px_0_#57cc99]
-                    hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
-                    active:shadow-[0_0px_0_#57cc99] active:top-[5px]"
+                  w-full min-w-[130px] h-10 
+                  text-white font-bold 
+                  px-2.5 py-1.5 
+                  relative inline-block 
+                  rounded-md border-none outline-none 
+                  cursor-pointer transition-all duration-300 ease-in-out 
+                  bg-[#80ed99] shadow-[0_5px_0_#57cc99]
+                  hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
+                  active:shadow-[0_0px_0_#57cc99] active:top-[5px]
+                  max-sm:text-sm max-md:h-9
+                "
               >
                 Next
               </button>

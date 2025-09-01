@@ -1,0 +1,40 @@
+.bg-pan-right {
+  -webkit-animation: bg-pan-right 8s both;
+          animation: bg-pan-right 8s both;
+}
+
+@-webkit-keyframes bg-pan-right {
+  0% {
+    background: lime;
+  }
+  25% {
+    background: green;
+  }
+  50% {
+    background: gray;
+  }
+  75% {
+    background: darkgreen;
+  }
+  100% {
+    background: lime;
+  }
+}
+
+@keyframes bg-pan-right {
+  0% {
+    background: lime;
+  }
+  25% {
+    background: green;
+  }
+  50% {
+    background: gray;
+  }
+  75% {
+    background: darkgreen;
+  }
+  100% {
+    background: lime;
+  }
+}
