@@ -1,11 +1,13 @@
 "use client"
+import { SiteHeader } from "../../components/site-header"
 import { AppSidebar } from "../../components/app-sidebar"
-import { ChartAreaInteractive } from "../../components/chart-area-interactive"
+//import { ChartAreaInteractive } from "../../components/chart-area-interactive"
 import { GoalsProgress } from "../../components/Progress"
 import { SectionCards } from "../../components/section-cards"
-import { SiteHeader } from "../../components/site-header"
 import { AddTransaction } from "../../components/add-transaction"
 import { TransactionsView } from "../../components/transactions-view"
+import { ChartAreaInteractive } from "../../components/chart-area-interactive"
+import { SpendingBreakdownChart } from "../../components/spending-breakdown-chart"
 import {
   SidebarInset,
   SidebarProvider,
@@ -75,7 +77,7 @@ export default function Page() {
     }
   }
 
-   const handleAddTransaction = (transaction: { type: "deposit" | "withdrawal"; amount: number; description: string }) => {
+  const handleAddTransaction = (transaction: { type: "deposit" | "withdrawal"; amount: number; description: string }) => {
     if (selectedUser) {
       const newTransaction = {
         id: selectedUser.transactions.length + 1,
@@ -97,13 +99,13 @@ export default function Page() {
     }
   }
 
-
   if (!selectedUser) {
     return <div>Loading...</div>
   }
 
   return (
-    <SidebarProvider
+   
+    <SidebarProvider className="mt-10"
       style={
         {
           "--sidebar-width": "calc(var(--spacing) * 72)",
@@ -120,29 +122,53 @@ export default function Page() {
       />
       <SidebarInset>
         <SiteHeader />
-        <div className="flex flex-1 flex-col">
+        <div className=" flex flex-1 flex-col max-sm:px-2 md:px-4">
           <div className="@container/main flex flex-1 flex-col gap-2">
-            <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
+            <div className="flex flex-col gap-4 py-4 max-sm:gap-3 max-sm:py-3 md:gap-6 md:py-6">
               {selectedView === "dashboard" && (
                 <>
-                  <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />
-                  <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
-                  <div className="px-4 lg:px-6">
+                  <SectionCards
+                    walletBalance={selectedUser.walletBalance} 
+                    savings={selectedUser.savings} 
+                  />
+                  <GoalsProgress 
+                    goals={selectedUser.goals} 
+                    onAddGoal={handleAddGoal} 
+                  />
+                  <div className="px-2 max-sm:px-1 md:px-6">
                     <ChartAreaInteractive breakdown={selectedUser.breakdown} />
                   </div>
                 </>
               )}
-              {selectedView === "goals" && <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />}
-              {selectedView === "progress" && <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />}
-              {selectedView === "wallet" && <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />}
+                 {selectedView === "analytics" && (
+                <div className="grid gap-4 px-4 lg:px-6">
+                  <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                  <SpendingBreakdownChart
+                    transactions={selectedUser.transactions}
+                    savings={selectedUser.savings}
+                  />
+                  <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
+                </div>
+              )}
+              {selectedView === "goals" && (
+                <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
+              )}
+              {selectedView === "progress" && (
+                <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
+              )}
+              {selectedView === "wallet" && (
+                <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />
+              )}
               {selectedView === "breakdown" && (
-                <div className="px-4 lg:px-6">
+                <div className="px-2 max-sm:px-1 md:px-6">
                   <ChartAreaInteractive breakdown={selectedUser.breakdown} />
                 </div>
               )}
-              {selectedView === "savings" && <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />}
-               {selectedView === "transactions" && (
-                <div className="grid gap-4 px-4 lg:px-6">
+              {selectedView === "savings" && (
+                <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />
+              )}
+              {selectedView === "transactions" && (
+                <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
                   <AddTransaction onAddTransaction={handleAddTransaction} />
                   <TransactionsView data={selectedUser.transactions} />
                 </div>
