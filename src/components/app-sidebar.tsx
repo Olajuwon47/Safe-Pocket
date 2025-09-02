@@ -99,18 +99,18 @@ export function AppSidebar({
     <Sidebar
       collapsible="offcanvas"
       {...props}
-      className="w-64 max-md:w-52 max-sm:w-44" // adjust width per screen
+     // className="w-[--sidebar-width] max-sm:w-[--sidebar-width-sm] md:w-[--sidebar-width-md]"
     >
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5 max-md:!p-1 max-sm:!p-0.5"
+              className="p-2 data-[slot=sidebar-menu-button]:!p-1.5 max-sm:p-1 max-sm:data-[slot=sidebar-menu-button]:!p-1"
             >
               <a>
                 <IconInnerShadowTop className="!size-5 max-sm:!size-4" />
-                <span className="text-base font-semibold max-md:text-sm max-sm:text-xs">
+                <span className="text-base font-semibold max-sm:text-sm">
                   SafePocket Inc.
                 </span>
               </a>
@@ -119,18 +119,18 @@ export function AppSidebar({
         </SidebarMenu>
       </SidebarHeader>
 
-      <SidebarContent className="bg-lime-200 max-md:text-sm max-sm:text-xs">
+      <SidebarContent className="bg-lime-200">
         <NavMain items={navMain} />
         <NavDocuments items={documents} />
         <NavSecondary items={navSecondary} className="mt-auto" />
       </SidebarContent>
 
-      <SidebarFooter className="flex flex-col gap-3 max-md:gap-2 max-sm:gap-1">
+      <SidebarFooter className="flex flex-col gap-3 max-sm:gap-2">
         {users.length > 0 && (
           <select
             value={selectedUser.id}
             onChange={(e) => onUserChange(e.target.value)}
-            className="w-full rounded-md border p-2 text-sm max-md:p-1.5 max-sm:p-1 max-sm:text-xs"
+            className="w-full rounded-md border p-2 text-sm max-sm:p-1.5 max-sm:text-xs"
           >
             {users.map((u) => (
               <option key={u.id} value={u.id}>

@@ -17,11 +17,11 @@ interface SectionCardsProps {
 
 export function SectionCards({ walletBalance, savings }: SectionCardsProps) {
   return (
-    <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs lg:px-6 @xl/main:grid-cols-2">
+    <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs max-sm:px-2 max-sm:gap-3 md:px-6 @xl/main:grid-cols-2">
       <Card className="@container/card">
         <CardHeader className="bg-lime-200">
           <CardDescription>Wallet Balance</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+          <CardTitle className="text-2xl font-semibold tabular-nums max-sm:text-xl @[250px]/card:text-3xl">
             ${walletBalance.toLocaleString()}
           </CardTitle>
           <CardAction>

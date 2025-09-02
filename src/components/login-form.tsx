@@ -7,7 +7,8 @@ import { Link, useNavigate } from "react-router-dom"
 import React from "react"
 import '../index.css'
 
-interface LoginFormProps extends React.ComponentProps<"div"> {}
+//interface LoginFormProps extends React.ComponentProps<"div"> {}
+type LoginFormProps = React.ComponentProps<"div">
 
 export function LoginForm({ className, ...props }: LoginFormProps) {
   const navigate = useNavigate()

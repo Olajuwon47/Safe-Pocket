@@ -5,7 +5,8 @@ import { Input } from "./ui/input"
 import { Label } from "./ui/label"
 import { Link, useNavigate } from "react-router-dom"
 
-interface SignUpProps extends React.ComponentProps<"div"> {}
+//interface SignUpProps extends React.ComponentProps<"div"> {}
+type SignUpProps = React.ComponentProps<"div">
 
 export function SignUp({ className, ...props }: SignUpProps) {
   const navigate = useNavigate()

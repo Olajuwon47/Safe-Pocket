@@ -105,10 +105,13 @@ export default function Page() {
 
   return (
    
-    <SidebarProvider className="mt-10"
+    <SidebarProvider
+      className="grid h-dvh w-full grid-cols-1 grid-rows-[max-content_1fr] overflow-hidden group/sidebar-provider"
       style={
         {
-          "--sidebar-width": "calc(var(--spacing) * 72)",
+          "--sidebar-width": "calc(var(--spacing) * 60)",
+          "--sidebar-width-sm": "calc(var(--spacing) * 56)",
+          "--sidebar-width-md": "calc(var(--spacing) * 60)",
           "--header-height": "calc(var(--spacing) * 12)",
         } as React.CSSProperties
       }
@@ -122,42 +125,54 @@ export default function Page() {
       />
       <SidebarInset>
         <SiteHeader />
-        <div className=" flex flex-1 flex-col max-sm:px-2 md:px-4">
+        <div className="max-h-[calc(h-dvh-var(--header-height))] flex flex-1 flex-col overflow-y-auto max-sm:px-2 md:px-4">
           <div className="@container/main flex flex-1 flex-col gap-2">
             <div className="flex flex-col gap-4 py-4 max-sm:gap-3 max-sm:py-3 md:gap-6 md:py-6">
               {selectedView === "dashboard" && (
                 <>
                   <SectionCards
-                    walletBalance={selectedUser.walletBalance} 
-                    savings={selectedUser.savings} 
+                    walletBalance={selectedUser.walletBalance}
+                    savings={selectedUser.savings}
                   />
-                  <GoalsProgress 
-                    goals={selectedUser.goals} 
-                    onAddGoal={handleAddGoal} 
+                  <GoalsProgress
+                    goals={selectedUser.goals}
+                    onAddGoal={handleAddGoal}
                   />
                   <div className="px-2 max-sm:px-1 md:px-6">
                     <ChartAreaInteractive breakdown={selectedUser.breakdown} />
                   </div>
                 </>
               )}
-                 {selectedView === "analytics" && (
+              {selectedView === "analytics" && (
                 <div className="grid gap-4 px-4 lg:px-6">
                   <ChartAreaInteractive breakdown={selectedUser.breakdown} />
                   <SpendingBreakdownChart
                     transactions={selectedUser.transactions}
                     savings={selectedUser.savings}
                   />
-                  <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
+                  <GoalsProgress
+                    goals={selectedUser.goals}
+                    onAddGoal={handleAddGoal}
+                  />
                 </div>
               )}
               {selectedView === "goals" && (
-                <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
+                <GoalsProgress
+                  goals={selectedUser.goals}
+                  onAddGoal={handleAddGoal}
+                />
               )}
               {selectedView === "progress" && (
-                <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
+                <GoalsProgress
+                  goals={selectedUser.goals}
+                  onAddGoal={handleAddGoal}
+                />
               )}
               {selectedView === "wallet" && (
-                <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />
+                <SectionCards
+                  walletBalance={selectedUser.walletBalance}
+                  savings={selectedUser.savings}
+                />
               )}
               {selectedView === "breakdown" && (
                 <div className="px-2 max-sm:px-1 md:px-6">
@@ -165,7 +180,10 @@ export default function Page() {
                 </div>
               )}
               {selectedView === "savings" && (
-                <SectionCards walletBalance={selectedUser.walletBalance} savings={selectedUser.savings} />
+                <SectionCards
+                  walletBalance={selectedUser.walletBalance}
+                  savings={selectedUser.savings}
+                />
               )}
               {selectedView === "transactions" && (
                 <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
