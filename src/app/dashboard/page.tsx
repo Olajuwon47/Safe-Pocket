@@ -106,7 +106,8 @@ export default function Page() {
   return (
    
     <SidebarProvider
-      className="grid h-dvh w-full grid-cols-1 grid-rows-[max-content_1fr] overflow-hidden group/sidebar-provider"
+      //className="grid h-dvh w-full grid-cols-1 grid-rows-[max-content_1fr] overflow-hidden group/sidebar-provider"
+      className="flex h-dvh w-full overflow-hidden group/sidebar-provider"
       style={
         {
           "--sidebar-width": "calc(var(--spacing) * 60)",

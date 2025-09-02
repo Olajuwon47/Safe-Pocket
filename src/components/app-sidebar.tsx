@@ -99,7 +99,8 @@ export function AppSidebar({
     <Sidebar
       collapsible="offcanvas"
       {...props}
-     // className="w-[--sidebar-width] max-sm:w-[--sidebar-width-sm] md:w-[--sidebar-width-md]"
+     //className="w-[--sidebar-width] max-sm:w-[--sidebar-width-sm] md:w-[--sidebar-width-md]"
+     className="w-[--sidebar-width] max-sm:w-[--sidebar-width-sm] md:w-[--sidebar-width-md]"
     >
       <SidebarHeader>
         <SidebarMenu>
