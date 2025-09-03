@@ -25,7 +25,7 @@ export function SignUp({ className, ...props }: SignUpProps) {
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-6">
-              <div className="flex flex-col items-center text-center">
+              <div className="flex flex-col items-center mt-20 text-center">
                 <h1 className="text-2xl font-bold max-sm:text-xl">Create an account</h1>
                 <p className="text-muted-foreground text-balance max-sm:text-xs max-md:text-sm">
                   Sign up for your SafePocket Inc account

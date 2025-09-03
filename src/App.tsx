@@ -47,9 +47,10 @@ export default function App() {
         </div>
       ) : (
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Navigate to="/signup" />} />
+         <Route path="/signup" element={<SignUp />} /> 
         <Route path="/login" element={<LoginForm />} />
-       <Route path="/signup" element={<SignUp />} /> 
+      
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route element={<ProtectedRoute />}>

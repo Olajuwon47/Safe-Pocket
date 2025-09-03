@@ -5,7 +5,7 @@ const ProtectedRoute = () => {
   // In a real application, this would be based on a token, user session, etc.
   const isAuthenticated = true; // Change this to false to test the redirect
 
-  return isAuthenticated ? <Outlet /> : <Navigate to="/login" />;
+  return isAuthenticated ? <Outlet /> : <Navigate to="/signup" />;
 };
 
 
