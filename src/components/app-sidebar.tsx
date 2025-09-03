@@ -2,19 +2,16 @@ import * as React from "react"
 import {
   IconDashboard,
   IconChartBar,
-  IconDatabase,
-  IconFileWord,
   IconFolder,
   IconHelp,
   IconInnerShadowTop,
   IconListDetails,
-  IconReport,
   IconSearch,
   IconSettings,
   IconUsers,
 } from "@tabler/icons-react"
 
-import { NavDocuments } from "../components/nav-documents"
+
 import { NavMain } from "../components/nav-main"
 import { NavSecondary } from "../components/nav-secondary"
 import { NavUser } from "../components/nav-user"
@@ -83,11 +80,7 @@ export function AppSidebar({
     { title: "Search", url: "#", icon: IconSearch },
   ]
 
-  const documents = [
-    { name: "Data Library", url: "#", icon: IconDatabase },
-    { name: "Reports", url: "#", icon: IconReport },
-    { name: "Word Assistant", url: "#", icon: IconFileWord },
-  ]
+  
 
   const navUser = {
     name: selectedUser.name,
@@ -122,7 +115,6 @@ export function AppSidebar({
 
       <SidebarContent className="bg-lime-200">
         <NavMain items={navMain} />
-        <NavDocuments items={documents} />
         <NavSecondary items={navSecondary} className="mt-auto" />
       </SidebarContent>
 
