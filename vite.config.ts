@@ -11,6 +11,7 @@ export default defineConfig({
       open: true,  // this will auto-open the report in your browser
     })
    ],
+   
   resolve: {
      
     alias: {
@@ -18,5 +19,3 @@ export default defineConfig({
     },
   },
 })
-
-
