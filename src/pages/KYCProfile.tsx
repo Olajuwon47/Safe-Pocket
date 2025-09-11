@@ -1,7 +1,9 @@
 import { useState, useRef } from "react";
 import { PhotoIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
-
+import { cn } from "../lib/utils" 
+//import { Button } from "../components/ui/button"
+import { Card, CardContent } from "../components/ui/card"
 const KYCProfile = () => {
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
@@ -36,30 +38,19 @@ const KYCProfile = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 max-sm:px-3 max-md:px-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
-        
-        {/* Left side image */}
-        <div className="bg-gray-200 flex items-center justify-center p-8 max-sm:p-3 max-md:p-5">
-          <img
-            alt="KYC"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4kyBp73_Rn5vtVsmcXdLZDZpokJtswoSENoRpMhyStMiYQ6gxCwz5Kd9rGkcABu4Ixb4&usqp=CAU"
-            className="h-f w-90 object-cover max-sm:h-60 max-md:h-80"
-          />
-        </div>
+      <div className={cn("flex flex-col gap-6")} >
+      <Card className="overflow-hidden p-0 ">
+        <CardContent className="grid p-0 md:grid-cols-2">
+          <form
+            className="p-6 md:p-8 max-sm:p-4 flex flex-col justify-center"
+            onSubmit={handleSubmit}
+          >
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col items-center text-center">
+                <h1 className="text-2xl font-bold "> Setup Your KYC Profile</h1>
+              </div>
 
-        {/* Right side form */}
-        <div className="p-8 max-sm:p-4 max-md:p-6">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-balance text-4xl font-semibold tracking-tight text-black sm:text-5xl max-sm:text-2xl max-md:text-3xl">
-              Setup Your KYC Profile
-            </h2>
-          </div>
-
-          <form onSubmit={handleSubmit} className="mt-8">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              
-              {/* Face Verification */}
+             {/* Face Verification */}
               <div className="text-center mt-2 flex justify-center sm:col-span-2">
                 <div className="relative w-32 h-32 max-sm:w-24 max-sm:h-24 max-md:w-28 max-md:h-28 rounded-full border-2 border-lime-300 flex items-center justify-center overflow-hidden">
                   <label
@@ -187,7 +178,7 @@ const KYCProfile = () => {
               )}
             </div>
 
-            {/* Submit */}
+
             <div className="mt-5">
               <button
                 type="submit"
@@ -208,8 +199,17 @@ const KYCProfile = () => {
               </button>
             </div>
           </form>
-        </div>
-      </div>
+
+          <div className="bg-muted relative hidden md:block">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4kyBp73_Rn5vtVsmcXdLZDZpokJtswoSENoRpMhyStMiYQ6gxCwz5Kd9rGkcABu4Ixb4&usqp=CAU"
+              alt="Image"
+              className="absolute inset-0 w-full h-full object-cover dark:brightness-[0.2] 
+              dark:grayscale"
+            />
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 };

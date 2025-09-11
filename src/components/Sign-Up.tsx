@@ -62,17 +62,17 @@ export function SignUp({ className, ...props }: SignUpProps) {
   }
 
   return (
-    <div className={cn("flex flex-col gap-6 max-sm:px-3 max-md:px-5", className)} {...props}>
+    <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden p-0">
         <CardContent className="grid p-0 md:grid-cols-2">
           <form 
-            className="p-6 md:p-8 max-sm:p-4 max-md:p-6" 
+            className="p-6 md:p-8 max-sm:p-4 flex flex-col justify-center" 
             onSubmit={handleSubmit}
           >
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center mt-20 text-center">
-                <h1 className="text-2xl font-bold max-sm:text-xl">Create an account</h1>
-                <p className="text-muted-foreground text-balance max-sm:text-xs max-md:text-sm">
+                <h1 className="text-2xl font-bold">Create an account</h1>
+                <p className="text-muted-foreground text-balance">
                   Sign up for your SafePocket Inc account
                 </p>
               </div>
@@ -87,6 +87,7 @@ export function SignUp({ className, ...props }: SignUpProps) {
                   placeholder="m@example.com"
                   required
                   value={email}
+                  className="max-sm:h-10"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
@@ -129,7 +130,7 @@ export function SignUp({ className, ...props }: SignUpProps) {
 
               <Button
                 type="submit"
-                disabled={loading}
+                //disabled={loading}
                 className="w-full min-w-[130px] h-10 font-bold text-white bg-[#80ed99] shadow-[0_5px_0_#57cc99] hover:shadow-[0_3px_0_#57cc99] hover:top-[1px] active:shadow-[0_0px_0_#57cc99] active:top-[5px] max-sm:text-sm max-md:h-9"
               >
                 {loading ? "Signing Up..." : "Sign Up"}
@@ -158,7 +159,7 @@ export function SignUp({ className, ...props }: SignUpProps) {
                 </Button>
               </div>
 
-              <div className="text-center text-sm max-sm:text-xs max-md:text-sm">
+              <div className="text-center text-sm">
                 Already have an account?{" "}
                 <Link
                   to="/login"
@@ -174,13 +175,15 @@ export function SignUp({ className, ...props }: SignUpProps) {
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4kyBp73_Rn5vtVsmcXdLZDZpokJtswoSENoRpMhyStMiYQ6gxCwz5Kd9rGkcABu4Ixb4&usqp=CAU"
               alt="Image"
-              className="absolute inset-0 w-90 h-full object-cover dark:brightness-[0.2] dark:grayscale"
+              className="absolute inset-0 w-full h-full object-cover dark:brightness-[0.2] 
+              dark:grayscale"
             />
           </div>
         </CardContent>
       </Card>
 
-      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4 max-sm:text-[10px] max-md:text-xs">
+      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs 
+      text-balance *:[a]:underline *:[a]:underline-offset-4 ">
         By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
         and <a href="#">Privacy Policy</a>.
       </div>

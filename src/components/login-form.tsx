@@ -59,8 +59,8 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
   }
 
   return (
-    <div className={cn("flex flex-col gap-6 max-sm:px-4", className)} {...props}>
-      <Card className="overflow-hidden p-0 w-full max-w-3xl mx-auto">
+    <div className={cn("flex flex-col gap-6 ", className)} {...props}>
+      <Card className="overflow-hidden p-0 ">
         <CardContent className="grid p-0 md:grid-cols-2">
           <form
             className="p-6 md:p-8 max-sm:p-4 flex flex-col justify-center"
@@ -68,8 +68,8 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
           >
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center text-center">
-                <h1 className="text-2xl font-bold max-sm:text-xl">Welcome back</h1>
-                <p className="text-muted-foreground text-balance max-sm:text-sm">
+                <h1 className="text-2xl font-bold ">Welcome back</h1>
+                <p className="text-muted-foreground text-balance">
                   Login to your SafePocket Inc account
                 </p>
               </div>
@@ -94,7 +94,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
                   <Label htmlFor="password">Password</Label>
                   <Link
                     to="/forgot-password"
-                    className="ml-auto text-sm underline-offset-2 hover:underline max-sm:text-xs"
+                    className="ml-auto text-sm underline-offset-2 hover:underline"
                   >
                     Forgot your password?
                   </Link>
@@ -103,7 +103,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
                   id="password" 
                   type="password" 
                   required 
-                  className="max-sm:h-10"
+                  //className="max-sm:h-10"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
@@ -125,7 +125,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
 
               <Button
                 type="submit"
-                disabled={loading}
+                //disabled={loading}
                 className="w-full min-w-[120px] h-10 text-white font-bold px-2.5 py-1.5 bg-[#80ed99] shadow-[0_5px_0_#57cc99] hover:shadow-[0_3px_0_#57cc99] hover:top-[1px] active:shadow-[0_0px_0_#57cc99] active:top-[5px] max-sm:text-sm"
               >
                 {loading ? "Logging in..." : "Login"}
@@ -141,7 +141,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
                 <Button
                   variant="outline"
                   type="button"
-                  className="w-full max-sm:text-xs"
+                  className="w-full"
                   onClick={handleGoogleLogin}
                 >
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
@@ -154,7 +154,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
                 </Button>
               </div>
 
-              <div className="text-center text-sm max-sm:text-xs">
+              <div className="text-center text-sm ">
                 Don&apos;t have an account?{" "}
                 <Link
                   to="/signup"
@@ -170,13 +170,15 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4kyBp73_Rn5vtVsmcXdLZDZpokJtswoSENoRpMhyStMiYQ6gxCwz5Kd9rGkcABu4Ixb4&usqp=CAU"
               alt="Image"
-              className="absolute inset-0 w-90 h-full object-cover dark:brightness-[0.2] dark:grayscale"
+              className="absolute inset-0 w-full h-full object-cover dark:brightness-[0.2] 
+              dark:grayscale"
             />
           </div>
         </CardContent>
       </Card>
 
-      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4 max-sm:text-[10px] px-2">
+      <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs 
+      text-balance *:[a]:underline *:[a]:underline-offset-4">
         By clicking continue, you agree to our{" "}
         <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
       </div>
