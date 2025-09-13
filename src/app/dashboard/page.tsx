@@ -36,9 +36,9 @@ export default function Page() {
   React.useEffect(() => {
     const fetchUsers = async () => {
       if ('from' in supabase) {
-        const { data: usersData, error } = await supabase.from('users').select('*')
+        const { data: usersData, error } = await supabase.from('profiles').select('*')
         if (error) {
-          console.error("Error fetching users:", error)
+          console.error("Error fetching profiles:", error)
         } else {
           setUsers(usersData as User[])
           if (usersData && usersData.length > 0) {
@@ -46,7 +46,7 @@ export default function Page() {
           }
         }
       } else {
-        console.warn("Supabase not configured, cannot fetch users.")
+        console.warn("Supabase not configured, cannot fetch profiles.")
       }
     }
     fetchUsers()
