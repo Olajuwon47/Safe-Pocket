@@ -16,14 +16,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "./ui/chart"
-
-interface Transaction {
-  id: number
-  date: string
-  type: "deposit" | "withdrawal"
-  amount: number
-  description: string
-}
+import type { Transaction } from "../types"
 
 interface SpendingBreakdownChartProps {
   transactions: Transaction[]

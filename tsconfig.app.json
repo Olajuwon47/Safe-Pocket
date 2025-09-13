@@ -3,7 +3,9 @@
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+   "lib": ["es2022", "dom", "dom.iterable"],
+    //"lib": ["ES2022", "DOM"],
+    //"baseUrl": ".",
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -25,3 +27,4 @@
   },
   "include": ["src"]
 }
+

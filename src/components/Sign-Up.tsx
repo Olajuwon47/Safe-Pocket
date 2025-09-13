@@ -5,7 +5,7 @@ import { Card, CardContent } from "./ui/card"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
 import { Link, useNavigate } from "react-router-dom"
-import { supabase, supabaseEphemeral } from "../lib/Supabase"
+import { supabase } from "../lib/Supabase"
 
 type SignUpProps = React.ComponentProps<"div">
 
@@ -30,9 +30,7 @@ export function SignUp({ className, ...props }: SignUpProps) {
     setLoading(true)
     setError(null)
 
-    const client = rememberMe ? supabase : supabaseEphemeral
-
-    const { error } = await client.auth.signUp({
+    const { error } = await supabase.auth.signUp({
       email,
       password,
     })
@@ -47,9 +45,7 @@ export function SignUp({ className, ...props }: SignUpProps) {
   }
 
   const handleGoogleSignUp = async () => {
-    const client = rememberMe ? supabase : supabaseEphemeral
-
-    const { error } = await client.auth.signInWithOAuth({
+    const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
         redirectTo: `${window.location.origin}/kyc-profile`,

@@ -5,7 +5,7 @@ import { Card, CardContent } from "../components/ui/card"
 import { Input } from "../components/ui/input"
 import { Label } from "../components/ui/label"
 import { Link, useNavigate } from "react-router-dom"
-import { supabase, supabaseEphemeral } from "../lib/Supabase"
+import { supabase } from "../lib/Supabase"
 import "../index.css"
 
 type LoginFormProps = React.ComponentProps<"div">
@@ -26,9 +26,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
     setLoading(true)
     setError(null)
 
-    const client = rememberMe ? supabase : supabaseEphemeral
-
-    const { error } = await client.auth.signInWithPassword({
+    const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
     })
@@ -44,9 +42,7 @@ export function LoginForm({ className, ...props }: LoginFormProps) {
 
   // Google OAuth login
   const handleGoogleLogin = async () => {
-    const client = rememberMe ? supabase : supabaseEphemeral
-
-    const { error } = await client.auth.signInWithOAuth({
+    const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
         redirectTo: `${window.location.origin}/dashboard`,

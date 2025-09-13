@@ -9,13 +9,16 @@ import {
   CardHeader,
   CardTitle,
 } from "../components/ui/card"
+import { Button } from "./ui/button"
 
 interface SectionCardsProps {
   walletBalance: number
   savings: number
+  onDeposit: () => void
+  onWithdraw: () => void
 }
 
-export function SectionCards({ walletBalance, savings }: SectionCardsProps) {
+export function SectionCards({ walletBalance, savings, onDeposit, onWithdraw }: SectionCardsProps) {
   return (
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 px-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs max-sm:px-2 max-sm:gap-3 md:px-6 @xl/main:grid-cols-2">
       <Card className="@container/card">
@@ -25,10 +28,12 @@ export function SectionCards({ walletBalance, savings }: SectionCardsProps) {
             ${walletBalance.toLocaleString()}
           </CardTitle>
           <CardAction>
-            <Badge variant="outline">
+           {/* <Badge variant="outline">
               <IconTrendingUp />
               +12.5%
-            </Badge>
+            </Badge>*/}
+            <Button onClick={onDeposit}>Deposit</Button>
+            <Button onClick={onWithdraw} variant="outline">Withdraw</Button>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
