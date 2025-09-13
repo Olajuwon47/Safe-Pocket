@@ -7,10 +7,7 @@
     {
       "path": "./tsconfig.node.json"
     },
-    {
-    
-      "path": "./src/supabase/functions/tsconfig.json"
-    }
+ 
   ],
   "compilerOptions": {
     "baseUrl": ".",
