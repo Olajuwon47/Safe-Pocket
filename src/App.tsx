@@ -25,6 +25,7 @@ export default function App() {
   }, []);
 
   return (
+<>
     <div className="#">
       {showSplash ? (
         // Splash Screen
@@ -60,6 +61,7 @@ export default function App() {
       </Routes>
             )}
     </div>
+</>
   );
 }
 
