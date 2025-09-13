@@ -24,14 +24,7 @@ import {
 } from "./ui/table"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
-
-interface Transaction {
-  id: number
-  date: string
-  type: "deposit" | "withdrawal"
-  amount: number
-  description: string
-}
+import type { Transaction } from "../types"
 
 interface TransactionsViewProps {
   data: Transaction[]

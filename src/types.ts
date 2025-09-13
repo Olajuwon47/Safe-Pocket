@@ -22,3 +22,13 @@ export interface User {
   };
   savings: number;
 }
+
+export interface Transaction {
+  id: number;
+  date: string;
+  type: "deposit" | "withdrawal";
+  amount: number;
+  description: string;
+}
+
+export type UserProfile = User;

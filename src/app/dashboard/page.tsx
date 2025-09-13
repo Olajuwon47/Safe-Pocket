@@ -1,7 +1,6 @@
 "use client"
 import { SiteHeader } from "../../components/site-header"
 import { AppSidebar } from "../../components/app-sidebar"
-//import { ChartAreaInteractive } from "../../components/chart-area-interactive"
 import { GoalsProgress } from "../../components/Progress"
 import { SectionCards } from "../../components/section-cards"
 import { AddTransaction } from "../../components/add-transaction"
@@ -13,43 +12,44 @@ import {
   SidebarProvider,
 } from "../../components/ui/sidebar"
 import * as React from "react"
-import data from "./data.json"
-
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  walletBalance: number;
-  goals: {
-    title: string;
-    target: number;
-    progress: number;
-  }[];
-  transactions: {
-    id: number;
-    date: string;
-    type: "deposit" | "withdrawal";
-    amount: number;
-    description: string;
-  }[];
-  breakdown: {
-    daily: { date: string; amount: number }[];
-    weekly: { week: string; amount: number }[];
-    monthly: { month: string; amount: number }[];
-  };
-  savings: number;
-}
+import { supabase } from "../../lib/Supabase"
+import type { User } from "../../types"
+import { WithdrawModal } from "../../components/withdraw-modal"
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+} from "../../components/ui/drawer"
+import { Button } from "../../components/ui/button"
 
 export default function Page() {
   const [users, setUsers] = React.useState<User[]>([])
   const [selectedUser, setSelectedUser] = React.useState<User | null>(null)
   const [selectedView, setSelectedView] = React.useState("dashboard")
+  const [isDepositOpen, setIsDepositOpen] = React.useState(false)
+  const [isWithdrawOpen, setIsWithdrawOpen] = React.useState(false)
 
   React.useEffect(() => {
-    setUsers(data as User[])
-    if (data.length > 0) {
-      setSelectedUser(data[0] as User)
+    const fetchUsers = async () => {
+      if ('from' in supabase) {
+        const { data: usersData, error } = await supabase.from('users').select('*')
+        if (error) {
+          console.error("Error fetching users:", error)
+        } else {
+          setUsers(usersData as User[])
+          if (usersData && usersData.length > 0) {
+            setSelectedUser(usersData[0])
+          }
+        }
+      } else {
+        console.warn("Supabase not configured, cannot fetch users.")
+      }
     }
+    fetchUsers()
   }, [])
 
   const handleUserChange = (id: string) => {
@@ -96,6 +96,8 @@ export default function Page() {
       setUsers(
         users.map((u) => (u.id === selectedUser.id ? updatedUser : u))
       )
+      // Close the modal after transaction
+      if (transaction.type === 'deposit') setIsDepositOpen(false)
     }
   }
 
@@ -104,9 +106,7 @@ export default function Page() {
   }
 
   return (
-   
     <SidebarProvider
-      //className="grid h-dvh w-full grid-cols-1 grid-rows-[max-content_1fr] overflow-hidden group/sidebar-provider"
       className="flex h-dvh w-full overflow-hidden group/sidebar-provider"
       style={
         {
@@ -134,6 +134,8 @@ export default function Page() {
                   <SectionCards
                     walletBalance={selectedUser.walletBalance}
                     savings={selectedUser.savings}
+                    onDeposit={() => setIsDepositOpen(true)}
+                    onWithdraw={() => setIsWithdrawOpen(true)}
                   />
                   <GoalsProgress
                     goals={selectedUser.goals}
@@ -173,6 +175,8 @@ export default function Page() {
                 <SectionCards
                   walletBalance={selectedUser.walletBalance}
                   savings={selectedUser.savings}
+                  onDeposit={() => setIsDepositOpen(true)}
+                  onWithdraw={() => setIsWithdrawOpen(true)}
                 />
               )}
               {selectedView === "breakdown" && (
@@ -184,6 +188,8 @@ export default function Page() {
                 <SectionCards
                   walletBalance={selectedUser.walletBalance}
                   savings={selectedUser.savings}
+                  onDeposit={() => setIsDepositOpen(true)}
+                  onWithdraw={() => setIsWithdrawOpen(true)}
                 />
               )}
               {selectedView === "transactions" && (
@@ -196,6 +202,30 @@ export default function Page() {
           </div>
         </div>
       </SidebarInset>
+      
+      {/* Deposit Modal */}
+      <Drawer open={isDepositOpen} onOpenChange={setIsDepositOpen}>
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerTitle>Make a Deposit</DrawerTitle>
+            <DrawerDescription>Enter the details for your deposit.</DrawerDescription>
+          </DrawerHeader>
+          <div className="px-4">
+            <AddTransaction onAddTransaction={handleAddTransaction} />
+          </div>
+          <DrawerFooter>
+            <DrawerClose asChild>
+              <Button variant="outline">Cancel</Button>
+            </DrawerClose>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+
+      {/* Withdraw Modal */}
+      <Drawer open={isWithdrawOpen} onOpenChange={setIsWithdrawOpen}>
+        <WithdrawModal />
+      </Drawer>
+
     </SidebarProvider>
   )
 }
