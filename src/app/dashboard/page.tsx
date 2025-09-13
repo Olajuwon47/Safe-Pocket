@@ -5,13 +5,13 @@ import { GoalsProgress } from "../../components/Progress"
 import { SectionCards } from "../../components/section-cards"
 import { AddTransaction } from "../../components/add-transaction"
 import { TransactionsView } from "../../components/transactions-view"
-import { ChartAreaInteractive } from "../../components/chart-area-interactive"
-import { SpendingBreakdownChart } from "../../components/spending-breakdown-chart"
 import {
   SidebarInset,
   SidebarProvider,
 } from "../../components/ui/sidebar"
 import * as React from "react"
+const ChartAreaInteractive = React.lazy(() => import("../../components/chart-area-interactive").then(module => ({ default: module.ChartAreaInteractive })))
+const SpendingBreakdownChart = React.lazy(() => import("../../components/spending-breakdown-chart").then(module => ({ default: module.SpendingBreakdownChart })))
 import { supabase } from "../../lib/Supabase"
 import type { User } from "../../types"
 import { WithdrawModal } from "../../components/withdraw-modal"
@@ -142,17 +142,21 @@ export default function Page() {
                     onAddGoal={handleAddGoal}
                   />
                   <div className="px-2 max-sm:px-1 md:px-6">
-                    <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                    <React.Suspense fallback={<div>Loading chart...</div>}>
+                      <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                    </React.Suspense>
                   </div>
                 </>
               )}
               {selectedView === "analytics" && (
                 <div className="grid gap-4 px-4 lg:px-6">
-                  <ChartAreaInteractive breakdown={selectedUser.breakdown} />
-                  <SpendingBreakdownChart
-                    transactions={selectedUser.transactions}
-                    savings={selectedUser.savings}
-                  />
+                  <React.Suspense fallback={<div>Loading chart...</div>}>
+                    <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                    <SpendingBreakdownChart
+                      transactions={selectedUser.transactions}
+                      savings={selectedUser.savings}
+                    />
+                  </React.Suspense>
                   <GoalsProgress
                     goals={selectedUser.goals}
                     onAddGoal={handleAddGoal}
@@ -181,7 +185,9 @@ export default function Page() {
               )}
               {selectedView === "breakdown" && (
                 <div className="px-2 max-sm:px-1 md:px-6">
-                  <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                  <React.Suspense fallback={<div>Loading chart...</div>}>
+                    <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                  </React.Suspense>
                 </div>
               )}
               {selectedView === "savings" && (
