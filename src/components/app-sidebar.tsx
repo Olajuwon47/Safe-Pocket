@@ -120,7 +120,6 @@ export function AppSidebar({
   )
 }*/
 
-
 import * as React from "react"
 import {
   IconDashboard,
@@ -150,19 +149,19 @@ import {
 import type { User } from "../types"
 
 interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
-  selectedUser: User | null
+  users: User[]
+  selectedUser: User
   onSelectView: (view: string) => void
+  onUserChange: (id: string) => void
 }
 
 export function AppSidebar({
+  users,
   selectedUser,
   onSelectView,
+  onUserChange,
   ...props
 }: AppSidebarProps) {
-  if (!selectedUser) {
-    return null; // Or a loading skeleton
-  }
-
   const navMain = [
     { title: "Dashboard", url: "#", icon: IconDashboard, action: () => onSelectView("dashboard") },
     { title: "Savings", url: "#", icon: IconUsers, action: () => onSelectView("savings") },
@@ -218,6 +217,20 @@ export function AppSidebar({
       </SidebarContent>
 
       <SidebarFooter className="flex flex-col gap-3 max-sm:gap-2">
+        {users.length > 0 && (
+          <select
+            value={selectedUser.id}
+            onChange={(e) => onUserChange(e.target.value)}
+            className="w-full rounded-md border p-2 text-sm max-sm:p-1.5 max-sm:text-xs"
+          >
+            {users.map((u) => (
+              <option key={u.id} value={u.id}>
+                {u.name}
+              </option>
+            ))}
+          </select>
+        )}
+
         {selectedUser && (
           <NavUser
             user={navUser}
@@ -228,4 +241,5 @@ export function AppSidebar({
     </Sidebar>
   )
 }
+
 

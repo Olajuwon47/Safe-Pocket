@@ -1,5 +1,5 @@
 "use client"
-/*import { SiteHeader } from "../../components/site-header"
+import { SiteHeader } from "../../components/site-header"
 import { AppSidebar } from "../../components/app-sidebar"
 import { GoalsProgress } from "../../components/Progress"
 import { SectionCards } from "../../components/section-cards"
@@ -257,10 +257,10 @@ export default function Page() {
 
     </SidebarProvider>
   )
-}*/
+}
 
 
-"use client"
+/*"use client"
 import { SiteHeader } from "../../components/site-header"
 import { AppSidebar } from "../../components/app-sidebar"
 import { GoalsProgress } from "../../components/Progress"
@@ -483,7 +483,7 @@ export default function Page() {
         </div>
       </SidebarInset>
       
-      {/* Deposit Modal */}
+      {
       <Drawer open={isDepositOpen} onOpenChange={setIsDepositOpen}>
         <DrawerContent>
           <DrawerHeader>
@@ -501,7 +501,7 @@ export default function Page() {
         </DrawerContent>
       </Drawer>
 
-      {/* Withdraw Modal */}
+
       <Drawer open={isWithdrawOpen} onOpenChange={setIsWithdrawOpen}>
         <WithdrawModal />
       </Drawer>
@@ -509,4 +509,4 @@ export default function Page() {
     </SidebarProvider>
   )
 }
-
+*/
