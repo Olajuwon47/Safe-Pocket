@@ -12,7 +12,7 @@ import {
 import * as React from "react"
 const ChartAreaInteractive = React.lazy(() => import("../../components/chart-area-interactive").then(module => ({ default: module.ChartAreaInteractive })))
 const SpendingBreakdownChart = React.lazy(() => import("../../components/spending-breakdown-chart").then(module => ({ default: module.SpendingBreakdownChart })))
-import { supabase } from "../../lib/Supabase"
+import { isSupabaseClient, supabase } from "../../lib/Supabase"
 import type { User } from "../../types"
 import { WithdrawModal } from "../../components/withdraw-modal"
 import {
@@ -25,6 +25,7 @@ import {
   DrawerTitle,
 } from "../../components/ui/drawer"
 import { Button } from "../../components/ui/button"
+import { toast } from "sonner"
 
 export default function Page() {
   const [users, setUsers] = React.useState<User[]>([])
@@ -35,7 +36,7 @@ export default function Page() {
 
   React.useEffect(() => {
     const fetchUsers = async () => {
-      if ('from' in supabase) {
+      if (isSupabaseClient(supabase)) {
         const { data: usersData, error } = await supabase.from('profiles').select('*')
         if (error) {
           console.error("Error fetching profiles:", error)
@@ -77,13 +78,13 @@ export default function Page() {
     }
   }
 
-  const handleAddTransaction = (transaction: { type: "deposit" | "withdrawal"; amount: number; description: string }) => {
+  const handleAddTransaction = async (transaction: { type: "deposit" | "withdrawal"; amount: number; description: string }) => {
     if (selectedUser) {
       const newTransaction = {
         id: selectedUser.transactions.length + 1,
         date: new Date().toISOString().split("T")[0],
         ...transaction,
-      }
+      };
       const updatedUser = {
         ...selectedUser,
         transactions: [...selectedUser.transactions, newTransaction],
@@ -91,15 +92,37 @@ export default function Page() {
           transaction.type === "deposit"
             ? selectedUser.walletBalance + transaction.amount
             : selectedUser.walletBalance - transaction.amount,
+      };
+
+      let error;
+      if (isSupabaseClient(supabase)) {
+        const result = await supabase
+          .from('profiles')
+          .update({
+            walletBalance: updatedUser.walletBalance,
+            transactions: updatedUser.transactions,
+          })
+          .eq('id', selectedUser.id);
+        error = result.error;
+      } else {
+        console.warn("Supabase not configured, cannot update profile.");
+        error = { message: "Supabase not configured" };
       }
-      setSelectedUser(updatedUser)
-      setUsers(
-        users.map((u) => (u.id === selectedUser.id ? updatedUser : u))
-      )
+
+      if (error) {
+        console.error("Error updating profile:", error);
+        toast.error("Failed to add transaction.");
+      } else {
+        setSelectedUser(updatedUser);
+        setUsers(
+          users.map((u) => (u.id === selectedUser.id ? updatedUser : u))
+        );
+        toast.success("Transaction added successfully");
+      }
       // Close the modal after transaction
-      if (transaction.type === 'deposit') setIsDepositOpen(false)
+      if (transaction.type === 'deposit') setIsDepositOpen(false);
     }
-  }
+  };
 
   if (!selectedUser) {
     return <div>Loading...</div>
@@ -200,7 +223,7 @@ export default function Page() {
               )}
               {selectedView === "transactions" && (
                 <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
-                  <AddTransaction onAddTransaction={handleAddTransaction} />
+                  <AddTransaction onAddTransaction={handleAddTransaction} email={selectedUser.email} />
                   <TransactionsView data={selectedUser.transactions} />
                 </div>
               )}
@@ -217,7 +240,7 @@ export default function Page() {
             <DrawerDescription>Enter the details for your deposit.</DrawerDescription>
           </DrawerHeader>
           <div className="px-4">
-            <AddTransaction onAddTransaction={handleAddTransaction} />
+            <AddTransaction onAddTransaction={handleAddTransaction} email={selectedUser.email} />
           </div>
           <DrawerFooter>
             <DrawerClose asChild>

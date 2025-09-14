@@ -67,7 +67,7 @@ export default function App() {
 
 import { Suspense, lazy, useEffect, useState } from "react";
 import { Navigate, Route, Routes } from 'react-router-dom'
-import Loading from "./components/Loading.tsx";
+import Loading from "./components/Loading";
 import { LoginForm } from './components/login-form'
 import ProtectedRoute from './components/ProtectedRoute'
 import { SignUp } from './components/Sign-Up'
