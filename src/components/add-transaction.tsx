@@ -114,6 +114,8 @@ const transactionSchema = z.object({
   description: z.string().min(1, "Description is required"),
 })
 
+export type TransactionInput = z.infer<typeof transactionSchema>;
+
 interface AddTransactionProps {
   onAddTransaction: (data: z.infer<typeof transactionSchema>) => void;
   email: string;

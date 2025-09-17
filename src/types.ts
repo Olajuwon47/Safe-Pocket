@@ -2,11 +2,10 @@
 
 // 💡 Progress / goals
 export interface Goal {
-  id: string
-  title: string
-  targetAmount: number
-  currentAmount: number
-  deadline: string
+  id: string;
+  title: string;
+  target: number;
+  progress: number;
 }
 
 // 💡 For charts
@@ -36,6 +35,7 @@ export interface User {
   goals: Goal[]
   transactions: Transaction[]
 }
+
 /*export interface User {
   id: number;
   name: string;

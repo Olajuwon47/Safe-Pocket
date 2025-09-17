@@ -3,7 +3,6 @@
 import * as React from "react"
 import { AppSidebar } from "../../components/app-sidebar"
 import { ChartAreaInteractive } from "../../components/chart-area-interactive.tsx"
-import type { BreakdownData } from "../../components/chart-area-interactive.tsx"
 import { SectionCards } from "../../components/section-cards.tsx"
 import { SiteHeader } from "../../components/site-header"
 import { GoalsProgress } from "../../components/Progress"
@@ -28,6 +27,8 @@ import type { Goal, Transaction, User } from "../../types"
 const nowIso = () => new Date().toISOString()
 
 const defaultUser: User = {
+  id: "1",
+  name: "Default User",
   email: "user@example.com",
   walletBalance: 1200,
   savings: 800,
@@ -41,14 +42,13 @@ const defaultUser: User = {
 }
 
 export default function Page() {
-  const [selectedView, setSelectedView] = React.useState<"dashboard" | "analytics" | "goals" | "wallet" | "breakdown" | "savings" | "transactions">("dashboard")
   const [isDepositOpen, setIsDepositOpen] = React.useState(false)
   const [isWithdrawOpen, setIsWithdrawOpen] = React.useState(false)
   const [user, setUser] = React.useState<User>(defaultUser)
 
   const handleAddGoal = React.useCallback((title: string, target: number) => {
     const newGoal: Goal = {
-      id: Math.floor(Math.random() * 100000),
+      id: Math.random().toString(36).substring(7),
       title,
       target,
       progress: 0,
@@ -58,7 +58,7 @@ export default function Page() {
 
   const handleAddTransaction = React.useCallback((data: TransactionInput) => {
     const tx: Transaction = {
-      id: Math.floor(Math.random() * 100000),
+      id: Math.random().toString(36).substring(7),
       type: data.type,
       amount: data.amount,
       description: data.description,
@@ -80,7 +80,7 @@ export default function Page() {
     setUser(prev => {
       const newBalance = prev.walletBalance - amount
       const tx: Transaction = {
-        id: Math.floor(Math.random() * 100000),
+        id: Math.random().toString(36).substring(7),
         type: "withdrawal",
         amount,
         description: description ?? "Withdraw",
@@ -127,7 +127,7 @@ export default function Page() {
               </div>
 
               <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
-                <AddTransaction onAddTransaction={handleAddTransaction} />
+                <AddTransaction onAddTransaction={handleAddTransaction} email={user.email} />
                 <TransactionsView data={user.transactions} />
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function Page() {
             <DrawerDescription>Enter the details for your deposit.</DrawerDescription>
           </DrawerHeader>
           <div className="px-4">
-            <AddTransaction onAddTransaction={handleAddTransaction} />
+            <AddTransaction onAddTransaction={handleAddTransaction} email={user.email} />
           </div>
           <DrawerFooter>
             <DrawerClose asChild>
