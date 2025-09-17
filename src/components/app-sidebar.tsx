@@ -156,16 +156,18 @@ type User = {
 
 const data = {
   navMain: [
-    { title: "Dashboard", url: "#", icon: IconDashboard },
-    { title: "Lifecycle", url: "#", icon: IconListDetails },
-    { title: "Analytics", url: "#", icon: IconChartBar },
-    { title: "Projects", url: "#", icon: IconFolder },
-    { title: "Team", url: "#", icon: IconUsers },
+    { title: "Dashboard", url: "/", icon: IconDashboard },
+    { title: "Savings", url: "/savings", icon: IconUsers },
+    { title: "Wallet balance", url: "/wallet", icon: IconListDetails },
+    { title: "Transactions", url: "/transactions", icon: IconListDetails },
+    { title: "Progress tracker", url: "/progress", icon: IconFolder },
+    { title: "Analytics", url: "/analytics", icon: IconChartBar },
+    { title: "Team", url: "/team", icon: IconUsers },
   ],
   navSecondary: [
-    { title: "Settings", url: "/Setting", icon: IconSettings },
-    { title: "Get Help", url: "#", icon: IconHelp },
-    { title: "Search", url: "#", icon: IconSearch },
+    { title: "Settings", url: "/settings", icon: IconSettings },
+    { title: "Get Help", url: "/help", icon: IconHelp },
+    { title: "Search", url: "/search", icon: IconSearch },
   ],
 }
 
@@ -266,5 +268,3 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     </Sidebar>
   )
 }
-
-
