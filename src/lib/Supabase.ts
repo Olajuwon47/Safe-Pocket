@@ -71,3 +71,7 @@ const createSupabaseClient = () => {
 }
 
 export const supabase: SupabaseClient | MockSupabaseClient = createSupabaseClient()
+
+export function isSupabaseClient(client: SupabaseClient | MockSupabaseClient): client is SupabaseClient {
+  return 'from' in client;
+}
