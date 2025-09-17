@@ -14,20 +14,22 @@ import {
 } from "./ui/select"
 import { toast } from "sonner"
 
-const transactionSchema = z.object({
+export const transactionSchema = z.object({
   type: z.enum(["deposit", "withdrawal"]),
   amount: z.coerce.number().positive("Amount must be positive"),
   description: z.string().min(1, "Description is required"),
 })
 
+export type TransactionInput = z.infer<typeof transactionSchema>
+
 interface AddTransactionProps {
-  onAddTransaction: (data: z.infer<typeof transactionSchema>) => void
+  onAddTransaction: (data: TransactionInput) => void
 }
 
 export function AddTransaction({ onAddTransaction }: AddTransactionProps) {
   const [type, setType] = React.useState<"deposit" | "withdrawal">("deposit")
-  const [amount, setAmount] = React.useState("")
-  const [description, setDescription] = React.useState("")
+  const [amount, setAmount] = React.useState<string>("")
+  const [description, setDescription] = React.useState<string>("")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -40,7 +42,6 @@ export function AddTransaction({ onAddTransaction }: AddTransactionProps) {
     if (result.success) {
       onAddTransaction(result.data)
       toast.success("Transaction added successfully")
-      // Reset form
       setType("deposit")
       setAmount("")
       setDescription("")
@@ -56,7 +57,10 @@ export function AddTransaction({ onAddTransaction }: AddTransactionProps) {
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-3">
           <Label htmlFor="type">Type</Label>
-          <Select onValueChange={(value) => setType(value as "deposit" | "withdrawal")} defaultValue={type}>
+          <Select
+            onValueChange={(value) => setType(value as "deposit" | "withdrawal")}
+            defaultValue={type}
+          >
             <SelectTrigger id="type">
               <SelectValue placeholder="Select a type" />
             </SelectTrigger>
@@ -66,41 +70,23 @@ export function AddTransaction({ onAddTransaction }: AddTransactionProps) {
             </SelectContent>
           </Select>
         </div>
+
         <div className="flex flex-col gap-3">
           <Label htmlFor="amount">Amount</Label>
-          <Input
-            id="amount"
-            type="number"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-          />
+          <Input id="amount" type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
         </div>
       </div>
+
       <div className="flex flex-col gap-3">
         <Label htmlFor="description">Description</Label>
-        <Input
-          id="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
+        <Input id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
       </div>
-          <div className="flex justify-center items-center w-full">
-        <Button
-          type="submit"
-          className="min-w-[130px] h-10 
-                    text-white font-bold 
-                    px-2.5 py-1.5 
-                    relative inline-block 
-                    rounded-md border-none outline-none 
-                    cursor-pointer transition-all duration-300 ease-in-out 
-                    bg-[#80ed99] shadow-[0_5px_0_#57cc99]
-                    hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
-                    active:shadow-[0_0px_0_#57cc99] active:top-[5px]"
-        >
+
+      <div className="flex justify-center items-center w-full">
+        <Button type="submit" className="min-w-[130px] h-10">
           Add Transaction
         </Button>
       </div>
-
     </form>
   )
 }

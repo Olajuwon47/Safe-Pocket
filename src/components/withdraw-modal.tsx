@@ -2,88 +2,70 @@
 
 import * as React from "react"
 import { Button } from "./ui/button"
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "./ui/drawer"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
-import { supabase } from "../lib/Supabase"
 import { toast } from "sonner"
 
 interface WithdrawModalProps {
-  // Props if any, e.g., onWithdrawSuccess: () => void
+  onWithdraw: (amount: number, description?: string) => Promise<void> | void
 }
 
-export function WithdrawModal({}: WithdrawModalProps) {
-  const [amount, setAmount] = React.useState("")
+export default function WithdrawModal({ onWithdraw }: WithdrawModalProps) {
+  const [amount, setAmount] = React.useState<string>("")
+  const [description, setDescription] = React.useState<string>("")
   const [loading, setLoading] = React.useState(false)
 
-  const handleWithdraw = async () => {
-    setLoading(true)
-    const amountNumber = parseFloat(amount)
-    if (isNaN(amountNumber) || amountNumber <= 0) {
+  const handleSubmit = async () => {
+    const n = parseFloat(amount)
+    if (isNaN(n) || n <= 0) {
       toast.error("Please enter a valid amount.")
-      setLoading(false)
       return
     }
 
-    // Use a type guard to ensure we have the real Supabase client.
-    if ('functions' in supabase) {
-      const { error } = await supabase.functions.invoke('withdraw', {
-        body: { amount: amountNumber },
-      })
-
-      if (error) {
-        toast.error(error.message)
-      } else {
-        toast.success("Withdrawal successful!")
-        // Optionally call a success prop and close the drawer
-      }
-    } else {
-      toast.error("Cannot perform withdrawal: Supabase is not configured.")
+    try {
+      setLoading(true)
+      await onWithdraw(n, description)
+      toast.success("Withdrawal processed.")
+      setAmount("")
+      setDescription("")
+    } catch (err: any) {
+      toast.error(err?.message ?? "Withdrawal failed.")
+    } finally {
+      setLoading(false)
     }
-
-    setLoading(false)
   }
 
   return (
-    <Drawer>
-      <DrawerTrigger asChild>
-        <Button>Make a Withdrawal</Button>
-      </DrawerTrigger>
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>Withdraw Funds</DrawerTitle>
-          <DrawerDescription>Enter the amount you wish to withdraw.</DrawerDescription>
-        </DrawerHeader>
-        <div className="px-4">
-          <div className="grid gap-2">
-            <Label htmlFor="amount">Amount</Label>
-            <Input
-              id="amount"
-              type="number"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
-              placeholder="e.g., 50.00"
-            />
-          </div>
-        </div>
-        <DrawerFooter>
-          <Button onClick={handleWithdraw} disabled={loading}>
-            {loading ? "Withdrawing..." : "Confirm Withdrawal"}
-          </Button>
-          <DrawerClose asChild>
-            <Button variant="outline">Cancel</Button>
-          </DrawerClose>
-        </DrawerFooter>
-      </DrawerContent>
-    </Drawer>
+    <div className="space-y-4">
+      <div className="grid gap-2">
+        <Label htmlFor="withdraw-amount">Amount</Label>
+        <Input
+          id="withdraw-amount"
+          type="number"
+          value={amount}
+          onChange={(e) => setAmount(e.target.value)}
+          placeholder="e.g., 50.00"
+        />
+      </div>
+
+      <div className="grid gap-2">
+        <Label htmlFor="withdraw-desc">Description (optional)</Label>
+        <Input
+          id="withdraw-desc"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder="Reason or note"
+        />
+      </div>
+
+      <div className="flex justify-end gap-3">
+        <Button variant="outline" onClick={() => { setAmount(""); setDescription(""); }}>
+          Clear
+        </Button>
+        <Button onClick={handleSubmit} disabled={loading}>
+          {loading ? "Processing..." : "Confirm Withdraw"}
+        </Button>
+      </div>
+    </div>
   )
 }
