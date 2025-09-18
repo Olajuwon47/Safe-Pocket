@@ -111,7 +111,13 @@
         "amount": 200,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 500,
+      "transactions": 10,
+      "walletBalance": 200,
+      "progress": 15
+    }
   },
   {
     "id": 2,
@@ -246,7 +252,13 @@
         "amount": 13832,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 1000,
+      "transactions": 20,
+      "walletBalance": 400,
+      "progress": 30
+    }
   },
   {
     "id": 3,
@@ -367,7 +379,13 @@
         "amount": 1922,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 1500,
+      "transactions": 30,
+      "walletBalance": 600,
+      "progress": 45
+    }
   },
   {
     "id": 4,
@@ -495,7 +513,13 @@
         "amount": 5582,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 2000,
+      "transactions": 40,
+      "walletBalance": 800,
+      "progress": 60
+    }
   },
   {
     "id": 5,
@@ -609,7 +633,13 @@
         "amount": 27958,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 2500,
+      "transactions": 50,
+      "walletBalance": 1000,
+      "progress": 75
+    }
   },
   {
     "id": 6,
@@ -744,7 +774,13 @@
         "amount": 2289,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 3000,
+      "transactions": 60,
+      "walletBalance": 1200,
+      "progress": 90
+    }
   },
   {
     "id": 7,
@@ -872,7 +908,13 @@
         "amount": 17095,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 3500,
+      "transactions": 70,
+      "walletBalance": 1400,
+      "progress": 100
+    }
   },
   {
     "id": 8,
@@ -993,7 +1035,13 @@
         "amount": 6291,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 4000,
+      "transactions": 80,
+      "walletBalance": 1600,
+      "progress": 100
+    }
   },
   {
     "id": 9,
@@ -1128,7 +1176,13 @@
         "amount": 4486,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 4500,
+      "transactions": 90,
+      "walletBalance": 1800,
+      "progress": 100
+    }
   },
   {
     "id": 10,
@@ -1256,7 +1310,13 @@
         "amount": 2220,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 5000,
+      "transactions": 100,
+      "walletBalance": 2000,
+      "progress": 100
+    }
   },
   {
     "id": 11,
@@ -1370,7 +1430,13 @@
         "amount": 19067,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 5500,
+      "transactions": 110,
+      "walletBalance": 2200,
+      "progress": 100
+    }
   },
   {
     "id": 12,
@@ -1498,7 +1564,13 @@
         "amount": 10502,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 6000,
+      "transactions": 120,
+      "walletBalance": 2400,
+      "progress": 100
+    }
   },
   {
     "id": 13,
@@ -1626,7 +1698,13 @@
         "amount": 18962,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 6500,
+      "transactions": 130,
+      "walletBalance": 2600,
+      "progress": 100
+    }
   },
   {
     "id": 14,
@@ -1761,7 +1839,13 @@
         "amount": 23868,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 7000,
+      "transactions": 140,
+      "walletBalance": 2800,
+      "progress": 100
+    }
   },
   {
     "id": 15,
@@ -1896,7 +1980,13 @@
         "amount": 12289,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 7500,
+      "transactions": 150,
+      "walletBalance": 3000,
+      "progress": 100
+    }
   },
   {
     "id": 16,
@@ -2010,7 +2100,13 @@
         "amount": 3586,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 8000,
+      "transactions": 160,
+      "walletBalance": 3200,
+      "progress": 100
+    }
   },
   {
     "id": 17,
@@ -2124,7 +2220,13 @@
         "amount": 1648,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 8500,
+      "transactions": 170,
+      "walletBalance": 3400,
+      "progress": 100
+    }
   },
   {
     "id": 18,
@@ -2252,7 +2354,13 @@
         "amount": 3712,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 9000,
+      "transactions": 180,
+      "walletBalance": 3600,
+      "progress": 100
+    }
   },
   {
     "id": 19,
@@ -2380,7 +2488,13 @@
         "amount": 2059,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 9500,
+      "transactions": 190,
+      "walletBalance": 3800,
+      "progress": 100
+    }
   },
   {
     "id": 20,
@@ -2515,7 +2629,13 @@
         "amount": 10407,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 10000,
+      "transactions": 200,
+      "walletBalance": 4000,
+      "progress": 100
+    }
   },
   {
     "id": 21,
@@ -2636,7 +2756,13 @@
         "amount": 11094,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 10500,
+      "transactions": 210,
+      "walletBalance": 4200,
+      "progress": 100
+    }
   },
   {
     "id": 22,
@@ -2757,7 +2883,13 @@
         "amount": 264,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 11000,
+      "transactions": 220,
+      "walletBalance": 4400,
+      "progress": 100
+    }
   },
   {
     "id": 23,
@@ -2878,7 +3010,13 @@
         "amount": 25101,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 11500,
+      "transactions": 230,
+      "walletBalance": 4600,
+      "progress": 100
+    }
   },
   {
     "id": 24,
@@ -2999,7 +3137,13 @@
         "amount": 632,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 12000,
+      "transactions": 240,
+      "walletBalance": 4800,
+      "progress": 100
+    }
   },
   {
     "id": 25,
@@ -3134,7 +3278,13 @@
         "amount": 28915,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 12500,
+      "transactions": 250,
+      "walletBalance": 5000,
+      "progress": 100
+    }
   },
   {
     "id": 26,
@@ -3255,7 +3405,13 @@
         "amount": 40222,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 13000,
+      "transactions": 260,
+      "walletBalance": 5200,
+      "progress": 100
+    }
   },
   {
     "id": 27,
@@ -3369,7 +3525,13 @@
         "amount": 39712,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 13500,
+      "transactions": 270,
+      "walletBalance": 5400,
+      "progress": 100
+    }
   },
   {
     "id": 28,
@@ -3490,7 +3652,13 @@
         "amount": 4903,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 14000,
+      "transactions": 280,
+      "walletBalance": 5600,
+      "progress": 100
+    }
   },
   {
     "id": 29,
@@ -3604,7 +3772,13 @@
         "amount": 15552,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 14500,
+      "transactions": 290,
+      "walletBalance": 5800,
+      "progress": 100
+    }
   },
   {
     "id": 30,
@@ -3718,7 +3892,13 @@
         "amount": 1054,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 15000,
+      "transactions": 300,
+      "walletBalance": 6000,
+      "progress": 100
+    }
   },
   {
     "id": 31,
@@ -3832,7 +4012,13 @@
         "amount": 17413,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 15500,
+      "transactions": 310,
+      "walletBalance": 6200,
+      "progress": 100
+    }
   },
   {
     "id": 32,
@@ -3953,7 +4139,13 @@
         "amount": 10760,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 16000,
+      "transactions": 320,
+      "walletBalance": 6400,
+      "progress": 100
+    }
   },
   {
     "id": 33,
@@ -4081,7 +4273,13 @@
         "amount": 1264,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 16500,
+      "transactions": 330,
+      "walletBalance": 6600,
+      "progress": 100
+    }
   },
   {
     "id": 34,
@@ -4216,7 +4414,13 @@
         "amount": 30267,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 17000,
+      "transactions": 340,
+      "walletBalance": 6800,
+      "progress": 100
+    }
   },
   {
     "id": 35,
@@ -4337,7 +4541,13 @@
         "amount": 12799,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 17500,
+      "transactions": 350,
+      "walletBalance": 7000,
+      "progress": 100
+    }
   },
   {
     "id": 36,
@@ -4451,7 +4661,13 @@
         "amount": 8538,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 18000,
+      "transactions": 360,
+      "walletBalance": 7200,
+      "progress": 100
+    }
   },
   {
     "id": 37,
@@ -4579,7 +4795,13 @@
         "amount": 18569,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 18500,
+      "transactions": 370,
+      "walletBalance": 7400,
+      "progress": 100
+    }
   },
   {
     "id": 38,
@@ -4714,7 +4936,13 @@
         "amount": 7194,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 19000,
+      "transactions": 380,
+      "walletBalance": 7600,
+      "progress": 100
+    }
   },
   {
     "id": 39,
@@ -4835,7 +5063,13 @@
         "amount": 10656,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 19500,
+      "transactions": 390,
+      "walletBalance": 7800,
+      "progress": 100
+    }
   },
   {
     "id": 40,
@@ -4970,7 +5204,13 @@
         "amount": 1232,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 20000,
+      "transactions": 400,
+      "walletBalance": 8000,
+      "progress": 100
+    }
   },
   {
     "id": 41,
@@ -5091,7 +5331,13 @@
         "amount": 1427,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 20500,
+      "transactions": 410,
+      "walletBalance": 8200,
+      "progress": 100
+    }
   },
   {
     "id": 42,
@@ -5205,7 +5451,13 @@
         "amount": 9304,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 21000,
+      "transactions": 420,
+      "walletBalance": 8400,
+      "progress": 100
+    }
   },
   {
     "id": 43,
@@ -5326,7 +5578,13 @@
         "amount": 6481,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 21500,
+      "transactions": 430,
+      "walletBalance": 8600,
+      "progress": 100
+    }
   },
   {
     "id": 44,
@@ -5461,7 +5719,13 @@
         "amount": 4572,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 22000,
+      "transactions": 440,
+      "walletBalance": 8800,
+      "progress": 100
+    }
   },
   {
     "id": 45,
@@ -5596,7 +5860,13 @@
         "amount": 13721,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 22500,
+      "transactions": 450,
+      "walletBalance": 9000,
+      "progress": 100
+    }
   },
   {
     "id": 46,
@@ -5710,7 +5980,13 @@
         "amount": 15628,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 23000,
+      "transactions": 460,
+      "walletBalance": 9200,
+      "progress": 100
+    }
   },
   {
     "id": 47,
@@ -5838,7 +6114,13 @@
         "amount": 9553,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 23500,
+      "transactions": 470,
+      "walletBalance": 9400,
+      "progress": 100
+    }
   },
   {
     "id": 48,
@@ -5973,7 +6255,13 @@
         "amount": 1920,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 24000,
+      "transactions": 480,
+      "walletBalance": 9600,
+      "progress": 100
+    }
   },
   {
     "id": 49,
@@ -6101,7 +6389,13 @@
         "amount": 15903,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 24500,
+      "transactions": 490,
+      "walletBalance": 9800,
+      "progress": 100
+    }
   },
   {
     "id": 50,
@@ -6222,7 +6516,13 @@
         "amount": 23030,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 25000,
+      "transactions": 500,
+      "walletBalance": 10000,
+      "progress": 100
+    }
   },
   {
     "id": 51,
@@ -6343,7 +6643,13 @@
         "amount": 12005,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 25500,
+      "transactions": 510,
+      "walletBalance": 10200,
+      "progress": 100
+    }
   },
   {
     "id": 52,
@@ -6471,7 +6777,13 @@
         "amount": 30995,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 26000,
+      "transactions": 520,
+      "walletBalance": 10400,
+      "progress": 100
+    }
   },
   {
     "id": 53,
@@ -6606,7 +6918,13 @@
         "amount": 2290,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 26500,
+      "transactions": 530,
+      "walletBalance": 10600,
+      "progress": 100
+    }
   },
   {
     "id": 54,
@@ -6734,7 +7052,13 @@
         "amount": 1762,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 27000,
+      "transactions": 540,
+      "walletBalance": 10800,
+      "progress": 100
+    }
   },
   {
     "id": 55,
@@ -6869,7 +7193,13 @@
         "amount": 4059,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 27500,
+      "transactions": 550,
+      "walletBalance": 11000,
+      "progress": 100
+    }
   },
   {
     "id": 56,
@@ -6997,7 +7327,13 @@
         "amount": 13582,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 28000,
+      "transactions": 560,
+      "walletBalance": 11200,
+      "progress": 100
+    }
   },
   {
     "id": 57,
@@ -7118,7 +7454,13 @@
         "amount": 22536,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 28500,
+      "transactions": 570,
+      "walletBalance": 11400,
+      "progress": 100
+    }
   },
   {
     "id": 58,
@@ -7239,7 +7581,13 @@
         "amount": 11133,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 29000,
+      "transactions": 580,
+      "walletBalance": 11600,
+      "progress": 100
+    }
   },
   {
     "id": 59,
@@ -7353,7 +7701,13 @@
         "amount": 485,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 29500,
+      "transactions": 590,
+      "walletBalance": 11800,
+      "progress": 100
+    }
   },
   {
     "id": 60,
@@ -7481,7 +7835,13 @@
         "amount": 8650,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 30000,
+      "transactions": 600,
+      "walletBalance": 12000,
+      "progress": 100
+    }
   },
   {
     "id": 61,
@@ -7616,7 +7976,13 @@
         "amount": 16710,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 30500,
+      "transactions": 610,
+      "walletBalance": 12200,
+      "progress": 100
+    }
   },
   {
     "id": 62,
@@ -7730,7 +8096,13 @@
         "amount": 7976,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 31000,
+      "transactions": 620,
+      "walletBalance": 12400,
+      "progress": 100
+    }
   },
   {
     "id": 63,
@@ -7865,7 +8237,13 @@
         "amount": 106,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 31500,
+      "transactions": 630,
+      "walletBalance": 12600,
+      "progress": 100
+    }
   },
   {
     "id": 64,
@@ -7993,7 +8371,13 @@
         "amount": 29118,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 32000,
+      "transactions": 640,
+      "walletBalance": 12800,
+      "progress": 100
+    }
   },
   {
     "id": 65,
@@ -8107,7 +8491,13 @@
         "amount": 15854,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 32500,
+      "transactions": 650,
+      "walletBalance": 13000,
+      "progress": 100
+    }
   },
   {
     "id": 66,
@@ -8221,7 +8611,13 @@
         "amount": 31604,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 33000,
+      "transactions": 660,
+      "walletBalance": 13200,
+      "progress": 100
+    }
   },
   {
     "id": 67,
@@ -8342,7 +8738,13 @@
         "amount": 4832,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 33500,
+      "transactions": 670,
+      "walletBalance": 13400,
+      "progress": 100
+    }
   },
   {
     "id": 68,
@@ -8470,7 +8872,13 @@
         "amount": 32705,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 34000,
+      "transactions": 680,
+      "walletBalance": 13600,
+      "progress": 100
+    }
   },
   {
     "id": 69,
@@ -8584,7 +8992,13 @@
         "amount": 3969,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 34500,
+      "transactions": 690,
+      "walletBalance": 13800,
+      "progress": 100
+    }
   },
   {
     "id": 70,
@@ -8712,7 +9126,13 @@
         "amount": 13473,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 35000,
+      "transactions": 700,
+      "walletBalance": 14000,
+      "progress": 100
+    }
   },
   {
     "id": 71,
@@ -8847,7 +9267,13 @@
         "amount": 21930,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 35500,
+      "transactions": 710,
+      "walletBalance": 14200,
+      "progress": 100
+    }
   },
   {
     "id": 72,
@@ -8968,7 +9394,13 @@
         "amount": 5459,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 36000,
+      "transactions": 720,
+      "walletBalance": 14400,
+      "progress": 100
+    }
   },
   {
     "id": 73,
@@ -9096,7 +9528,13 @@
         "amount": 2006,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 36500,
+      "transactions": 730,
+      "walletBalance": 14600,
+      "progress": 100
+    }
   },
   {
     "id": 74,
@@ -9210,7 +9648,13 @@
         "amount": 31556,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 37000,
+      "transactions": 740,
+      "walletBalance": 14800,
+      "progress": 100
+    }
   },
   {
     "id": 75,
@@ -9324,7 +9768,13 @@
         "amount": 38011,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 37500,
+      "transactions": 750,
+      "walletBalance": 15000,
+      "progress": 100
+    }
   },
   {
     "id": 76,
@@ -9438,7 +9888,13 @@
         "amount": 8897,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 38000,
+      "transactions": 760,
+      "walletBalance": 15200,
+      "progress": 100
+    }
   },
   {
     "id": 77,
@@ -9552,7 +10008,13 @@
         "amount": 1062,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 38500,
+      "transactions": 770,
+      "walletBalance": 15400,
+      "progress": 100
+    }
   },
   {
     "id": 78,
@@ -9673,7 +10135,13 @@
         "amount": 2482,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 39000,
+      "transactions": 780,
+      "walletBalance": 15600,
+      "progress": 100
+    }
   },
   {
     "id": 79,
@@ -9801,7 +10269,13 @@
         "amount": 6943,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 39500,
+      "transactions": 790,
+      "walletBalance": 15800,
+      "progress": 100
+    }
   },
   {
     "id": 80,
@@ -9936,7 +10410,13 @@
         "amount": 14548,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 40000,
+      "transactions": 800,
+      "walletBalance": 16000,
+      "progress": 100
+    }
   },
   {
     "id": 81,
@@ -10064,7 +10544,13 @@
         "amount": 738,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 40500,
+      "transactions": 810,
+      "walletBalance": 16200,
+      "progress": 100
+    }
   },
   {
     "id": 82,
@@ -10178,7 +10664,13 @@
         "amount": 581,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 41000,
+      "transactions": 820,
+      "walletBalance": 16400,
+      "progress": 100
+    }
   },
   {
     "id": 83,
@@ -10292,7 +10784,13 @@
         "amount": 4725,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 41500,
+      "transactions": 830,
+      "walletBalance": 16600,
+      "progress": 100
+    }
   },
   {
     "id": 84,
@@ -10427,7 +10925,13 @@
         "amount": 8016,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 42000,
+      "transactions": 840,
+      "walletBalance": 16800,
+      "progress": 100
+    }
   },
   {
     "id": 85,
@@ -10541,7 +11045,13 @@
         "amount": 2973,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 42500,
+      "transactions": 850,
+      "walletBalance": 17000,
+      "progress": 100
+    }
   },
   {
     "id": 86,
@@ -10676,7 +11186,13 @@
         "amount": 4446,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 43000,
+      "transactions": 860,
+      "walletBalance": 17200,
+      "progress": 100
+    }
   },
   {
     "id": 87,
@@ -10804,7 +11320,13 @@
         "amount": 15653,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 43500,
+      "transactions": 870,
+      "walletBalance": 17400,
+      "progress": 100
+    }
   },
   {
     "id": 88,
@@ -10932,7 +11454,13 @@
         "amount": 11517,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 44000,
+      "transactions": 880,
+      "walletBalance": 17600,
+      "progress": 100
+    }
   },
   {
     "id": 89,
@@ -11046,7 +11574,13 @@
         "amount": 851,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 44500,
+      "transactions": 890,
+      "walletBalance": 17800,
+      "progress": 100
+    }
   },
   {
     "id": 90,
@@ -11174,7 +11708,13 @@
         "amount": 2247,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 45000,
+      "transactions": 900,
+      "walletBalance": 18000,
+      "progress": 100
+    }
   },
   {
     "id": 91,
@@ -11309,7 +11849,13 @@
         "amount": 10056,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 45500,
+      "transactions": 910,
+      "walletBalance": 18200,
+      "progress": 100
+    }
   },
   {
     "id": 92,
@@ -11444,7 +11990,13 @@
         "amount": 19248,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 46000,
+      "transactions": 920,
+      "walletBalance": 18400,
+      "progress": 100
+    }
   },
   {
     "id": 93,
@@ -11579,7 +12131,13 @@
         "amount": 10912,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 46500,
+      "transactions": 930,
+      "walletBalance": 18600,
+      "progress": 100
+    }
   },
   {
     "id": 94,
@@ -11707,7 +12265,13 @@
         "amount": 48517,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 47000,
+      "transactions": 940,
+      "walletBalance": 18800,
+      "progress": 100
+    }
   },
   {
     "id": 95,
@@ -11828,7 +12392,13 @@
         "amount": 263,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 47500,
+      "transactions": 950,
+      "walletBalance": 19000,
+      "progress": 100
+    }
   },
   {
     "id": 96,
@@ -11942,7 +12512,13 @@
         "amount": 15176,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 48000,
+      "transactions": 960,
+      "walletBalance": 19200,
+      "progress": 100
+    }
   },
   {
     "id": 97,
@@ -12070,7 +12646,13 @@
         "amount": 2355,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 48500,
+      "transactions": 970,
+      "walletBalance": 19400,
+      "progress": 100
+    }
   },
   {
     "id": 98,
@@ -12205,7 +12787,13 @@
         "amount": 7019,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 49000,
+      "transactions": 980,
+      "walletBalance": 19600,
+      "progress": 100
+    }
   },
   {
     "id": 99,
@@ -12319,7 +12907,13 @@
         "amount": 15376,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 49500,
+      "transactions": 990,
+      "walletBalance": 19800,
+      "progress": 100
+    }
   },
   {
     "id": 100,
@@ -12454,7 +13048,13 @@
         "amount": 683,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 50000,
+      "transactions": 1000,
+      "walletBalance": 20000,
+      "progress": 100
+    }
   },
   {
     "id": 101,
@@ -12575,7 +13175,13 @@
         "amount": 3492,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 50500,
+      "transactions": 1010,
+      "walletBalance": 20200,
+      "progress": 100
+    }
   },
   {
     "id": 102,
@@ -12710,7 +13316,13 @@
         "amount": 12840,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 51000,
+      "transactions": 1020,
+      "walletBalance": 20400,
+      "progress": 100
+    }
   },
   {
     "id": 103,
@@ -12824,7 +13436,13 @@
         "amount": 298,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 51500,
+      "transactions": 1030,
+      "walletBalance": 20600,
+      "progress": 100
+    }
   },
   {
     "id": 104,
@@ -12959,7 +13577,13 @@
         "amount": 6205,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 52000,
+      "transactions": 1040,
+      "walletBalance": 20800,
+      "progress": 100
+    }
   },
   {
     "id": 105,
@@ -13080,7 +13704,13 @@
         "amount": 908,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 52500,
+      "transactions": 1050,
+      "walletBalance": 21000,
+      "progress": 100
+    }
   },
   {
     "id": 106,
@@ -13208,7 +13838,13 @@
         "amount": 23821,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 53000,
+      "transactions": 1060,
+      "walletBalance": 21200,
+      "progress": 100
+    }
   },
   {
     "id": 107,
@@ -13336,7 +13972,13 @@
         "amount": 4224,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 53500,
+      "transactions": 1070,
+      "walletBalance": 21400,
+      "progress": 100
+    }
   },
   {
     "id": 108,
@@ -13457,7 +14099,13 @@
         "amount": 25249,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 54000,
+      "transactions": 1080,
+      "walletBalance": 21600,
+      "progress": 100
+    }
   },
   {
     "id": 109,
@@ -13592,7 +14240,13 @@
         "amount": 38399,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 54500,
+      "transactions": 1090,
+      "walletBalance": 21800,
+      "progress": 100
+    }
   },
   {
     "id": 110,
@@ -13720,7 +14374,13 @@
         "amount": 3107,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 55000,
+      "transactions": 1100,
+      "walletBalance": 22000,
+      "progress": 100
+    }
   },
   {
     "id": 111,
@@ -13848,7 +14508,13 @@
         "amount": 7603,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 55500,
+      "transactions": 1110,
+      "walletBalance": 22200,
+      "progress": 100
+    }
   },
   {
     "id": 112,
@@ -13976,7 +14642,13 @@
         "amount": 207,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 56000,
+      "transactions": 1120,
+      "walletBalance": 22400,
+      "progress": 100
+    }
   },
   {
     "id": 113,
@@ -14104,7 +14776,13 @@
         "amount": 4287,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 56500,
+      "transactions": 1130,
+      "walletBalance": 22600,
+      "progress": 100
+    }
   },
   {
     "id": 114,
@@ -14232,7 +14910,13 @@
         "amount": 4947,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 57000,
+      "transactions": 1140,
+      "walletBalance": 22800,
+      "progress": 100
+    }
   },
   {
     "id": 115,
@@ -14367,7 +15051,13 @@
         "amount": 5881,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 57500,
+      "transactions": 1150,
+      "walletBalance": 23000,
+      "progress": 100
+    }
   },
   {
     "id": 116,
@@ -14495,7 +15185,13 @@
         "amount": 8135,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 58000,
+      "transactions": 1160,
+      "walletBalance": 23200,
+      "progress": 100
+    }
   },
   {
     "id": 117,
@@ -14623,7 +15319,13 @@
         "amount": 3156,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 58500,
+      "transactions": 1170,
+      "walletBalance": 23400,
+      "progress": 100
+    }
   },
   {
     "id": 118,
@@ -14758,7 +15460,13 @@
         "amount": 5930,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 59000,
+      "transactions": 1180,
+      "walletBalance": 23600,
+      "progress": 100
+    }
   },
   {
     "id": 119,
@@ -14872,7 +15580,13 @@
         "amount": 12388,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 59500,
+      "transactions": 1190,
+      "walletBalance": 23800,
+      "progress": 100
+    }
   },
   {
     "id": 120,
@@ -14986,7 +15700,13 @@
         "amount": 8400,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 60000,
+      "transactions": 1200,
+      "walletBalance": 24000,
+      "progress": 100
+    }
   },
   {
     "id": 121,
@@ -15114,7 +15834,13 @@
         "amount": 27070,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 60500,
+      "transactions": 1210,
+      "walletBalance": 24200,
+      "progress": 100
+    }
   },
   {
     "id": 122,
@@ -15242,7 +15968,13 @@
         "amount": 23058,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 61000,
+      "transactions": 1220,
+      "walletBalance": 24400,
+      "progress": 100
+    }
   },
   {
     "id": 123,
@@ -15370,7 +16102,13 @@
         "amount": 5657,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 61500,
+      "transactions": 1230,
+      "walletBalance": 24600,
+      "progress": 100
+    }
   },
   {
     "id": 124,
@@ -15491,7 +16229,13 @@
         "amount": 4458,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 62000,
+      "transactions": 1240,
+      "walletBalance": 24800,
+      "progress": 100
+    }
   },
   {
     "id": 125,
@@ -15626,7 +16370,13 @@
         "amount": 2307,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 62500,
+      "transactions": 1250,
+      "walletBalance": 25000,
+      "progress": 100
+    }
   },
   {
     "id": 126,
@@ -15747,7 +16497,13 @@
         "amount": 27879,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 63000,
+      "transactions": 1260,
+      "walletBalance": 25200,
+      "progress": 100
+    }
   },
   {
     "id": 127,
@@ -15875,7 +16631,13 @@
         "amount": 1514,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 63500,
+      "transactions": 1270,
+      "walletBalance": 25400,
+      "progress": 100
+    }
   },
   {
     "id": 128,
@@ -15996,7 +16758,13 @@
         "amount": 3931,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 64000,
+      "transactions": 1280,
+      "walletBalance": 25600,
+      "progress": 100
+    }
   },
   {
     "id": 129,
@@ -16117,7 +16885,13 @@
         "amount": 25103,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 64500,
+      "transactions": 1290,
+      "walletBalance": 25800,
+      "progress": 100
+    }
   },
   {
     "id": 130,
@@ -16231,7 +17005,13 @@
         "amount": 14575,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 65000,
+      "transactions": 1300,
+      "walletBalance": 26000,
+      "progress": 100
+    }
   },
   {
     "id": 131,
@@ -16366,7 +17146,13 @@
         "amount": 7625,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 65500,
+      "transactions": 1310,
+      "walletBalance": 26200,
+      "progress": 100
+    }
   },
   {
     "id": 132,
@@ -16487,7 +17273,13 @@
         "amount": 9530,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 66000,
+      "transactions": 1320,
+      "walletBalance": 26400,
+      "progress": 100
+    }
   },
   {
     "id": 133,
@@ -16601,7 +17393,13 @@
         "amount": 28337,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 66500,
+      "transactions": 1330,
+      "walletBalance": 26600,
+      "progress": 100
+    }
   },
   {
     "id": 134,
@@ -16722,7 +17520,13 @@
         "amount": 1463,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 67000,
+      "transactions": 1340,
+      "walletBalance": 26800,
+      "progress": 100
+    }
   },
   {
     "id": 135,
@@ -16850,7 +17654,13 @@
         "amount": 2502,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 67500,
+      "transactions": 1350,
+      "walletBalance": 27000,
+      "progress": 100
+    }
   },
   {
     "id": 136,
@@ -16964,7 +17774,13 @@
         "amount": 8098,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 68000,
+      "transactions": 1360,
+      "walletBalance": 27200,
+      "progress": 100
+    }
   },
   {
     "id": 137,
@@ -17099,7 +17915,13 @@
         "amount": 6365,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 68500,
+      "transactions": 1370,
+      "walletBalance": 27400,
+      "progress": 100
+    }
   },
   {
     "id": 138,
@@ -17227,7 +18049,13 @@
         "amount": 2560,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 69000,
+      "transactions": 1380,
+      "walletBalance": 27600,
+      "progress": 100
+    }
   },
   {
     "id": 139,
@@ -17355,7 +18183,13 @@
         "amount": 1845,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 69500,
+      "transactions": 1390,
+      "walletBalance": 27800,
+      "progress": 100
+    }
   },
   {
     "id": 140,
@@ -17483,7 +18317,13 @@
         "amount": 7644,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 70000,
+      "transactions": 1400,
+      "walletBalance": 28000,
+      "progress": 100
+    }
   },
   {
     "id": 141,
@@ -17618,7 +18458,13 @@
         "amount": 296,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 70500,
+      "transactions": 1410,
+      "walletBalance": 28200,
+      "progress": 100
+    }
   },
   {
     "id": 142,
@@ -17746,7 +18592,13 @@
         "amount": 17530,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 71000,
+      "transactions": 1420,
+      "walletBalance": 28400,
+      "progress": 100
+    }
   },
   {
     "id": 143,
@@ -17860,7 +18712,13 @@
         "amount": 21523,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 71500,
+      "transactions": 1430,
+      "walletBalance": 28600,
+      "progress": 100
+    }
   },
   {
     "id": 144,
@@ -17995,7 +18853,13 @@
         "amount": 2885,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 72000,
+      "transactions": 1440,
+      "walletBalance": 28800,
+      "progress": 100
+    }
   },
   {
     "id": 145,
@@ -18109,7 +18973,13 @@
         "amount": 33831,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 72500,
+      "transactions": 1450,
+      "walletBalance": 29000,
+      "progress": 100
+    }
   },
   {
     "id": 146,
@@ -18237,7 +19107,13 @@
         "amount": 20003,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 73000,
+      "transactions": 1460,
+      "walletBalance": 29200,
+      "progress": 100
+    }
   },
   {
     "id": 147,
@@ -18372,7 +19248,13 @@
         "amount": 16472,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 73500,
+      "transactions": 1470,
+      "walletBalance": 29400,
+      "progress": 100
+    }
   },
   {
     "id": 148,
@@ -18493,7 +19375,13 @@
         "amount": 4835,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 74000,
+      "transactions": 1480,
+      "walletBalance": 29600,
+      "progress": 100
+    }
   },
   {
     "id": 149,
@@ -18607,7 +19495,13 @@
         "amount": 21188,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 74500,
+      "transactions": 1490,
+      "walletBalance": 29800,
+      "progress": 100
+    }
   },
   {
     "id": 150,
@@ -18728,7 +19622,13 @@
         "amount": 20511,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 75000,
+      "transactions": 1500,
+      "walletBalance": 30000,
+      "progress": 100
+    }
   },
   {
     "id": 151,
@@ -18849,7 +19749,13 @@
         "amount": 5669,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 75500,
+      "transactions": 1510,
+      "walletBalance": 30200,
+      "progress": 100
+    }
   },
   {
     "id": 152,
@@ -18977,7 +19883,13 @@
         "amount": 9256,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 76000,
+      "transactions": 1520,
+      "walletBalance": 30400,
+      "progress": 100
+    }
   },
   {
     "id": 153,
@@ -19105,7 +20017,13 @@
         "amount": 1445,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 76500,
+      "transactions": 1530,
+      "walletBalance": 30600,
+      "progress": 100
+    }
   },
   {
     "id": 154,
@@ -19219,7 +20137,13 @@
         "amount": 746,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 77000,
+      "transactions": 1540,
+      "walletBalance": 30800,
+      "progress": 100
+    }
   },
   {
     "id": 155,
@@ -19340,7 +20264,13 @@
         "amount": 1777,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 77500,
+      "transactions": 1550,
+      "walletBalance": 31000,
+      "progress": 100
+    }
   },
   {
     "id": 156,
@@ -19475,7 +20405,13 @@
         "amount": 3064,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 78000,
+      "transactions": 1560,
+      "walletBalance": 31200,
+      "progress": 100
+    }
   },
   {
     "id": 157,
@@ -19589,7 +20525,13 @@
         "amount": 34437,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 78500,
+      "transactions": 1570,
+      "walletBalance": 31400,
+      "progress": 100
+    }
   },
   {
     "id": 158,
@@ -19717,7 +20659,13 @@
         "amount": 15310,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 79000,
+      "transactions": 1580,
+      "walletBalance": 31600,
+      "progress": 100
+    }
   },
   {
     "id": 159,
@@ -19831,7 +20779,13 @@
         "amount": 1844,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 79500,
+      "transactions": 1590,
+      "walletBalance": 31800,
+      "progress": 100
+    }
   },
   {
     "id": 160,
@@ -19966,7 +20920,13 @@
         "amount": 21513,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 80000,
+      "transactions": 1600,
+      "walletBalance": 32000,
+      "progress": 100
+    }
   },
   {
     "id": 161,
@@ -20080,7 +21040,13 @@
         "amount": 29766,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 80500,
+      "transactions": 1610,
+      "walletBalance": 32200,
+      "progress": 100
+    }
   },
   {
     "id": 162,
@@ -20194,7 +21160,13 @@
         "amount": 577,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 81000,
+      "transactions": 1620,
+      "walletBalance": 32400,
+      "progress": 100
+    }
   },
   {
     "id": 163,
@@ -20322,7 +21294,13 @@
         "amount": 21318,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 81500,
+      "transactions": 1630,
+      "walletBalance": 32600,
+      "progress": 100
+    }
   },
   {
     "id": 164,
@@ -20436,7 +21414,13 @@
         "amount": 347,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 82000,
+      "transactions": 1640,
+      "walletBalance": 32800,
+      "progress": 100
+    }
   },
   {
     "id": 165,
@@ -20550,7 +21534,13 @@
         "amount": 6942,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 82500,
+      "transactions": 1650,
+      "walletBalance": 33000,
+      "progress": 100
+    }
   },
   {
     "id": 166,
@@ -20678,7 +21668,13 @@
         "amount": 1567,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 83000,
+      "transactions": 1660,
+      "walletBalance": 33200,
+      "progress": 100
+    }
   },
   {
     "id": 167,
@@ -20792,7 +21788,13 @@
         "amount": 27553,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 83500,
+      "transactions": 1670,
+      "walletBalance": 33400,
+      "progress": 100
+    }
   },
   {
     "id": 168,
@@ -20920,7 +21922,13 @@
         "amount": 5089,
         "description": "Restaurant"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 84000,
+      "transactions": 1680,
+      "walletBalance": 33600,
+      "progress": 100
+    }
   },
   {
     "id": 169,
@@ -21055,7 +22063,13 @@
         "amount": 5530,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 84500,
+      "transactions": 1690,
+      "walletBalance": 33800,
+      "progress": 100
+    }
   },
   {
     "id": 170,
@@ -21169,7 +22183,13 @@
         "amount": 5088,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 85000,
+      "transactions": 1700,
+      "walletBalance": 34000,
+      "progress": 100
+    }
   },
   {
     "id": 171,
@@ -21283,7 +22303,13 @@
         "amount": 18495,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 85500,
+      "transactions": 1710,
+      "walletBalance": 34200,
+      "progress": 100
+    }
   },
   {
     "id": 172,
@@ -21397,7 +22423,13 @@
         "amount": 16737,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 86000,
+      "transactions": 1720,
+      "walletBalance": 34400,
+      "progress": 100
+    }
   },
   {
     "id": 173,
@@ -21511,7 +22543,13 @@
         "amount": 717,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 86500,
+      "transactions": 1730,
+      "walletBalance": 34600,
+      "progress": 100
+    }
   },
   {
     "id": 174,
@@ -21625,7 +22663,13 @@
         "amount": 1450,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 87000,
+      "transactions": 1740,
+      "walletBalance": 34800,
+      "progress": 100
+    }
   },
   {
     "id": 175,
@@ -21760,7 +22804,13 @@
         "amount": 22640,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 87500,
+      "transactions": 1750,
+      "walletBalance": 35000,
+      "progress": 100
+    }
   },
   {
     "id": 176,
@@ -21881,7 +22931,13 @@
         "amount": 11570,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 88000,
+      "transactions": 1760,
+      "walletBalance": 35200,
+      "progress": 100
+    }
   },
   {
     "id": 177,
@@ -22002,7 +23058,13 @@
         "amount": 9338,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 88500,
+      "transactions": 1770,
+      "walletBalance": 35400,
+      "progress": 100
+    }
   },
   {
     "id": 178,
@@ -22130,7 +23192,13 @@
         "amount": 11075,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 89000,
+      "transactions": 1780,
+      "walletBalance": 35600,
+      "progress": 100
+    }
   },
   {
     "id": 179,
@@ -22244,7 +23312,13 @@
         "amount": 141,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 89500,
+      "transactions": 1790,
+      "walletBalance": 35800,
+      "progress": 100
+    }
   },
   {
     "id": 180,
@@ -22358,7 +23432,13 @@
         "amount": 36096,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 90000,
+      "transactions": 1800,
+      "walletBalance": 36000,
+      "progress": 100
+    }
   },
   {
     "id": 181,
@@ -22479,7 +23559,13 @@
         "amount": 15303,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 90500,
+      "transactions": 1810,
+      "walletBalance": 36200,
+      "progress": 100
+    }
   },
   {
     "id": 182,
@@ -22614,7 +23700,13 @@
         "amount": 5126,
         "description": "Received from Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 91000,
+      "transactions": 1820,
+      "walletBalance": 36400,
+      "progress": 100
+    }
   },
   {
     "id": 183,
@@ -22749,7 +23841,13 @@
         "amount": 10810,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 91500,
+      "transactions": 1830,
+      "walletBalance": 36600,
+      "progress": 100
+    }
   },
   {
     "id": 184,
@@ -22870,7 +23968,13 @@
         "amount": 9239,
         "description": "Utility Bill"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 92000,
+      "transactions": 1840,
+      "walletBalance": 36800,
+      "progress": 100
+    }
   },
   {
     "id": 185,
@@ -22998,7 +24102,13 @@
         "amount": 10697,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 92500,
+      "transactions": 1850,
+      "walletBalance": 37000,
+      "progress": 100
+    }
   },
   {
     "id": 186,
@@ -23112,7 +24222,13 @@
         "amount": 31949,
         "description": "Gift"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 93000,
+      "transactions": 1860,
+      "walletBalance": 37200,
+      "progress": 100
+    }
   },
   {
     "id": 187,
@@ -23240,7 +24356,13 @@
         "amount": 18388,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 93500,
+      "transactions": 1870,
+      "walletBalance": 37400,
+      "progress": 100
+    }
   },
   {
     "id": 188,
@@ -23368,7 +24490,13 @@
         "amount": 3564,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 94000,
+      "transactions": 1880,
+      "walletBalance": 37600,
+      "progress": 100
+    }
   },
   {
     "id": 189,
@@ -23482,7 +24610,13 @@
         "amount": 377,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 94500,
+      "transactions": 1890,
+      "walletBalance": 37800,
+      "progress": 100
+    }
   },
   {
     "id": 190,
@@ -23603,7 +24737,13 @@
         "amount": 16536,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 95000,
+      "transactions": 1900,
+      "walletBalance": 38000,
+      "progress": 100
+    }
   },
   {
     "id": 191,
@@ -23731,7 +24871,13 @@
         "amount": 41313,
         "description": "Refund"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 95500,
+      "transactions": 1910,
+      "walletBalance": 38200,
+      "progress": 100
+    }
   },
   {
     "id": 192,
@@ -23845,7 +24991,13 @@
         "amount": 4143,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 96000,
+      "transactions": 1920,
+      "walletBalance": 38400,
+      "progress": 100
+    }
   },
   {
     "id": 193,
@@ -23973,7 +25125,13 @@
         "amount": 27269,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 96500,
+      "transactions": 1930,
+      "walletBalance": 38600,
+      "progress": 100
+    }
   },
   {
     "id": 194,
@@ -24101,7 +25259,13 @@
         "amount": 37450,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 97000,
+      "transactions": 1940,
+      "walletBalance": 38800,
+      "progress": 100
+    }
   },
   {
     "id": 195,
@@ -24236,7 +25400,13 @@
         "amount": 941,
         "description": "Groceries"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 97500,
+      "transactions": 1950,
+      "walletBalance": 39000,
+      "progress": 100
+    }
   },
   {
     "id": 196,
@@ -24364,7 +25534,13 @@
         "amount": 21728,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 98000,
+      "transactions": 1960,
+      "walletBalance": 39200,
+      "progress": 100
+    }
   },
   {
     "id": 197,
@@ -24478,7 +25654,13 @@
         "amount": 8490,
         "description": "Online Shopping"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 98500,
+      "transactions": 1970,
+      "walletBalance": 39400,
+      "progress": 100
+    }
   },
   {
     "id": 198,
@@ -24599,7 +25781,13 @@
         "amount": 1432,
         "description": "Paycheck"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 99000,
+      "transactions": 1980,
+      "walletBalance": 39600,
+      "progress": 100
+    }
   },
   {
     "id": 199,
@@ -24734,7 +25922,13 @@
         "amount": 14529,
         "description": "Sent to Friend"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 99500,
+      "transactions": 1990,
+      "walletBalance": 39800,
+      "progress": 100
+    }
   },
   {
     "id": 200,
@@ -24848,6 +26042,12 @@
         "amount": 15445,
         "description": "Subscription"
       }
-    ]
+    ],
+    "analytics": {
+      "savings": 100000,
+      "transactions": 2000,
+      "walletBalance": 40000,
+      "progress": 100
+    }
   }
 ]

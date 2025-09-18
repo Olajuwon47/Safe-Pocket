@@ -1,5 +1,4 @@
 "use client"
-
 import * as React from "react"
 import { AppSidebar } from "../../components/app-sidebar"
 import { ChartAreaInteractive } from "../../components/chart-area-interactive.tsx"

@@ -47,7 +47,7 @@ export function TransactionsView({ data }: TransactionsViewProps) {
         const amount = parseFloat(row.getValue("amount"))
         const formatted = new Intl.NumberFormat("en-US", {
           style: "currency",
-          currency: "USD",
+          currency: "USD, NAIRA",
         }).format(amount)
   
         return <div className="text-right font-medium">{formatted}</div>
