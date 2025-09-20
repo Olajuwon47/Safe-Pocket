@@ -1,178 +1,47 @@
 "use client"
 
-import * as React from "react"
-import {
-  type ColumnDef,
-  flexRender,
-  getCoreRowModel,
-  useReactTable,
-  getPaginationRowModel,
-  getSortedRowModel,
-  getFilteredRowModel,
-  type SortingState,
-  type ColumnFiltersState,
-  type VisibilityState,
-} from "@tanstack/react-table"
-
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "./ui/table"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
+import React from "react"
 import type { Transaction } from "../types"
 
 interface TransactionsViewProps {
-  data: Transaction[]
+  transactions: Transaction[]
 }
 
-export function TransactionsView({ data }: TransactionsViewProps) {
-  const columns: ColumnDef<Transaction>[] = [
-    {
-      accessorKey: "date",
-      header: "Date",
-    },
-    {
-      accessorKey: "type",
-      header: "Type",
-    },
-    {
-      accessorKey: "amount",
-      header: () => <div className="text-right">Amount</div>,
-      cell: ({ row }) => {
-        const amount = parseFloat(row.getValue("amount"))
-        const formatted = new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD, NAIRA",
-        }).format(amount)
-  
-        return <div className="text-right font-medium">{formatted}</div>
-      },
-    },
-    {
-      accessorKey: "description",
-      header: "Description",
-    },
-  ]
-  const [sorting, setSorting] = React.useState<SortingState>([])
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    []
-  )
-  const [columnVisibility, setColumnVisibility] =
-    React.useState<VisibilityState>({})
-  const [rowSelection, setRowSelection] = React.useState({})
-
-  const table = useReactTable({
-    data,
-    columns,
-    onSortingChange: setSorting,
-    onColumnFiltersChange: setColumnFilters,
-    getCoreRowModel: getCoreRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
-    getSortedRowModel: getSortedRowModel(),
-    getFilteredRowModel: getFilteredRowModel(),
-    onColumnVisibilityChange: setColumnVisibility,
-    onRowSelectionChange: setRowSelection,
-    state: {
-      sorting,
-      columnFilters,
-      columnVisibility,
-      rowSelection,
-    },
-  })
+const TransactionsView: React.FC<TransactionsViewProps> = ({ transactions }) => {
+  if (transactions.length === 0) {
+    return <p className="text-gray-500">No transactions yet.</p>
+  }
 
   return (
-    <div className="w-full">
-      <div className="flex items-center py-4">
-        <Input
-          placeholder="Filter descriptions..."
-          value={(table.getColumn("description")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("description")?.setFilterValue(event.target.value)
-          }
-          className="max-w-sm"
-        />
-      </div>
-      <div className="rounded-md border">
-        <Table>
-          <TableHeader   className="bg-lime-200">
-            {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  return (
-                    <TableHead key={header.id}>
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
-                    </TableHead>
-                  )
-                })}
-              </TableRow>
-            ))}
-          </TableHeader>
-          <TableBody>
-            {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))
-            ) : (
-              <TableRow>
-                <TableCell
-                  colSpan={columns.length}
-                  className="h-24 text-center"
-                >
-                  No results.
-                </TableCell>
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </div>
-      <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
-          {table.getFilteredSelectedRowModel().rows.length} of{" "}
-          {table.getFilteredRowModel().rows.length} row(s) selected.
-        </div>
-        <div className="space-x-2">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.previousPage()}
-            //disabled={!table.getCanPreviousPage()}
-             className="bg-lime-200 hover:bg-lime-800 cursor-pointer"
+    <div className="mt-6 space-y-4">
+      <h2 className="text-lg font-semibold">Transactions</h2>
+      <ul className="space-y-2">
+        {transactions.map((tx) => (
+          <li
+            key={tx.id}
+            className="p-3 border rounded flex justify-between items-center"
           >
-            Previous
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.nextPage()}
-            //disabled={!table.getCanNextPage()}
-            className="bg-lime-200 hover:bg-lime-800 cursor-pointer"
-          >
-            Next
-          </Button>
-        </div>
-      </div>
+            <div>
+              <p className="font-medium">
+                {tx.type.toUpperCase()} - ₦{tx.amount}
+              </p>
+              <p className="text-sm text-gray-500">{tx.description}</p>
+              <p className="text-xs text-gray-400">{tx.date}</p>
+            </div>
+            <span
+              className={`px-2 py-1 text-xs rounded ${
+                tx.status === "successful"
+                  ? "bg-green-100 text-green-800"
+                  : "bg-yellow-100 text-yellow-800"
+              }`}
+            >
+              {tx.status}
+            </span>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
+
+export default TransactionsView

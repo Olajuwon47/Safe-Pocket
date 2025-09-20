@@ -1,239 +1,86 @@
 "use client"
 
-/*import * as React from "react"
-import { z, type ZodIssue } from "zod"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
-import { Label } from "./ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select"
-import { toast } from "sonner"
+import React, { useState } from "react"
 
-export const transactionSchema = z.object({
-  type: z.enum(["deposit", "withdrawal"]),
-  amount: z.coerce.number().positive("Amount must be positive"),
-  description: z.string().min(1, "Description is required"),
-})
-
-export type TransactionInput = z.infer<typeof transactionSchema>
-
-interface AddTransactionProps {
-  onAddTransaction: (data: TransactionInput) => void
+export interface TransactionInput {
+  type: "deposit" | "withdrawal"
+  amount: number
+  description: string
 }
 
-export function AddTransaction({ onAddTransaction }: AddTransactionProps) {
-  const [type, setType] = React.useState<"deposit" | "withdrawal">("deposit")
-  const [amount, setAmount] = React.useState<string>("")
-  const [description, setDescription] = React.useState<string>("")
+interface AddTransactionProps {
+  email: string
+  onAddTransaction: (transaction: TransactionInput) => void
+}
+
+const AddTransaction: React.FC<AddTransactionProps> = ({ onAddTransaction }) => {
+  const [amount, setAmount] = useState<number>(0)
+  const [description, setDescription] = useState<string>("")
+  const [type, setType] = useState<"deposit" | "withdrawal">("deposit")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const result = transactionSchema.safeParse({
-      type,
-      amount: Number(amount),
-      description,
-    })
 
-    if (result.success) {
-      onAddTransaction(result.data)
-      toast.success("Transaction added successfully")
-      setType("deposit")
-      setAmount("")
-      setDescription("")
-    } else {
-      result.error.issues.forEach((error: ZodIssue) => {
-        toast.error(error.message)
-      })
+    const tx: TransactionInput = {
+      type,
+      amount,
+      description,
     }
+
+    onAddTransaction(tx)
+
+    // reset form
+    setAmount(0)
+    setDescription("")
+    setType("deposit")
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-4">
-      <div className="grid grid-cols-2 gap-4">
-        <div className="flex flex-col gap-3">
-          <Label htmlFor="type">Type</Label>
-          <Select
-            onValueChange={(value) => setType(value as "deposit" | "withdrawal")}
-            defaultValue={type}
-          >
-            <SelectTrigger id="type">
-              <SelectValue placeholder="Select a type" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="deposit">Deposit</SelectItem>
-              <SelectItem value="withdrawal">Withdrawal</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
+    <form onSubmit={handleSubmit} className="p-4 border rounded-lg space-y-4">
+      <h2 className="text-lg font-semibold">Add Transaction</h2>
 
-        <div className="flex flex-col gap-3">
-          <Label htmlFor="amount">Amount</Label>
-          <Input id="amount" type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
-        </div>
-      </div>
-
-      <div className="flex flex-col gap-3">
-        <Label htmlFor="description">Description</Label>
-        <Input id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
-      </div>
-
-      <div className="flex justify-center items-center w-full">
-        <Button type="submit" className="min-w-[130px] h-10">
-          Add Transaction
-        </Button>
-      </div>
-    </form>
-  )
-}*/
-
-"use client"
-
-import * as React from "react"
-import { z, type ZodIssue } from "zod"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
-import { Label } from "./ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select"
-import { toast } from "sonner"
-import usePaystack from "../hooks/usePaystack";
-
-const transactionSchema = z.object({
-  type: z.enum(["deposit", "withdrawal"]),
-  amount: z.coerce.number().positive("Amount must be positive"),
-  description: z.string().min(1, "Description is required"),
-})
-
-export type TransactionInput = z.infer<typeof transactionSchema>;
-
-interface AddTransactionProps {
-  onAddTransaction: (data: z.infer<typeof transactionSchema>) => void;
-  email: string;
-}
-
-export function AddTransaction({ onAddTransaction, email }: AddTransactionProps) {
-  const [type, setType] = React.useState<"deposit" | "withdrawal">("deposit")
-  const [amount, setAmount] = React.useState("")
-  const [description, setDescription] = React.useState("")
-
-  const paystackPublicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
-
-  const handleSuccess = (reference: any) => {
-    console.log("Payment successful", reference);
-    onAddTransaction({
-      type: "deposit",
-      amount: Number(amount),
-      description: `Deposit via Paystack - ${reference.reference}`,
-    });
-    // Reset form
-    setType("deposit");
-    setAmount("");
-    setDescription("");
-  };
-
-  const handleClose = () => {
-    console.log("Payment closed");
-  };
-
-  const initializePayment = usePaystack({
-    publicKey: paystackPublicKey,
-    email,
-    amount: Number(amount) * 100, // Paystack expects kobo
-    onSuccess: handleSuccess,
-    onClose: handleClose,
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (type === 'deposit') {
-      if (Number(amount) > 0) {
-        initializePayment();
-      } else {
-        toast.error("Amount must be positive");
-      }
-      return;
-    }
-
-    const result = transactionSchema.safeParse({
-      type,
-      amount: Number(amount),
-      description,
-    })
-
-    if (result.success) {
-      onAddTransaction(result.data)
-      toast.success("Transaction added successfully")
-      // Reset form
-      setType("deposit")
-      setAmount("")
-      setDescription("")
-    } else {
-      result.error.issues.forEach((error: ZodIssue) => {
-        toast.error(error.message)
-      })
-    }
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="grid gap-4">
-      <div className="grid grid-cols-2 gap-4">
-        <div className="flex flex-col gap-3">
-          <Label htmlFor="type">Type</Label>
-          <Select onValueChange={(value) => setType(value as "deposit" | "withdrawal")} defaultValue={type}>
-            <SelectTrigger id="type">
-              <SelectValue placeholder="Select a type" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="deposit">Deposit</SelectItem>
-              <SelectItem value="withdrawal">Withdrawal</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="flex flex-col gap-3">
-          <Label htmlFor="amount">Amount</Label>
-          <Input
-            id="amount"
-            type="number"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-          />
-        </div>
-      </div>
-      <div className="flex flex-col gap-3">
-        <Label htmlFor="description">Description</Label>
-        <Input
-          id="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+      <div>
+        <label className="block mb-1">Amount</label>
+        <input
+          type="number"
+          value={amount}
+          onChange={(e) => setAmount(Number(e.target.value))}
+          required
+          className="w-full border px-3 py-2 rounded"
         />
       </div>
-          <div className="flex justify-center items-center w-full">
-        <Button
-          type="submit"
-          className="min-w-[130px] h-10 
-                    text-white font-bold 
-                    px-2.5 py-1.5 
-                    relative inline-block 
-                    rounded-md border-none outline-none 
-                    cursor-pointer transition-all duration-300 ease-in-out 
-                    bg-[#80ed99] shadow-[0_5px_0_#57cc99]
-                    hover:shadow-[0_3px_0_#57cc99] hover:top-[1px]
-                    active:shadow-[0_0px_0_#57cc99] active:top-[5px]"
-        >
-          Add Transaction
-        </Button>
+
+      <div>
+        <label className="block mb-1">Description</label>
+        <input
+          type="text"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+          className="w-full border px-3 py-2 rounded"
+        />
       </div>
 
+      <div>
+        <label className="block mb-1">Type</label>
+        <select
+          value={type}
+          onChange={(e) => setType(e.target.value as "deposit" | "withdrawal")}
+          className="w-full border px-3 py-2 rounded"
+        >
+          <option value="deposit">Deposit</option>
+          <option value="withdrawal">Withdrawal</option>
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+      >
+        Add Transaction
+      </button>
     </form>
   )
 }
+
+export default AddTransaction

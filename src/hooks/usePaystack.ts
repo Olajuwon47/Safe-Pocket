@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 interface PaystackProps {
   publicKey: string;
@@ -10,37 +10,43 @@ interface PaystackProps {
 
 declare global {
   interface Window {
-    PaystackPop: new () => {
-      newTransaction: (options: any) => void;
+    PaystackPop: {
+      setup: (options: any) => {
+        openIframe: () => void;
+      };
     };
   }
 }
 
 const usePaystackPayment = (options: PaystackProps) => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://js.paystack.co/v1/inline.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    if (!document.querySelector(`script[src="https://js.paystack.co/v1/inline.js"]`)) {
+      const script = document.createElement("script");
+      script.src = "https://js.paystack.co/v1/inline.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, []);
 
   const initializePayment = () => {
-    const paystack = new (window as any).PaystackPop();
-    paystack.newTransaction({
+    if (!window.PaystackPop) {
+      console.error("Paystack script not loaded yet");
+      return;
+    }
+
+    const handler = window.PaystackPop.setup({
       key: options.publicKey,
       email: options.email,
       amount: options.amount,
-      onSuccess: (response: any) => {
+      callback: (response: any) => {
         options.onSuccess(response);
       },
-      onCancel: () => {
+      onClose: () => {
         options.onClose();
       },
     });
+
+    handler.openIframe();
   };
 
   return initializePayment;

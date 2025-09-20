@@ -1,14 +1,13 @@
 "use client"
-import * as React from "react"
+import React, { useState, useCallback, Suspense } from "react"
 import { AppSidebar } from "../../components/app-sidebar"
-import { ChartAreaInteractive } from "../../components/chart-area-interactive.tsx"
-import { SectionCards } from "../../components/section-cards.tsx"
+import { ChartAreaInteractive } from "../../components/chart-area-interactive"
+import { SectionCards } from "../../components/section-cards"
 import { SiteHeader } from "../../components/site-header"
 import { GoalsProgress } from "../../components/Progress"
 import WithdrawModal from "../../components/withdraw-modal"
-import { AddTransaction } from "../../components/add-transaction.tsx"
-import type { TransactionInput } from "../../components/add-transaction.tsx"
-import { TransactionsView } from "../../components/transactions-view"
+import AddTransaction, { type TransactionInput } from "../../components/add-transaction"
+import TransactionsView from "../../components/transactions-view"
 import { SidebarInset, SidebarProvider } from "../../components/ui/sidebar"
 import {
   Drawer,
@@ -20,7 +19,6 @@ import {
   DrawerClose,
 } from "../../components/ui/drawer"
 import { Button } from "../../components/ui/button"
-
 import type { Goal, Transaction, User } from "../../types"
 
 const nowIso = () => new Date().toISOString()
@@ -41,11 +39,11 @@ const defaultUser: User = {
 }
 
 export default function Page() {
-  const [isDepositOpen, setIsDepositOpen] = React.useState(false)
-  const [isWithdrawOpen, setIsWithdrawOpen] = React.useState(false)
-  const [user, setUser] = React.useState<User>(defaultUser)
+  const [isDepositOpen, setIsDepositOpen] = useState(false)
+  const [isWithdrawOpen, setIsWithdrawOpen] = useState(false)
+  const [user, setUser] = useState<User>(defaultUser)
 
-  const handleAddGoal = React.useCallback((title: string, target: number) => {
+  const handleAddGoal = useCallback((title: string, target: number) => {
     const newGoal: Goal = {
       id: Math.random().toString(36).substring(7),
       title,
@@ -55,17 +53,27 @@ export default function Page() {
     setUser(prev => ({ ...prev, goals: [...prev.goals, newGoal] }))
   }, [])
 
-  const handleAddTransaction = React.useCallback((data: TransactionInput) => {
+  const handleAddTransaction = useCallback((data: TransactionInput) => {
     const tx: Transaction = {
       id: Math.random().toString(36).substring(7),
       type: data.type,
       amount: data.amount,
       description: data.description,
       date: nowIso(),
+      status: "completed", // ✅ required field
     }
+
     setUser(prev => {
-      const newBalance = data.type === "deposit" ? prev.walletBalance + data.amount : prev.walletBalance - data.amount
-      const newSavings = data.type === "deposit" ? prev.savings + data.amount * 0.2 : prev.savings // example: 20% to savings on deposit
+      const newBalance =
+        data.type === "deposit"
+          ? prev.walletBalance + data.amount
+          : prev.walletBalance - data.amount
+
+      const newSavings =
+        data.type === "deposit"
+          ? prev.savings + data.amount * 0.2
+          : prev.savings
+
       return {
         ...prev,
         walletBalance: newBalance,
@@ -75,7 +83,7 @@ export default function Page() {
     })
   }, [])
 
-  const handleWithdraw = React.useCallback(async (amount: number, description?: string) => {
+  const handleWithdraw = useCallback(async (amount: number, description?: string) => {
     setUser(prev => {
       const newBalance = prev.walletBalance - amount
       const tx: Transaction = {
@@ -84,6 +92,7 @@ export default function Page() {
         amount,
         description: description ?? "Withdraw",
         date: nowIso(),
+        status: "completed",
       }
       return {
         ...prev,
@@ -104,7 +113,6 @@ export default function Page() {
       }
     >
       <AppSidebar variant="inset" />
-
       <SidebarInset>
         <SiteHeader />
         <div className="flex flex-1 flex-col">
@@ -120,14 +128,14 @@ export default function Page() {
               <GoalsProgress goals={user.goals} onAddGoal={handleAddGoal} />
 
               <div className="px-2 max-sm:px-1 md:px-6">
-                <React.Suspense fallback={<div>Loading chart...</div>}>
+                <Suspense fallback={<div>Loading chart...</div>}>
                   <ChartAreaInteractive breakdown={user.breakdown} />
-                </React.Suspense>
+                </Suspense>
               </div>
 
               <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
                 <AddTransaction onAddTransaction={handleAddTransaction} email={user.email} />
-                <TransactionsView data={user.transactions} />
+                <TransactionsView transactions={user.transactions} />
               </div>
             </div>
           </div>
@@ -152,18 +160,16 @@ export default function Page() {
         </DrawerContent>
       </Drawer>
 
-      {/* Withdraw Drawer (uses WithdrawModal as content) */}
+      {/* Withdraw Drawer */}
       <Drawer open={isWithdrawOpen} onOpenChange={setIsWithdrawOpen}>
         <DrawerContent>
           <DrawerHeader>
             <DrawerTitle>Withdraw</DrawerTitle>
             <DrawerDescription>Confirm withdrawal details</DrawerDescription>
           </DrawerHeader>
-
           <div className="px-4">
             <WithdrawModal onWithdraw={handleWithdraw} />
           </div>
-
           <DrawerFooter>
             <DrawerClose asChild>
               <Button variant="outline">Cancel</Button>

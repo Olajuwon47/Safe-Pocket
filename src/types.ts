@@ -10,6 +10,17 @@ export interface Goal {
   progress: number;
 }
 
+// types.ts
+export interface Transaction {
+  id: string
+  type: "deposit" | "withdrawal"
+  amount: number
+  status: string
+  description: string
+  date: string
+}
+
+
 // 💡 For charts
 export interface BreakdownData {
   daily: { date: string; amount: number }[];
@@ -17,14 +28,7 @@ export interface BreakdownData {
   monthly: { month: string; amount: number }[];
 }
 
-// 💡 For transaction history
-export interface Transaction {
-  id: string;
-  type: "deposit" | "withdrawal" | "expense";
-  amount: number;
-  date: string;
-  description?: string;
-}
+
 
 // 💡 Main user type
 export interface User {
