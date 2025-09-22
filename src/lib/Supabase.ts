@@ -1,77 +1,41 @@
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js'
 
-// Load env vars from Vite
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-// Check if we're in development mode
-const isDevelopment = import.meta.env.DEV
+const isDevelopment = import.meta.env.MODE === 'development'
 
-// Define a type for our mock client
-interface MockSupabaseClient {
+const createMockClient = () => ({
   auth: {
-    signUp: () => Promise<{ data: null; error: { message: string } }>
-    signInWithPassword: () => Promise<{ data: null; error: { message: string } }>
-    signInWithOAuth: () => Promise<{ data: null; error: { message: string } }>
-    getSession: () => Promise<{ data: { session: null } }>
-    onAuthStateChange: () => {
-      data: {
-        subscription: { unsubscribe: () => void }
-      }
-    }
-  }
-}
-
-// ---- Mock Client Implementation ----
-const createMockClient = (): MockSupabaseClient => ({
-  auth: {
-    signUp: () =>
-      Promise.resolve({
-        data: null,
-        error: { message: 'Supabase not configured - using mock client' },
-      }),
-    signInWithPassword: () =>
-      Promise.resolve({
-        data: null,
-        error: { message: 'Supabase not configured - using mock client' },
-      }),
-    signInWithOAuth: () =>
-      Promise.resolve({
-        data: null,
-        error: { message: 'Supabase not configured - using mock client' },
-      }),
-    getSession: () => Promise.resolve({ data: { session: null } }),
-    onAuthStateChange: () => ({
-      data: {
-        subscription: {
-          unsubscribe: () => {},
-        },
-      },
+    signUp: () => Promise.resolve({ 
+      data: null, 
+      error: { message: 'Supabase not configured - using localStorage fallback' } 
     }),
-  },
+    signInWithPassword: () => Promise.resolve({ 
+      data: null, 
+      error: { message: 'Supabase not configured - using localStorage fallback' } 
+    }),
+    signInWithOAuth: () => Promise.resolve({ 
+      data: null, 
+      error: { message: 'Supabase not configured - using localStorage fallback' } 
+    }),
+    getSession: () => Promise.resolve({ data: { session: null } }),
+    onAuthStateChange: () => ({ 
+      data: { subscription: { unsubscribe: () => {} } }
+    })
+  }
 })
 
-
-const createSupabaseClient = () => {
+const initializeSupabase = () => {
   if (!supabaseUrl || !supabaseAnonKey) {
     if (isDevelopment) {
-      console.warn('[Supabase] Missing env vars. Using mock client for development.')
+      console.warn('Supabase environment variables are missing. Using mock client for development.')
       return createMockClient()
     } else {
-      throw new Error('[Supabase] Missing environment variables')
+      throw new Error('Missing Supabase environment variables')
     }
   }
-
-  return createClient(supabaseUrl, supabaseAnonKey, {
-    auth: {
-      persistSession: true,
-      autoRefreshToken: true,
-    },
-  })
+  return createClient(supabaseUrl, supabaseAnonKey)
 }
 
-export const supabase: SupabaseClient | MockSupabaseClient = createSupabaseClient()
-
-export function isSupabaseClient(client: SupabaseClient | MockSupabaseClient): client is SupabaseClient {
-  return 'from' in client;
-}
+export const supabase = initializeSupabase()
