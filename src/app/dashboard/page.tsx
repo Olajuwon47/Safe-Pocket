@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useCallback, Suspense } from "react"
+import React, { useState, useCallback } from "react"
 import { AppSidebar } from "../../components/app-sidebar"
 import { ChartAreaInteractive } from "../../components/chart-area-interactive"
 import { SectionCards } from "../../components/section-cards"
@@ -18,90 +18,118 @@ import {
   DrawerFooter,
   DrawerClose,
 } from "../../components/ui/drawer"
+import { SpendingBreakdownChart } from "../../components/spending-breakdown-chart" // ✅ removed `.tsx`
 import { Button } from "../../components/ui/button"
 import type { Goal, Transaction, User } from "../../types"
-
-const nowIso = () => new Date().toISOString()
-
-const defaultUser: User = {
-  id: "1",
-  name: "Default User",
-  email: "user@example.com",
-  walletBalance: 1200,
-  savings: 800,
-  breakdown: {
-    daily: [{ date: new Date().toISOString(), amount: 120 }],
-    weekly: [{ week: "W1", amount: 500 }],
-    monthly: [{ month: "Jan", amount: 2000 }],
-  },
-  goals: [],
-  transactions: [],
-}
+import data from "./data.json"
 
 export default function Page() {
   const [isDepositOpen, setIsDepositOpen] = useState(false)
   const [isWithdrawOpen, setIsWithdrawOpen] = useState(false)
-  const [user, setUser] = useState<User>(defaultUser)
+  const [users, setUsers] = useState<User[]>([])
+  const [selectedUser, setSelectedUser] = useState<User | null>(null)
+  const [selectedView, setSelectedView] = useState("dashboard")
 
-  const handleAddGoal = useCallback((title: string, target: number) => {
-    const newGoal: Goal = {
-      id: Math.random().toString(36).substring(7),
-      title,
-      target,
-      progress: 0,
+  React.useEffect(() => {
+    // ✅ Ensure IDs are strings
+    const fixedData = (data as any[]).map((user) => ({
+      ...user,
+      id: String(user.id),
+      transactions: user.transactions.map((tx: any) => ({
+        ...tx,
+        id: String(tx.id),
+      })),
+    })) as User[]
+
+    setUsers(fixedData)
+    if (fixedData.length > 0) {
+      setSelectedUser(fixedData[0])
     }
-    setUser(prev => ({ ...prev, goals: [...prev.goals, newGoal] }))
   }, [])
 
-  const handleAddTransaction = useCallback((data: TransactionInput) => {
-    const tx: Transaction = {
-      id: Math.random().toString(36).substring(7),
-      type: data.type,
-      amount: data.amount,
-      description: data.description,
-      date: nowIso(),
-      status: "completed", // ✅ required field
-    }
+  const nowIso = () => new Date().toISOString()
 
-    setUser(prev => {
-      const newBalance =
-        data.type === "deposit"
-          ? prev.walletBalance + data.amount
-          : prev.walletBalance - data.amount
-
-      const newSavings =
-        data.type === "deposit"
-          ? prev.savings + data.amount * 0.2
-          : prev.savings
-
-      return {
-        ...prev,
-        walletBalance: newBalance,
-        savings: newSavings,
-        transactions: [...prev.transactions, tx],
+  const handleAddGoal = useCallback(
+    (title: string, target: number) => {
+      if (!selectedUser) return
+      const newGoal: Goal = {
+        id: Math.random().toString(36).substring(7),
+        title,
+        target,
+        progress: 0,
       }
-    })
-  }, [])
+      setSelectedUser((prev) =>
+        prev ? { ...prev, goals: [...prev.goals, newGoal] } : prev
+      )
+    },
+    [selectedUser]
+  )
 
-  const handleWithdraw = useCallback(async (amount: number, description?: string) => {
-    setUser(prev => {
-      const newBalance = prev.walletBalance - amount
+  const handleAddTransaction = useCallback(
+    (data: TransactionInput) => {
+      if (!selectedUser) return
       const tx: Transaction = {
         id: Math.random().toString(36).substring(7),
-        type: "withdrawal",
-        amount,
-        description: description ?? "Withdraw",
+        type: data.type,
+        amount: data.amount,
+        description: data.description,
         date: nowIso(),
         status: "completed",
       }
-      return {
-        ...prev,
-        walletBalance: newBalance,
-        transactions: [...prev.transactions, tx],
-      }
-    })
-    setIsWithdrawOpen(false)
-  }, [])
+
+      setSelectedUser((prev) => {
+        if (!prev) return prev
+        const newBalance =
+          data.type === "deposit"
+            ? prev.walletBalance + data.amount
+            : prev.walletBalance - data.amount
+
+        const newSavings =
+          data.type === "deposit" ? prev.savings + data.amount * 0.2 : prev.savings
+
+        return {
+          ...prev,
+          walletBalance: newBalance,
+          savings: newSavings,
+          transactions: [...prev.transactions, tx],
+        }
+      })
+    },
+    [selectedUser]
+  )
+
+  const handleWithdraw = useCallback(
+    async (amount: number, description?: string) => {
+      if (!selectedUser) return
+      setSelectedUser((prev) => {
+        if (!prev) return prev
+        const newBalance = prev.walletBalance - amount
+        const tx: Transaction = {
+          id: Math.random().toString(36).substring(7),
+          type: "withdrawal",
+          amount,
+          description: description ?? "Withdraw",
+          date: nowIso(),
+          status: "completed",
+        }
+        return {
+          ...prev,
+          walletBalance: newBalance,
+          transactions: [...prev.transactions, tx],
+        }
+      })
+      setIsWithdrawOpen(false)
+    },
+    [selectedUser]
+  )
+
+  const handleSelectView = (view: string) => {
+    setSelectedView(view)
+  }
+
+  const handleUserChange = (user: User) => {
+    setSelectedUser(user)
+  }
 
   return (
     <SidebarProvider
@@ -112,31 +140,80 @@ export default function Page() {
         } as React.CSSProperties
       }
     >
-      <AppSidebar variant="inset" />
+      <AppSidebar
+        variant="inset"
+        users={users}
+        selectedUser={selectedUser}
+        onSelectView={handleSelectView}
+        onUserChange={handleUserChange}
+      />
       <SidebarInset>
         <SiteHeader />
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-              <SectionCards
-                walletBalance={user.walletBalance}
-                savings={user.savings}
-                onDeposit={() => setIsDepositOpen(true)}
-                onWithdraw={() => setIsWithdrawOpen(true)}
-              />
+              {selectedUser && selectedView === "dashboard" && (
+                <>
+                  <SectionCards
+                    walletBalance={selectedUser.walletBalance}
+                    savings={selectedUser.savings}
+                    onDeposit={() => setIsDepositOpen(true)}
+                    onWithdraw={() => setIsWithdrawOpen(true)}
+                  />
 
-              <GoalsProgress goals={user.goals} onAddGoal={handleAddGoal} />
+                  <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
 
-              <div className="px-2 max-sm:px-1 md:px-6">
-                <Suspense fallback={<div>Loading chart...</div>}>
-                  <ChartAreaInteractive breakdown={user.breakdown} />
-                </Suspense>
+                  <div className="px-2 max-sm:px-1 md:px-6">
+                    <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                    <SpendingBreakdownChart
+                      transactions={selectedUser.transactions}
+                      savings={selectedUser.savings}
+                    />
+                  </div>
+
+                    <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
+                <AddTransaction onAddTransaction={handleAddTransaction} email={selectedUser.email} />
+                <TransactionsView transactions={selectedUser.transactions} />
               </div>
+                </>
+              )}
 
-              <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
-                <AddTransaction onAddTransaction={handleAddTransaction} email={user.email} />
-                <TransactionsView transactions={user.transactions} />
-              </div>
+              {selectedUser && selectedView === "goals" && (
+                <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
+              )}
+
+              {selectedUser && selectedView === "progress" && (
+                <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
+              )}
+
+              {selectedUser && selectedView === "wallet" && (
+                <SectionCards
+                  walletBalance={selectedUser.walletBalance}
+                  savings={selectedUser.savings}
+                  onDeposit={() => setIsDepositOpen(true)}
+                  onWithdraw={() => setIsWithdrawOpen(true)}
+                />
+              )}
+
+              {selectedUser && selectedView === "breakdown" && (
+                <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
+                  <AddTransaction
+                    onAddTransaction={handleAddTransaction}
+                    email={selectedUser.email}
+                  />
+                  <TransactionsView transactions={selectedUser.transactions} />
+                  <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                </div>
+              )}
+
+              {selectedUser && selectedView === "savings" && (
+                <SectionCards
+                  walletBalance={selectedUser.walletBalance}
+                  savings={selectedUser.savings}
+                  onDeposit={() => setIsDepositOpen(true)}
+                  onWithdraw={() => setIsWithdrawOpen(true)}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -150,7 +227,12 @@ export default function Page() {
             <DrawerDescription>Enter the details for your deposit.</DrawerDescription>
           </DrawerHeader>
           <div className="px-4">
-            <AddTransaction onAddTransaction={handleAddTransaction} email={user.email} />
+            {selectedUser && (
+              <AddTransaction
+                onAddTransaction={handleAddTransaction}
+                email={selectedUser.email}
+              />
+            )}
           </div>
           <DrawerFooter>
             <DrawerClose asChild>

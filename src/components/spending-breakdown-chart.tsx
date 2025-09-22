@@ -16,6 +16,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "./ui/chart"
+
 import type { Transaction } from "../types"
 
 interface SpendingBreakdownChartProps {
