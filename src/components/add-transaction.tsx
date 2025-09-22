@@ -75,7 +75,7 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ onAddTransaction }) => 
 
       <button
         type="submit"
-        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+        className="bg-green-600 text-white flex justify-center items-center px-4 py-2 rounded hover:bg-green-700"
       >
         Add Transaction
       </button>
