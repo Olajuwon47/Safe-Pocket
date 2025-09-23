@@ -20,6 +20,14 @@ export interface Transaction {
   date: string
 }
 
+/*export interface Analytics{
+   savings: { num: number }[];
+   transactions: { num: number }[];
+   walletBalance: { num: number }[];
+   goals: { title: string; target: number; progress: number }[];
+   breakdown: { daily: { date: string; amount: number }[]; weekly: { week: string; amount: number }[]; monthly: { month: string; amount: number }[] }[];
+}*/
+
 
 // 💡 For charts
 export interface BreakdownData {
@@ -40,4 +48,5 @@ export interface User {
   breakdown: BreakdownData;
   goals: Goal[];
   transactions: Transaction[];
+  //analytics:Analytics[];
 }

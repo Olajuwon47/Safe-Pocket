@@ -168,6 +168,9 @@ export default function Page() {
                     <SpendingBreakdownChart
                       transactions={selectedUser.transactions}
                       savings={selectedUser.savings}
+                      goals={selectedUser.goals}
+                      breakdown={selectedUser.breakdown}
+                      //walletBalance={selectedUser.walletBalance}
                     />
                   </div>
 
@@ -205,7 +208,6 @@ export default function Page() {
                   <ChartAreaInteractive breakdown={selectedUser.breakdown} />
                 </div>
               )}
-
               {selectedUser && selectedView === "savings" && (
                 <SectionCards
                   walletBalance={selectedUser.walletBalance}
