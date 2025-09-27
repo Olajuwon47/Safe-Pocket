@@ -22,6 +22,7 @@ import { SpendingBreakdownChart } from "../../components/spending-breakdown-char
 import { Button } from "../../components/ui/button"
 import type { Goal, Transaction, User } from "../../types"
 import data from "./data.json"
+import { toast } from "sonner"
 
 export default function Page() {
   const [isDepositOpen, setIsDepositOpen] = useState(false)
@@ -61,6 +62,9 @@ export default function Page() {
       setSelectedUser((prev) =>
         prev ? { ...prev, goals: [...prev.goals, newGoal] } : prev
       )
+      toast.success(`New goal "${title}" has been added.`, {
+        description: `Your target is $${target.toLocaleString()}.`,
+      })
     },
     [selectedUser]
   )
@@ -94,6 +98,14 @@ export default function Page() {
           transactions: [...prev.transactions, tx],
         }
       })
+      toast.success(
+        `$${data.amount.toLocaleString()} ${
+          data.type === "deposit" ? "deposit" : "expense"
+        } recorded.`,
+        {
+          description: `Description: ${data.description}`,
+        }
+      )
     },
     [selectedUser]
   )
@@ -117,6 +129,9 @@ export default function Page() {
           walletBalance: newBalance,
           transactions: [...prev.transactions, tx],
         }
+      })
+      toast.success(`$${amount.toLocaleString()} has been withdrawn.`, {
+        description: `Description: ${description}`,
       })
       setIsWithdrawOpen(false)
     },
@@ -152,69 +167,66 @@ export default function Page() {
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-              {selectedUser && selectedView === "dashboard" && (
+              {selectedUser && (
                 <>
-                  <SectionCards
-                    walletBalance={selectedUser.walletBalance}
-                    savings={selectedUser.savings}
-                    onDeposit={() => setIsDepositOpen(true)}
-                    onWithdraw={() => setIsWithdrawOpen(true)}
-                  />
+                  {selectedView === "dashboard" && (
+                    <>
+                      <SectionCards
+                        walletBalance={selectedUser.walletBalance}
+                        savings={selectedUser.savings}
+                        onDeposit={() => setIsDepositOpen(true)}
+                        onWithdraw={() => setIsWithdrawOpen(true)}
+                      />
+                      <GoalsProgress
+                        goals={selectedUser.goals}
+                        onAddGoal={handleAddGoal}
+                      />
+                      <div className="px-2 max-sm:px-1 md:px-6">
+                        <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                        <SpendingBreakdownChart
+                          transactions={selectedUser.transactions}
+                          savings={selectedUser.savings}
+                          goals={selectedUser.goals}
+                          breakdown={selectedUser.breakdown}
+                        />
+                      </div>
+                      <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
+                        <AddTransaction
+                          onAddTransaction={handleAddTransaction}
+                          email={selectedUser.email}
+                        />
+                        <TransactionsView transactions={selectedUser.transactions} />
+                      </div>
+                    </>
+                  )}
 
-                  <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
-
-                  <div className="px-2 max-sm:px-1 md:px-6">
-                    <ChartAreaInteractive breakdown={selectedUser.breakdown} />
-                    <SpendingBreakdownChart
-                      transactions={selectedUser.transactions}
-                      savings={selectedUser.savings}
+                  {(selectedView === "goals" || selectedView === "progress") && (
+                    <GoalsProgress
                       goals={selectedUser.goals}
-                      breakdown={selectedUser.breakdown}
-                      //walletBalance={selectedUser.walletBalance}
+                      onAddGoal={handleAddGoal}
                     />
-                  </div>
+                  )}
 
+                  {(selectedView === "wallet" || selectedView === "savings") && (
+                    <SectionCards
+                      walletBalance={selectedUser.walletBalance}
+                      savings={selectedUser.savings}
+                      onDeposit={() => setIsDepositOpen(true)}
+                      onWithdraw={() => setIsWithdrawOpen(true)}
+                    />
+                  )}
+
+                  {selectedView === "breakdown" && (
                     <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
-                <AddTransaction onAddTransaction={handleAddTransaction} email={selectedUser.email} />
-                <TransactionsView transactions={selectedUser.transactions} />
-              </div>
+                      <AddTransaction
+                        onAddTransaction={handleAddTransaction}
+                        email={selectedUser.email}
+                      />
+                      <TransactionsView transactions={selectedUser.transactions} />
+                      <ChartAreaInteractive breakdown={selectedUser.breakdown} />
+                    </div>
+                  )}
                 </>
-              )}
-
-              {selectedUser && selectedView === "goals" && (
-                <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
-              )}
-
-              {selectedUser && selectedView === "progress" && (
-                <GoalsProgress goals={selectedUser.goals} onAddGoal={handleAddGoal} />
-              )}
-
-              {selectedUser && selectedView === "wallet" && (
-                <SectionCards
-                  walletBalance={selectedUser.walletBalance}
-                  savings={selectedUser.savings}
-                  onDeposit={() => setIsDepositOpen(true)}
-                  onWithdraw={() => setIsWithdrawOpen(true)}
-                />
-              )}
-
-              {selectedUser && selectedView === "breakdown" && (
-                <div className="grid gap-4 px-2 max-sm:gap-2 max-sm:px-1 md:px-6">
-                  <AddTransaction
-                    onAddTransaction={handleAddTransaction}
-                    email={selectedUser.email}
-                  />
-                  <TransactionsView transactions={selectedUser.transactions} />
-                  <ChartAreaInteractive breakdown={selectedUser.breakdown} />
-                </div>
-              )}
-              {selectedUser && selectedView === "savings" && (
-                <SectionCards
-                  walletBalance={selectedUser.walletBalance}
-                  savings={selectedUser.savings}
-                  onDeposit={() => setIsDepositOpen(true)}
-                  onWithdraw={() => setIsWithdrawOpen(true)}
-                />
               )}
             </div>
           </div>

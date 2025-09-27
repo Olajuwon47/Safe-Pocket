@@ -21,7 +21,6 @@ export function DashboardLayout({
 }: DashboardLayoutProps) {
   return (
     <SidebarProvider
-      className=""
       style={
         {
           "--sidebar-width": "calc(var(--spacing) * 72)",
@@ -38,7 +37,7 @@ export function DashboardLayout({
       />
       <SidebarInset>
         <SiteHeader />
-        <main className="flex flex-1 flex-col bg-gray-100 p-4 max-sm:p-2">
+        <main className="flex flex-1 flex-col bg-lime-400 p-4 max-sm:p-2">
           {children}
         </main>
       </SidebarInset>

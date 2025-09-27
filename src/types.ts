@@ -40,6 +40,7 @@ export interface BreakdownData {
 
 // 💡 Main user type
 export interface User {
+  avatar: string;
   id: string;
   name: string;
   email: string;

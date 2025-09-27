@@ -1,10 +1,10 @@
 //import Navigation from "@/components/Navigation";
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input";
-import { Label } from "../components/ui/label";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card.tsx";
+import { Button } from "../components/ui/button.tsx";
+import { Input } from "../components/ui/input.tsx";
+import { Label } from "../components/ui/label.tsx";
 import { Switch } from "../components/ui/switch.tsx";
-import { Separator } from "../components/ui/separator";
+import { Separator } from "../components/ui/separator.tsx";
 import { User, Bell, Shield, Palette, Download } from "lucide-react";
 
 const Settings = () => {

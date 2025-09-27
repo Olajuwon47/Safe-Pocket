@@ -1,6 +1,6 @@
 import * as React from "react"
 import {
-  IconChartBar,
+  //IconChartBar,
   IconDashboard,
   IconFolder,
   IconHelp,
@@ -37,18 +37,18 @@ interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
 
 const data = {
   navMain: [
-    { title: "Dashboard", url: "/", icon: IconDashboard },
-    { title: "Savings", url: "/savings", icon: IconUsers },
-    { title: "Wallet balance", url: "/wallet", icon: IconListDetails },
-    { title: "Transactions", url: "/transactions-view", icon: IconListDetails },
-    { title: "Progress", url: "/progress", icon: IconFolder },
-    { title: "Analytics", url: "/Analytics", icon: IconChartBar },
-    { title: "Team", url: "/team", icon: IconUsers },
+    { title: "Dashboard", href: "/", icon: IconDashboard },
+    { title: "Savings", href: "/savings", icon: IconUsers },
+    { title: "Wallet balance", href: "/wallet", icon: IconListDetails },
+    { title: "Transactions", href: "/transactions-view", icon: IconListDetails },
+    { title: "Progress", href: "/Progress", icon: IconFolder },
+   // { title: "Analytics", href: "/Analytics", icon: IconChartBar },
+    { title: "Team", href: "/team", icon: IconUsers },
   ],
   navSecondary: [
-    { title: "Settings", url: "/Settings", icon: IconSettings },
-    { title: "Get Help", url: "/help", icon: IconHelp },
-    { title: "Search", url: "/search", icon: IconSearch },
+    { title: "Settings", href: "/Settings", icon: IconSettings },
+    { title: "Get Help", href: "/help", icon: IconHelp },
+    { title: "Search", href: "/search", icon: IconSearch },
   ],
 }
 

@@ -89,7 +89,7 @@ export function SpendingBreakdownChart({
   ]
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col bg-lime-100 mt-6">
       <CardHeader className="items-center pb-0">
         <CardTitle className="text-center">Spending Breakdown</CardTitle>
         <CardDescription></CardDescription>

@@ -37,7 +37,7 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ onAddTransaction }) => 
 
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded-lg space-y-4">
-      <h2 className="text-lg font-semibold">Add Transaction</h2>
+      <h2 className="text-lg font-semibold text-center">Add Transaction</h2>
 
       <div>
         <label className="block mb-1">Amount</label>
@@ -75,7 +75,7 @@ const AddTransaction: React.FC<AddTransactionProps> = ({ onAddTransaction }) => 
 
       <button
         type="submit"
-        className="bg-green-600 text-white flex justify-center items-center px-4 py-2 rounded hover:bg-green-700"
+        className="bg-lime-200 ms-8 text-white flex items-center px-2 py-2 rounded hover:bg-black"
       >
         Add Transaction
       </button>
