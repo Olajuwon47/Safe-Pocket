@@ -46,6 +46,146 @@ const testimonials = [
     quote:
       "I don't just save here, I also invest in stocks. It's simple, transparent, and I finally feel in control of my finances.",
   },
+  {
+    name: "Grace Okafor",
+    title: "Medical Student",
+    image: "https://randomuser.me/api/portraits/women/22.jpg",
+    quote:
+      "As a student with limited income, this app taught me financial discipline. I've saved ₦50,000 in just 3 months!",
+  },
+  {
+    name: "Mohammed Ibrahim",
+    title: "Taxi Driver",
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    quote:
+      "The daily auto-save from my earnings has helped me build an emergency fund for my family. No more borrowing for emergencies.",
+  },
+  {
+    name: "Chiamaka Nwosu",
+    title: "Fashion Designer",
+    image: "https://randomuser.me/api/portraits/women/33.jpg",
+    quote:
+      "I used to spend all my profits. Now I automatically save 10% for new equipment and materials. Business has never been better!",
+  },
+  {
+    name: "James Adekunle",
+    title: "Teacher",
+    image: "https://randomuser.me/api/portraits/men/28.jpg",
+    quote:
+      "The goal-setting feature helped me save for my wedding. We had our dream ceremony without going into debt.",
+  },
+  {
+    name: "Bisi Adeyemi",
+    title: "Market Trader",
+    image: "https://randomuser.me/api/portraits/women/51.jpg",
+    quote:
+      "Small daily savings from my market sales have become a substantial amount. I can now invest in more goods to sell.",
+  },
+  {
+    name: "Tunde Lawal",
+    title: "Graphics Designer",
+    image: "https://randomuser.me/api/portraits/men/36.jpg",
+    quote:
+      "The round-up feature is genius! Saving spare change from transactions helped me buy a new laptop for my design work.",
+  },
+  {
+    name: "Ngozi Eze",
+    title: "Nurse",
+    image: "https://randomuser.me/api/portraits/women/28.jpg",
+    quote:
+      "Working night shifts made it hard to track savings. This app does it automatically. I've saved ₦200,000 for my master's degree.",
+  },
+  {
+    name: "Samuel Chukwu",
+    title: "Content Creator",
+    image: "https://randomuser.me/api/portraits/men/41.jpg",
+    quote:
+      "The investment feature allowed me to start with small amounts. My ₦5,000 investment has grown by 23% in 6 months.",
+  },
+  {
+    name: "Aminat Yusuf",
+    title: "Beautician",
+    image: "https://randomuser.me/api/portraits/women/39.jpg",
+    quote:
+      "I save automatically from every client payment. Now I have enough to open my own beauty salon next month!",
+  },
+  {
+    name: "Peter Okoro",
+    title: "Delivery Rider",
+    image: "https://randomuser.me/api/portraits/men/53.jpg",
+    quote:
+      "This app helped me break the paycheck-to-paycheck cycle. I now have 3 months of expenses saved up for the first time.",
+  },
+  {
+    name: "Funke Adebayo",
+    title: "Civil Servant",
+    image: "https://randomuser.me/api/portraits/women/47.jpg",
+    quote:
+      "The savings challenges made putting money aside fun. I completed 4 challenges and saved ₦120,000 for my children's school fees.",
+  },
+  {
+    name: "Ibrahim Sani",
+    title: "Barber",
+    image: "https://randomuser.me/api/portraits/men/49.jpg",
+    quote:
+      "I save a small amount from every haircut. In one year, I've saved enough to renovate my barbershop and attract more customers.",
+  },
+  {
+    name: "Sarah Thompson",
+    title: "Freelance Writer",
+    image: "https://randomuser.me/api/portraits/women/31.jpg",
+    quote:
+      "As a freelancer with irregular income, the flexible savings plan works perfectly. I save more during good months without pressure.",
+  },
+  {
+    name: "Musa Abdullahi",
+    title: "Farm Manager",
+    image: "https://randomuser.me/api/portraits/men/44.jpg",
+    quote:
+      "The agricultural investment options helped me diversify. I'm earning returns while supporting local farmers in my community.",
+  },
+  {
+    name: "Jennifer Obi",
+    title: "HR Manager",
+    image: "https://randomuser.me/api/portraits/women/42.jpg",
+    quote:
+      "I recommended this app to my entire team. We now have a savings challenge at work. Financial wellness improves productivity!",
+  },
+  {
+    name: "Collins Nwachukwu",
+    title: "Tech Support",
+    image: "https://randomuser.me/api/portraits/men/38.jpg",
+    quote:
+      "The stock investment feature with small amounts got me into investing. Started with ₦2,000 and now have a diversified portfolio.",
+  },
+  {
+    name: "Patience Okon",
+    title: "Tailor",
+    image: "https://randomuser.me/api/portraits/women/53.jpg",
+    quote:
+      "Saving small amounts daily helped me buy a new industrial sewing machine. My business capacity has doubled!",
+  },
+  {
+    name: "Victor Martins",
+    title: "Photographer",
+    image: "https://randomuser.me/api/portraits/men/27.jpg",
+    quote:
+      "The app's visualization of my progress kept me motivated. Saved ₦300,000 for professional camera equipment in 8 months.",
+  },
+  {
+    name: "Blessing Adewole",
+    title: "Baker",
+    image: "https://randomuser.me/api/portraits/women/36.jpg",
+    quote:
+      "Micro-saving from my daily sales helped me expand my bakery. I now supply to 3 restaurants in my area.",
+  },
+  {
+    name: "Franklin Ojo",
+    title: "Ride-share Driver",
+    image: "https://randomuser.me/api/portraits/men/56.jpg",
+    quote:
+      "Automatic savings from each trip helped me maintain my car better and save for my driver's license upgrade.",
+  }
 ];
 
 export function Testimonal() {
