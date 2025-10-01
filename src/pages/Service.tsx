@@ -49,9 +49,9 @@ export default function Service() {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-16 px-6">
+    <section className=" bg-gradient-to-b from-white to-gray-50 py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mt-8">Our Services</h2>
         <p className="text-gray-600 mb-12">
           Explore the powerful tools that make saving, investing, and learning easier for everyone.
         </p>

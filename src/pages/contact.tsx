@@ -37,8 +37,8 @@ export default function Contact() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-lime-50 via-white to-lime-100 px-4 py-16 max-sm:px-3 max-sm:py-12 max-md:px-5 max-md:py-20 sm:py-32 lg:px-8">
-      <h2 className="text-2xl font-bold text-black mb-4 text-center max-sm:text-xl">
+    <div className="  bg-gradient-to-b from-lime-50 via-white to-lime-100 px-4 py-16 max-sm:px-3 max-sm:py-12 max-md:px-5 max-md:py-20 sm:py-32 lg:px-8">
+      <h2 className="text-2xl mt-8 font-bold text-black text-center max-sm:text-xl">
         Contact SafePocket Support
       </h2>
       <p className="text-gray-700 text-center mb-8 max-sm:text-sm">
