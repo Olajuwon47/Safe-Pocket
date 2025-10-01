@@ -158,7 +158,7 @@ export function SignUp({ className, ...props }: SignUpProps) {
               <div className="text-center text-sm">
                 Already have an account?{" "}
                 <Link
-                  to="/login"
+                  to="/login-form"
                   className="underline underline-offset-4 cursor-pointer"
                 >
                   Sign in
