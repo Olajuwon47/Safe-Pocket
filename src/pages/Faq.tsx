@@ -48,7 +48,8 @@ export default function Faq() {
   }
 
   return (
-    <section className="pt-20 px-4 max-sm:px-3 max-md:px-6 max-w-4xl mx-auto">
+  <div className='bg-gradient-to-b from-lime-100 via-white to-lime-200 '>
+    <section className="pt-20  px-4 max-sm:px-3 max-md:px-6 max-w-4xl mx-auto">
       <h1 className="font-bold text-center text-2xl max-sm:text-lg mb-8">
         Get Answers to Frequently Asked Questions
       </h1>
@@ -57,7 +58,7 @@ export default function Faq() {
         {faqs.map((item, index) => (
           <div
             key={index}
-            className="rounded-lg border border-lime-400 bg-white px-4 py-2 shadow-sm transition-all duration-300 max-sm:text-sm max-md:text-base"
+            className="px-4 py-2 shadow-sm transition-all duration-300 max-sm:text-sm max-md:text-base"
           >
             <button
               onClick={() => toggle(index)}
@@ -80,7 +81,7 @@ export default function Faq() {
       </div>
 
       {/* 🌐 Submit Your Question Form */}
-      <div className="mt-16 bg-lime-50 mb-10 p-6 rounded-lg shadow-sm max-sm:p-4 max-md:px-6">
+      <div className=" mt-8 p-6 rounded-md shadow-sm max-sm:p-4 max-md:px-6">
         <h2 className="text-xl font-bold text-lime-900 mb-4 max-sm:text-lg">
           Didn’t find your question? Ask us directly!
         </h2>
@@ -145,12 +146,13 @@ export default function Faq() {
 
           <button
             type="submit"
-            className="mt-2 w-full rounded-md bg-lime-300 px-4 py-2 text-white font-semibold shadow hover:bg-lime-800 transition max-sm:text-sm"
+            className="mt-2 w-full rounded-md bg-lime-300 px-4 py-2 text-white font-semibold shadow cursor-pointer hover:bg-black transition max-sm:text-sm"
           >
             Submit
           </button>
         </form>
       </div>
     </section>
+  </div>
   )
 }

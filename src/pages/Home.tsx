@@ -8,7 +8,7 @@ import { Features } from './Features'
 
 export default function Home() {
   return (
-    <div className="bg-white relative">
+    <div className="bg-gradient-to-b from-lime-50 via-white to-lime-100 relative">
       {/* Hero Section */}
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="text-center">
@@ -75,14 +75,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Subscribe */}
       <Subscribe />
-
-      {/* How It Works */}
       <HowItWorks />
-
-      {/* Testimonials */}
       <Testimonal />
     </div>
   )

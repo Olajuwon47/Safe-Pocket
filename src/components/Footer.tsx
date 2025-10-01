@@ -2,7 +2,7 @@ import {} from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-lime-400 to-lime-800 text-white py-10 px-6 max-sm:px-4 max-md:px-5">
+    <footer className="bg-gradient-to-r  from-lime-400 to-lime-800 text-white py-10 px-6 max-sm:px-4 max-md:px-5">
       <div className="max-w-7xl mx-auto grid grid-cols-4 gap-8 max-md:grid-cols-2 max-sm:grid-cols-1">
         
         {/* Company */}

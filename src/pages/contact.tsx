@@ -37,9 +37,9 @@ export default function Contact() {
   }
 
   return (
-    <div className="bg-lime-50 px-4 py-16 max-sm:px-3 max-sm:py-12 max-md:px-5 max-md:py-20 sm:py-32 lg:px-8">
+    <div className="bg-gradient-to-b from-lime-50 via-white to-lime-100 px-4 py-16 max-sm:px-3 max-sm:py-12 max-md:px-5 max-md:py-20 sm:py-32 lg:px-8">
       <h2 className="text-2xl font-bold text-black mb-4 text-center max-sm:text-xl">
-        Contact MicroSave
+        Contact SafePocket Support
       </h2>
       <p className="text-gray-700 text-center mb-8 max-sm:text-sm">
         Have questions about your savings goals, investments, or account security?  
@@ -120,8 +120,8 @@ export default function Contact() {
         <button
           type="submit"
           className="mt-6 w-full rounded-md bg-green-600 px-3.5 py-2.5 text-sm 
-                     font-semibold text-white shadow-sm hover:bg-green-700 
-                     focus:ring-2 focus:ring-green-600 max-sm:py-2 max-sm:text-sm"
+                     font-semibold text-white shadow-sm
+                     cursor-pointer focus:ring-2 focus:ring-green-600 max-sm:py-2 max-sm:text-sm hover:bg-black"
         >
           Submit Request
         </button>

@@ -1,150 +1,106 @@
-import { FaTelegram, FaWhatsapp, FaComments,
-  //  FaFacebook,
-  //   FaInstagram, FaTwitter, FaTiktok 
-  } from 'react-icons/fa';
+import { FaTelegram, FaWhatsapp, FaComments } from 'react-icons/fa';
 
 function Community() {
-  const telegramLink = "https://t.me/+ggTLaOM6gCZjZGNk";
-  const whatsappLink = "https://chat.whatsapp.com/B7hAvRzlvZF0EtisQ7GaRJ"; 
-  // const socials = [ 
-  //   { name: "Telegram", icon: <FaTelegram />, link: telegramLink },
-  //   { name: "WhatsApp", icon: <FaWhatsapp />, link: whatsappLink },
-  //   // { name: "Chat a Councilor", icon: <FaComments />, onClick: handleCouncilorChat },
-  //   {name: "Facebook", icon: <FaFacebook />, link: "https://www.facebook.com/H.O.P.E" },
-  //   {name: "Instagram", icon: <FaInstagram />, link: "https://www.instagram.com/H.O.P.E" },
-  //   {name: "Twitter", icon: <FaTwitter />, link: "https://twitter.com/H.O.P.E" },
-  //   {name: "TikTok", icon: <FaTiktok />, link: "https://www.tiktok.com/@H.O.P.E" },
-  // ];
+  const telegramLink = "https://t.me/safepocketcommunity";
+  const whatsappLink = "https://chat.whatsapp.com/KiX1b8k3mYJH9F7y5G6Z5F"; 
 
-  const councilors = [
-    { name: "Councilor sulaiman", number: "+2348038390300" },
-    { name: "Councilor Sarah", number: "+2349096155347" },
-    
+  const mentors = [
+    { name: "Agent jay", number: "" },
+    { name: "Agent Sarah", number: "" },
   ];
 
-  // Function to get a random councilor
-  const getRandomCouncilor = () => {
-    const randomIndex = Math.floor(Math.random() * councilors.length);
-    return councilors[randomIndex];
+  const getRandomMentor = () => {
+    const randomIndex = Math.floor(Math.random() * mentors.length);
+    return mentors[randomIndex];
   };
 
-  // Function to handle "Chat a Councilor" click
-  const handleCouncilorChat = () => {
-    const councilor = getRandomCouncilor();
-    const whatsappUrl = `https://wa.me/${councilor.number}`;
+  const handleMentorChat = () => {
+    const mentor = getRandomMentor();
+    const whatsappUrl = `https://wa.me/${mentor.number}`;
     window.open(whatsappUrl, '_blank');
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
+    <div className="mt-16 bg-gradient-to-b from-lime-100 to-lime-200 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mt-8">Join Our Community</h1>
           <p className="text-xl text-gray-600">
-            Connect with others, get support, and engage with our councilors.
+            Connect with fellow savers, learn from mentors, and grow your wealth together.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Telegram Card */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
-            <div className="p-6">
-              <div className="flex justify-center mb-4">
-                <FaTelegram className="text-blue-500 text-5xl" />
-              </div>
-              <h2 className="text-2xl font-semibold text-gray-800 text-center mb-3">Telegram Group</h2>
-              <p className="text-gray-600 text-center mb-6">
-                Join our active Telegram community for discussions and updates.
+          {/* Telegram */}
+          <div className="bg-white rounded-md shadow-lg hover:scale-105 transition-transform">
+            <div className="p-6 text-center">
+              <FaTelegram className="text-blue-500 text-5xl mx-auto mb-4" />
+              <h2 className="text-2xl font-semibold mb-3">Telegram Group</h2>
+              <p className="text-gray-600 mb-6">
+                Join our Telegram hub for tips, discussions, and investment insights.
               </p>
-              <div className="flex justify-center">
-                <a
-                  href={telegramLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-6 rounded-full transition-colors"
-                >
-                  Join {}
-                </a>
-              </div>
+              <a href={telegramLink} target="_blank" rel="noopener noreferrer"
+                className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-full">
+                Join Telegram
+              </a>
             </div>
           </div>
 
-          {/* WhatsApp Card */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
-            <div className="p-6">
-              <div className="flex justify-center mb-4">
-                <FaWhatsapp className="text-green-500 text-5xl" />
-              </div>
-              <h2 className="text-2xl font-semibold text-gray-800 text-center mb-3">WhatsApp Community</h2>
-              <p className="text-gray-600 text-center mb-6">
-                Be part of our WhatsApp group for instant communication.
+          {/* WhatsApp */}
+          <div className="bg-white rounded-md shadow-lg hover:scale-105 transition-transform">
+            <div className="p-6 text-center">
+              <FaWhatsapp className="text-green-500 text-5xl mx-auto mb-4" />
+              <h2 className="text-2xl font-semibold mb-3">WhatsApp Community</h2>
+              <p className="text-gray-600 mb-6">
+                Be part of savings groups and get daily financial motivation.
               </p>
-              <div className="flex justify-center">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-6 rounded-full transition-colors"
-                >
-                  Join WhatsApp
-                </a>
-              </div>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-full">
+                Join WhatsApp
+              </a>
             </div>
           </div>
 
-          {/* Councilor Card */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
-            <div className="p-6">
-              <div className="flex justify-center mb-4">
-                <FaComments className="text-purple-500 text-5xl" />
-              </div>
-              <h2 className="text-2xl font-semibold text-gray-800 text-center mb-3">Chat a Councilor</h2>
-              <p className="text-gray-600 text-center mb-6">
-                Get personalized help by chatting with one of our councilors.
+          {/* Mentors */}
+          <div className="bg-white rounded-md shadow-lg hover:scale-105 transition-transform">
+            <div className="p-6 text-center">
+              <FaComments className="text-purple-500 text-5xl mx-auto mb-4" />
+              <h2 className="text-2xl font-semibold mb-3">Chat a Mentor</h2>
+              <p className="text-gray-600 mb-6">
+                Need guidance? Chat with one of our financial mentors anytime.
               </p>
-              <div className="flex justify-center">
-                <button
-                  onClick={handleCouncilorChat}
-                  className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-6 rounded-full transition-colors"
-                >
-                  Chat Now
-                </button>
-              </div>
+              <button onClick={handleMentorChat}
+                className="bg-purple-500 hover:bg-purple-600 text-white py-2 px-6 rounded-full">
+                Chat Now
+              </button>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-5">About Our Community</h2>
-          <p className="text-gray-600 mb-4">
-            Our community is a safe space for sharing ideas, getting support, and connecting with
-            like-minded individuals. Whether you prefer Telegram or WhatsApp, we have an active
-            group waiting for you.
-          </p>
-          <p className="text-gray-600">
-            Our councilors are available to provide guidance and support. The "Chat a Councilor"
-            feature will connect you with one of our available councilors.
+        {/* About */}
+        <div className="mt-5 bg-white rounded-md shadow-md p-6">
+          <h2 className="text font-semibold text-gray-800 mb-2">About Our Community</h2>
+          <p className="text-gray-600 mb-2">
+            Our community is more than a chat group — it’s a circle of trust, 
+            accountability, and financial empowerment. Whether you’re saving for a 
+            goal, exploring stock investments, or just starting your journey, you’ll 
+            find support here.
           </p>
         </div>
 
-        <div className="mt-12 bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">What We Stand For</h2>
-          <p className="text-gray-600 mb-4">
-            Gender-based violence is not just a personal issue — it is a societal crisis.
-        It affects women, men, children and individuals across cultures and communities. 
-        Our mission is to:
-          </p>
-        <ul > 
-        <li>Empower survivors through support, healing, and advocacy</li>
-        <li>Educate communities on the root causes and consequences of GBV</li>
-        <li>Engage allies and changemakers to take action and create safe spaces</li>
-        <li>Elevate voices that are often silenced, ignored, or marginalized</li>
-            </ul>
-          
+        {/* Vision */}
+        <div className="mt-5 bg-white rounded-md shadow-md p-6">
+          <h2 className="text font-semibold text-gray-800 mb-2">What We Stand For</h2>
+          <ul className="list-disc list-inside text-gray-600 space-y-2">
+            <li>Empowering members to build consistent saving habits</li>
+            <li>Creating investment awareness through peer learning</li>
+            <li>Building group savings opportunities</li>
+            <li>Encouraging accountability & collective financial growth</li>
+          </ul>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Community;
