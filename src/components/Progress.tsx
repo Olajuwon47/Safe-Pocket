@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card"
-import type { Goal } from "../types"
+} from "./ui/card.tsx"
+import type { Goal } from "../types.ts"
 import { AddGoal } from "./add-goal.tsx"
 
 interface GoalsProgressProps {
@@ -14,7 +14,7 @@ interface GoalsProgressProps {
 }
 
 // ✅ Named export
-export function GoalsProgress({ goals, onAddGoal }: GoalsProgressProps) {
+export  function GoalsProgress ({ goals, onAddGoal }: GoalsProgressProps) {
   return (
     <div className="px-4 lg:px-6">
       <div className="flex justify-between items-center mb-4">

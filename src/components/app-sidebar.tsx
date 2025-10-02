@@ -37,18 +37,62 @@ interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
 
 const data = {
   navMain: [
-    { title: "Dashboard", href: "/", icon: IconDashboard },
-    { title: "Savings", href: "/savings", icon: IconUsers },
-    { title: "Wallet balance", href: "/wallet", icon: IconListDetails },
-    { title: "Transactions", href: "/transactions-view", icon: IconListDetails },
-    { title: "Progress", href: "/Progress", icon: IconFolder },
-   // { title: "Analytics", href: "/Analytics", icon: IconChartBar },
-    { title: "Team", href: "/team", icon: IconUsers },
+    { 
+      title: "Dashboard", 
+      href: "/", 
+      icon: IconDashboard,
+      view: "dashboard"
+    },
+    { 
+      title: "Savings", 
+      href: "/savings", 
+      icon: IconUsers,
+      view: "savings"
+    },
+    { 
+      title: "Wallet balance", 
+      href: "/wallet", 
+      icon: IconListDetails,
+      view: "wallet"
+    },
+    { 
+      title: "Transactions", 
+      href: "/transactions-view", 
+      icon: IconListDetails,
+      view: "transactions"
+    },
+    { 
+      title: "Progress", 
+      href: "/Progress", 
+      icon: IconFolder,
+      view: "progress"
+    },
   ],
   navSecondary: [
-    { title: "Settings", href: "/Settings", icon: IconSettings },
-    { title: "Get Help", href: "/help", icon: IconHelp },
-    { title: "Search", href: "/search", icon: IconSearch },
+      { 
+      title: "Transactions", 
+      href: "/transactions-view", 
+      icon: IconListDetails,
+      view: "transactions"
+    },
+    { 
+      title: "Setting", 
+      href: "/Setting", 
+      icon: IconSettings,
+      view: "setting"
+    },
+    { 
+      title: "Get Help", 
+      href: "/help", 
+      icon: IconHelp,
+      view: "help"
+    },
+    { 
+      title: "Search", 
+      href: "/search", 
+      icon: IconSearch,
+      view: "search"
+    },
   ],
 }
 
@@ -59,7 +103,7 @@ export function AppSidebar({
   onUserChange, 
   ...props 
 }: AppSidebarProps) {
-  // ✅ Handle view selection
+
   const handleSelectView = (view: string) => {
     onSelectView(view)
   }
@@ -72,6 +116,12 @@ export function AppSidebar({
     }
   }
 
+  // ✅ Handle nav item click
+  const handleNavClick = (item: any, event: React.MouseEvent) => {
+    event.preventDefault() 
+    handleSelectView(item.view || item.title.toLowerCase())
+  }
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -81,7 +131,10 @@ export function AppSidebar({
               asChild
               className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
-              <a href="#">
+              <a href="#" onClick={(e) => {
+                e.preventDefault()
+                handleSelectView('dashboard')
+              }}>
                 <IconInnerShadowTop className="!size-5" />
                 <span className="text-base font-semibold">
                   SafePocket Inc.
@@ -93,14 +146,17 @@ export function AppSidebar({
       </SidebarHeader>
 
       <SidebarContent>
-        {/* ✅ Update NavMain to handle view selection */}
+        {/* ✅ Updated NavMain with click handlers */}
         <NavMain 
-          items={data.navMain.map(item => ({
-            ...item,
-            onClick: () => handleSelectView(item.title.toLowerCase())
-          }))} 
+          items={data.navMain} 
+          onItemClick={handleNavClick}
         />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+
+        <NavSecondary 
+          items={data.navSecondary} 
+          //onItemClick={handleNavClick}
+          className="mt-auto" 
+        />
       </SidebarContent>
 
       {/* ✅ User Switcher */}

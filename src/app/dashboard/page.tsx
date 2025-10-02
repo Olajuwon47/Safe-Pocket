@@ -18,7 +18,7 @@ import {
   DrawerFooter,
   DrawerClose,
 } from "../../components/ui/drawer"
-import { SpendingBreakdownChart } from "../../components/spending-breakdown-chart" // ✅ removed `.tsx`
+import { SpendingBreakdownChart } from "../../components/spending-breakdown-chart" 
 import { Button } from "../../components/ui/button"
 import type { Goal, Transaction, User } from "../../types"
 import data from "./data.json"
