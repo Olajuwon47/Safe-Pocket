@@ -78,7 +78,7 @@ export default function Page() {
         amount: data.amount,
         description: data.description,
         date: nowIso(),
-        status: "completed",
+        status: "successful" // Fixed: Use a specific status value
       }
 
       setSelectedUser((prev) => {
@@ -122,7 +122,7 @@ export default function Page() {
           amount,
           description: description ?? "Withdraw",
           date: nowIso(),
-          status: "completed",
+          status: "successful" // Fixed: Use a specific status value
         }
         return {
           ...prev,

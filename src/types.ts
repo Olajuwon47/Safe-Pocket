@@ -11,12 +11,11 @@ export interface Goal {
 }
 
 // types.ts
-// types.ts
 /*export interface Transaction {
   id: string
   type: "deposit" | "withdrawal"
   amount: number
-  status: "successful" | "pending" | "failed"
+  status: string
   description: string
   date: string
 }*/
@@ -30,6 +29,14 @@ export interface Transaction {
   description: string
   date: string
 }
+
+/*export interface Analytics{
+   savings: { num: number }[];
+   transactions: { num: number }[];
+   walletBalance: { num: number }[];
+   goals: { title: string; target: number; progress: number }[];
+   breakdown: { daily: { date: string; amount: number }[]; weekly: { week: string; amount: number }[]; monthly: { month: string; amount: number }[] }[];
+}*/
 
 
 // 💡 For charts
