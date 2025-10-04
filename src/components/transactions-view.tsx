@@ -15,6 +15,7 @@ export default function TransactionsView({ transactions }: TransactionsViewProps
       </div>
     )
   }
+  
 
   // Sort transactions by date (most recent first)
   const sortedTransactions = [...transactions].sort((a, b) => 

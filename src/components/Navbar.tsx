@@ -27,7 +27,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-gradient-to-r from-lime-400 to-lime-800 shadow-md">
       <div className="container mx-auto px-4 max-sm:px-2 max-md:px-3 py-3 flex items-center justify-between">
-        <img src="/public/image.png" alt="SafePocket logo" className="h-10 " />
+        <img src="/image.png" alt="SafePocket logo" className="h-10 " />
 
         {/* Hamburger for Mobile */}
         <div className="sm:hidden">

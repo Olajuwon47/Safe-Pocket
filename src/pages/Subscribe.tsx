@@ -77,7 +77,7 @@ export default function Subscribe() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="px-6 py-2 rounded-lg bg-lime-100 text-white font-semibold hover:bg-black transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                className="px-6 py-2 rounded-lg bg-lime-500 text-white font-semibold hover:bg-black transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
               >
                 {isLoading ? "Subscribing..." : "Join Now"}
               </button>
@@ -89,7 +89,7 @@ export default function Subscribe() {
 
             <div className="grid grid-cols-3 gap-4 mb-3">
               <div className="flex flex-col items-center">
-                <ChartBarIcon className="h-8 w-8 text-blue-600 mb-1" />
+                <ChartBarIcon className="h-8 w-8 text-lime-600 mb-1" />
                 <p className="text-gray-700 text-xs">Savings insights</p>
               </div>
               <div className="flex flex-col items-center">
@@ -97,7 +97,7 @@ export default function Subscribe() {
                 <p className="text-gray-700 text-xs">Early stock access</p>
               </div>
               <div className="flex flex-col items-center">
-                <BanknotesIcon className="h-8 w-8 text-yellow-600 mb-1" />
+                <BanknotesIcon className="h-8 w-8 text-lime-600 mb-1" />
                 <p className="text-gray-700 text-xs">Saving challenges</p>
               </div>
             </div>

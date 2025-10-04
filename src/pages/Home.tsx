@@ -12,13 +12,12 @@ export default function Home() {
       {/* Hero Section */}
       <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div className="text-center">
-          <h1 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+          <h1 className="text-5xl font-semibold tracking-tight  text-gray-900 sm:text-7xl">
             Save Smart. Live Better.
           </h1>
-          <p className="mt-8 text-lg font-medium text-gray-500 sm:text-xl">
-            Take control of your money with smarter savings, 
-            smarter investments, and a path to true financial freedom.  
-            Build wealth gradually through <span className="font-semibold ">micro-savings, goal-based budgeting, and stock investing</span> all in one secure app.
+          <p className="mt-4 text-md text-gray-500 sm:text-xl">
+            Take control of your money with smarter savings, smarter investments, and a path to true financial freedom.  
+            Build wealth gradually through micro-savings, goal-based budgeting, and stock investing all in one secure app.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
@@ -49,26 +48,20 @@ export default function Home() {
           <h2 className="text font-bold text-gray-900 sm:text">
             More than just saving
           </h2>
-          <p className="mt-4 text-lg text-gray-600 leading-8">
-            Start with <span className="font-semibold ">micro-savings</span> 
-            to build discipline, then expand into <span className="font-semibold">custom savings goals</span>—like 
-            travel, education, or buying your first home.  
-            Track your <span className="font-semibold">progress in real time</span>, enjoy the power of 
-            <span className="font-semibold"> compounding returns</span>, and unlock access to 
-            <span className="font-semibold"> diverse investment opportunities</span>.  
-            From budgeting smarter to investing wiser, our platform is designed to help you 
-            achieve <span className="font-semibold ">financial stability, growth, and long-term security</span>.
+          <p className="mt-4 text-md text-gray-600 leading-8">
+            Start with micro-savings to build discipline, then expand into custom savings goals like travel, education, or buying your first home. Track your progress in real time, enjoy the power of compounding returns, and unlock access to 
+            diverse investment opportunities.From budgeting smarter to investing wiser, our platform is designed to help you achieve financial stability, growth, and long-term security.
           </p>
           <div className="mt-8 flex justify-center gap-6">
             <a
               href="/goals"
-              className="rounded-lg bg-lime-500 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-lime-600 transition"
+              className="rounded-lg bg-lime-500 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-black transition"
             >
               Start a Goal
             </a>
             <a
               href="/stocks"
-              className="rounded-lg bg-gray-900 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-gray-700 transition"
+              className="rounded-lg bg-lime-500 px-6 py-3 text-sm font-semibold text-white shadow-md hover:bg-black transition"
             >
               Explore Stocks
             </a>
