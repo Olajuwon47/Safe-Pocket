@@ -40,7 +40,7 @@ export function AddGoal({ onAddGoal }: AddGoalProps) {
         <DrawerHeader>
           <DrawerTitle>Add New Goal</DrawerTitle>
           <DrawerDescription>
-            Set a new savings goal. Enter a title and a target amount for your goal.
+            Set a new savings goal. Enter a title and a target amount.
           </DrawerDescription>
         </DrawerHeader>
         <div className="px-4">
