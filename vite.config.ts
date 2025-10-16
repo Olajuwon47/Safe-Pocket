@@ -24,6 +24,7 @@ export default defineConfig({
   },
 
   build: {
+    sourcemap: false,
     rollupOptions: {
       output: {
         // 💡 This breaks large libraries into smaller chunks
