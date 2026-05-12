@@ -1,153 +1,134 @@
-'use client'
-import { useState } from 'react'
-import { CheckCircleIcon, BanknotesIcon, ChartBarIcon } from '@heroicons/react/24/outline'
+import { useState } from "react"
+
+function Icon({ kind }: { kind: "bank" | "chart" | "check" }) {
+  const common = "h-8 w-8 text-lime-700"
+  if (kind === "chart") {
+    return (
+      <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M4 19h16" />
+        <path d="M7 15v-4" />
+        <path d="M12 15V7" />
+        <path d="M17 15v-6" />
+      </svg>
+    )
+  }
+  if (kind === "check") {
+    return (
+      <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="2">
+        <path strokeLinecap="round" strokeLinejoin="round" d="m5 13 4 4L19 7" />
+      </svg>
+    )
+  }
+  return (
+    <svg viewBox="0 0 24 24" className={common} fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="5" y="4" width="14" height="16" rx="2" />
+      <path d="M8 8h8" />
+      <path d="M8 12h8" />
+      <path d="M8 16h5" />
+    </svg>
+  )
+}
 
 export default function Subscribe() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("")
+  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState("")
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setError('');
-    
-    if (!email) {
-      setError('Please enter a valid email address.');
-      return;
+    e.preventDefault()
+    setError("")
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError("Please enter a valid email address.")
+      return
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError('Please enter a valid email address.');
-      return;
-    }
-
-    setIsLoading(true);
-
+    setIsLoading(true)
     try {
-      // Simulated API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      setIsSubscribed(true);
-      setEmail('');
-    } catch (error) {
-      setError('Something went wrong. Please try again later.');
+      await new Promise((resolve) => setTimeout(resolve, 500))
+      setIsSubscribed(true)
+      setEmail("")
+    } catch {
+      setError("Something went wrong. Please try again later.")
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
-
-  const handleUnsubscribe = () => {
-    setIsSubscribed(false);
-    setEmail('');
-    setError('');
-  };
+  }
 
   return (
-    <div className="bg-gradient-to-b from-lime-100 via-white to-lime-200 flex items-center justify-center px-4 py-8">
-      <div className="max-w-2xl w-full">
+    <div className="flex items-center justify-center bg-gradient-to-b from-lime-100 via-white to-lime-200 px-4 py-8">
+      <div className="w-full max-w-2xl">
         {!isSubscribed ? (
-          // Compact Subscription Form
-          <div className="bg-white py-8 px-6 rounded-2xl shadow-xl border border-gray-100 text-center">
-            <div className="flex justify-center mb-4">
-              <BanknotesIcon className="h-12 w-12 text-lime-700" />
+          <div className="rounded-2xl border border-gray-100 bg-white px-6 py-8 text-center shadow-xl">
+            <div className="mb-4 flex justify-center">
+              <Icon kind="bank" />
             </div>
 
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-              Start Your Wealth Journey 🚀
+            <h1 className="mb-2 text-2xl font-bold text-gray-900 sm:text-3xl">
+              Start Your Wealth Journey
             </h1>
-            <p className="text-gray-600 mb-6 text-sm">
-              Get <span className="text-lime-700 font-medium">saving tips, 
-              early stock access,</span> and <span className="font-medium">financial goal</span> updates.
+            <p className="mb-6 text-sm text-gray-600">
+              Get saving tips, early stock access, and financial goal updates.
             </p>
 
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+            <form onSubmit={handleSubmit} className="mb-4 flex flex-col gap-3 sm:flex-row">
               <input
-                id="email"
-                name="email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required
                 disabled={isLoading}
-                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 bg-gray-50 placeholder-gray-400 focus:ring-2 focus:ring-lime-600 focus:border-lime-600 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                 placeholder="Enter your email address"
+                className="flex-1 rounded-lg border border-gray-300 bg-gray-50 px-4 py-2 text-sm placeholder-gray-400 focus:border-lime-600 focus:ring-2 focus:ring-lime-600 disabled:cursor-not-allowed disabled:opacity-50"
               />
-              
               <button
                 type="submit"
                 disabled={isLoading}
-                className="px-6 py-2 rounded-lg bg-lime-500 text-white font-semibold hover:bg-black transition disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                className="rounded-lg bg-lime-500 px-6 py-2 text-sm font-semibold text-white transition hover:bg-black disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {isLoading ? "Subscribing..." : "Join Now"}
               </button>
             </form>
 
-            {error && (
-              <p className="text-lime-600 mb-3 text-xs">{error}</p>
-            )}
+            {error && <p className="mb-3 text-xs text-lime-600">{error}</p>}
 
-            <div className="grid grid-cols-3 gap-4 mb-3">
+            <div className="mb-3 grid grid-cols-3 gap-4">
               <div className="flex flex-col items-center">
-                <ChartBarIcon className="h-8 w-8 text-lime-600 mb-1" />
-                <p className="text-gray-700 text-xs">Savings insights</p>
+                <Icon kind="chart" />
+                <p className="text-xs text-gray-700">Savings insights</p>
               </div>
               <div className="flex flex-col items-center">
-                <CheckCircleIcon className="h-8 w-8 text-lime-600 mb-1" />
-                <p className="text-gray-700 text-xs">Early stock access</p>
+                <Icon kind="check" />
+                <p className="text-xs text-gray-700">Early stock access</p>
               </div>
               <div className="flex flex-col items-center">
-                <BanknotesIcon className="h-8 w-8 text-lime-600 mb-1" />
-                <p className="text-gray-700 text-xs">Saving challenges</p>
+                <Icon kind="bank" />
+                <p className="text-xs text-gray-700">Saving challenges</p>
               </div>
             </div>
 
-            <p className="text-xs text-gray-400">
-              No spam. Unsubscribe anytime.
-            </p>
+            <p className="text-xs text-gray-400">No spam. Unsubscribe anytime.</p>
           </div>
         ) : (
-          // Compact Thank You Page
-          <div className="bg-white py-10 px-6 rounded-2xl shadow-xl border border-gray-100 text-center">
-            <div className="flex justify-center mb-4">
-              <CheckCircleIcon className="h-16 w-16 text-green-500" />
+          <div className="rounded-2xl border border-gray-100 bg-white px-6 py-10 text-center shadow-xl">
+            <div className="mb-4 flex justify-center">
+              <Icon kind="check" />
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-              You're In! 🎉
+            <h1 className="mb-2 text-2xl font-bold text-gray-900 sm:text-3xl">
+              You&apos;re In!
             </h1>
-            <p className="text-gray-600 text-sm mb-6">
-              Welcome to <span className="font-medium text-lime-700">Micro-Savings</span>.  
-              Get investment features & money growth tips.
+            <p className="mb-6 text-sm text-gray-600">
+              Welcome to Micro-Savings. Get investment features and money growth tips.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-              <button
-                onClick={handleUnsubscribe}
-                className="px-5 py-2 rounded-md border border-lime-600 text-black hover:bg-black transition text-sm"
-              >
-                Unsubscribe
-              </button>
-              <a
-                href="/Home"
-                className="px-5 py-2 rounded-lg bg-lime-200 text-white hover:bg-black transition text-sm"
-              >
-                Back to Home
-              </a>
-            </div>
-
-            <div className="p-4 bg-gray-50 rounded-lg">
-              <h3 className="text-sm font-semibold text-gray-900 mb-2">
-                What's Next?
-              </h3>
-              <ul className="text-xs text-gray-600 space-y-1 text-left max-w-md mx-auto">
-                <li>✅ Weekly savings & investment hacks</li>
-                <li>✅ Early bird stock & goal features</li>
-                <li>✅ Join our money community</li>
-              </ul>
-            </div>
+            <button
+              onClick={() => setIsSubscribed(false)}
+              className="rounded-md border border-lime-600 px-5 py-2 text-sm text-black transition hover:bg-black hover:text-white"
+            >
+              Unsubscribe
+            </button>
           </div>
         )}
       </div>
     </div>
-  );
+  )
 }
