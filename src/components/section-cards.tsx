@@ -2,7 +2,24 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "./ui/card"
 //import { Button } from "./ui/button"
 import { Badge } from "./ui/badge"
-import { IconTrendingUp, IconTrendingDown } from "@tabler/icons-react"
+
+function TrendUpIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="mr-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M4 16l6-6 4 4 6-8" />
+      <path d="M14 6h6v6" />
+    </svg>
+  )
+}
+
+function TrendDownIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="mr-1 h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M4 8l6 6 4-4 6 8" />
+      <path d="M14 18h6v-6" />
+    </svg>
+  )
+}
 
 interface SectionCardsProps {
   walletBalance: number
@@ -26,7 +43,7 @@ export function SectionCards({
             ${walletBalance.toFixed(2)}
           </CardTitle>
           <Badge variant="outline" className="mt-2">
-            <IconTrendingUp className="mr-1" /> Active
+            <TrendUpIcon /> Active
           </Badge>
         </CardHeader>
        {/* <CardFooter className="flex justify-between w-full">
@@ -46,7 +63,7 @@ export function SectionCards({
             ${savings.toFixed(2)}
           </CardTitle>
           <Badge variant="outline" className="mt-2">
-            <IconTrendingDown className="mr-1" /> Secured
+            <TrendDownIcon /> Secured
           </Badge>
         </CardHeader>
         <CardFooter className="text-sm text-muted-foreground">
