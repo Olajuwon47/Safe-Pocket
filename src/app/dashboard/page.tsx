@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useCallback } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import { AppSidebar } from "../../components/app-sidebar"
 import { ChartAreaInteractive } from "../../components/chart-area-interactive"
 import { SectionCards } from "../../components/section-cards"
@@ -21,7 +21,6 @@ import {
 import { SpendingBreakdownChart } from "../../components/spending-breakdown-chart" 
 import { Button } from "../../components/ui/button"
 import type { Goal, Transaction, User } from "../../types"
-import data from "./data.json"
 import { toast } from "sonner"
 
 export default function Page() {
@@ -31,20 +30,46 @@ export default function Page() {
   const [selectedUser, setSelectedUser] = useState<User | null>(null)
   const [selectedView, setSelectedView] = useState("dashboard")
 
-  React.useEffect(() => {
-    // ✅ Ensure IDs are strings
-    const fixedData = (data as any[]).map((user) => ({
-      ...user,
-      id: String(user.id),
-      transactions: user.transactions.map((tx: any) => ({
-        ...tx,
-        id: String(tx.id),
-      })),
-    })) as User[]
+  useEffect(() => {
+    let cancelled = false
 
-    setUsers(fixedData)
-    if (fixedData.length > 0) {
-      setSelectedUser(fixedData[0])
+    const loadDashboardData = async () => {
+      try {
+        const response = await fetch("/dashboard-data.json", {
+          cache: "no-store",
+        })
+
+        if (!response.ok) {
+          throw new Error(`Failed to load dashboard data: ${response.status}`)
+        }
+
+        const data = (await response.json()) as any[]
+
+        // ✅ Ensure IDs are strings
+        const fixedData = data.map((user) => ({
+          ...user,
+          id: String(user.id),
+          transactions: user.transactions.map((tx: any) => ({
+            ...tx,
+            id: String(tx.id),
+          })),
+        })) as User[]
+
+        if (cancelled) return
+
+        setUsers(fixedData)
+        if (fixedData.length > 0) {
+          setSelectedUser(fixedData[0])
+        }
+      } catch (error) {
+        console.error("Unable to load dashboard data", error)
+      }
+    }
+
+    void loadDashboardData()
+
+    return () => {
+      cancelled = true
     }
   }, [])
 

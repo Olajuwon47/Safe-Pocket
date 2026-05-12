@@ -1,10 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
-
 import { Card, CardAction, CardDescription, CardHeader, CardTitle } from "./ui/card"
-import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "./ui/chart"
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group"
 
 export interface BreakdownData {
@@ -17,12 +14,18 @@ interface ChartAreaInteractiveProps {
   breakdown: BreakdownData
 }
 
-const chartConfig = {
-  amount: {
-    label: "Amount",
-    color: "var(--primary)",
-  },
-} satisfies ChartConfig
+const RANGE_LABELS = {
+  daily: "Daily",
+  weekly: "Weekly",
+  monthly: "Monthly",
+} as const
+
+function buildPath(points: { x: number; y: number }[]) {
+  if (!points.length) return ""
+  return points
+    .map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`)
+    .join(" ")
+}
 
 export function ChartAreaInteractive({ breakdown }: ChartAreaInteractiveProps) {
   const [timeRange, setTimeRange] = React.useState<"daily" | "weekly" | "monthly">("monthly")
@@ -34,6 +37,18 @@ export function ChartAreaInteractive({ breakdown }: ChartAreaInteractiveProps) {
     else if (timeRange === "monthly" && "month" in item) dateLabel = (item as any).month
     return { ...item, date: dateLabel }
   })
+
+  const values = chartData.map((item) => item.amount)
+  const min = Math.min(...values, 0)
+  const max = Math.max(...values, 1)
+  const points = chartData.map((item, index) => {
+    const x = chartData.length > 1 ? (index / (chartData.length - 1)) * 100 : 50
+    const normalized = max === min ? 0.5 : (item.amount - min) / (max - min)
+    const y = 90 - normalized * 75
+    return { x, y }
+  })
+  const linePath = buildPath(points)
+  const areaPath = `${linePath} L 100 95 L 0 95 Z`
 
   return (
     <Card className="@container/card">
@@ -48,41 +63,64 @@ export function ChartAreaInteractive({ breakdown }: ChartAreaInteractiveProps) {
             variant="outline"
             className="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex"
           >
-            <ToggleGroupItem value="daily">Daily</ToggleGroupItem>
-            <ToggleGroupItem value="weekly">Weekly</ToggleGroupItem>
-            <ToggleGroupItem value="monthly">Monthly</ToggleGroupItem>
+            <ToggleGroupItem value="daily">{RANGE_LABELS.daily}</ToggleGroupItem>
+            <ToggleGroupItem value="weekly">{RANGE_LABELS.weekly}</ToggleGroupItem>
+            <ToggleGroupItem value="monthly">{RANGE_LABELS.monthly}</ToggleGroupItem>
           </ToggleGroup>
         </CardAction>
       </CardHeader>
 
-      <ChartContainer config={chartConfig} className="aspect-auto h-[250px] w-full bg-lime-100 rounded-xl">
-        <AreaChart data={chartData}>
+      <div className="h-[250px] w-full rounded-xl bg-lime-100 px-4 py-4">
+        <svg viewBox="0 0 100 100" className="h-full w-full overflow-visible" role="img" aria-label="Transaction breakdown chart">
           <defs>
             <linearGradient id="fillAmount" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="var(--color-amount)" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="var(--color-amount)" stopOpacity={0.1} />
+              <stop offset="0%" stopColor="rgb(132 204 22)" stopOpacity="0.65" />
+              <stop offset="100%" stopColor="rgb(132 204 22)" stopOpacity="0.08" />
             </linearGradient>
           </defs>
 
-          <CartesianGrid vertical={false} />
-          <XAxis dataKey="date" tickLine={false} axisLine={false} tickMargin={8} minTickGap={32} />
-          <ChartTooltip
-            cursor={false}
-            content={
-              <ChartTooltipContent
-                labelFormatter={(value) => {
-                  if (timeRange === "daily") {
-                    return new Date(value).toLocaleDateString("en-US", { month: "short", day: "numeric" })
-                  }
-                  return value
-                }}
-                indicator="dot"
-              />
-            }
+          {[0, 1, 2, 3].map((line) => (
+            <line
+              key={line}
+              x1="0"
+              x2="100"
+              y1={20 + line * 20}
+              y2={20 + line * 20}
+              stroke="rgba(0,0,0,0.08)"
+              strokeWidth="0.4"
+            />
+          ))}
+
+          <path d={areaPath} fill="url(#fillAmount)" />
+          <path
+            d={linePath}
+            fill="none"
+            stroke="rgb(77 124 15)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
-          <Area dataKey="amount" type="natural" fill="url(#fillAmount)" stroke="var(--color-amount)" stackId="a" />
-        </AreaChart>
-      </ChartContainer>
+
+          {points.map((point, index) => (
+            <g key={index}>
+              <circle cx={point.x} cy={point.y} r="1.5" fill="rgb(77 124 15)" />
+            </g>
+          ))}
+
+          {chartData.map((item, index) => (
+            <text
+              key={item.date || index}
+              x={points[index]?.x ?? 0}
+              y="98"
+              textAnchor="middle"
+              fontSize="3"
+              fill="rgba(0,0,0,0.55)"
+            >
+              {item.date}
+            </text>
+          ))}
+        </svg>
+      </div>
     </Card>
   )
 }
