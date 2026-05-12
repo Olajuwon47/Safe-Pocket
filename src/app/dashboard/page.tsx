@@ -8,7 +8,6 @@ import { GoalsProgress } from "../../components/Progress"
 import WithdrawModal from "../../components/withdraw-modal"
 import AddTransaction, { type TransactionInput } from "../../components/add-transaction"
 import TransactionsView from "../../components/transactions-view"
-import { SidebarInset, SidebarProvider } from "../../components/ui/sidebar"
 import {
   Drawer,
   DrawerContent,
@@ -172,22 +171,14 @@ export default function Page() {
   }
 
   return (
-    <SidebarProvider
-      style={
-        {
-          "--sidebar-width": "calc(var(--spacing) * 72)",
-          "--header-height": "calc(var(--spacing) * 12)",
-        } as React.CSSProperties
-      }
-    >
+    <div className="min-h-screen bg-slate-50 lg:flex">
       <AppSidebar
-        variant="inset"
         users={users}
         selectedUser={selectedUser}
         onSelectView={handleSelectView}
         onUserChange={handleUserChange}
       />
-      <SidebarInset>
+      <main className="flex min-h-screen flex-1 flex-col">
         <SiteHeader />
         <div className="flex flex-1 flex-col">
           <div className="@container/main flex flex-1 flex-col gap-2">
@@ -256,7 +247,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </SidebarInset>
+      </main>
 
       {/* Deposit Drawer */}
       <Drawer open={isDepositOpen} onOpenChange={setIsDepositOpen}>
@@ -298,6 +289,6 @@ export default function Page() {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-    </SidebarProvider>
+    </div>
   )
 }

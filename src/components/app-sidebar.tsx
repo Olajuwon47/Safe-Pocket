@@ -1,34 +1,7 @@
 import * as React from "react"
-import {
-  //IconChartBar,
-  IconDashboard,
-  IconFolder,
-  IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
-  IconSearch,
-  IconSettings,
-  IconUsers,
-} from "@tabler/icons-react"
+import type { User } from "../types"
 
-import { NavMain } from "../components/nav-main"
-import { NavSecondary } from "../components/nav-secondary"
-import { NavUser } from "../components/nav-user"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "../components/ui/sidebar"
-
-// ✅ Import User type from your types
-import type { User } from "../types.ts"
-
-// ✅ Define props interface
-interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
+interface AppSidebarProps {
   users: User[]
   selectedUser: User | null
   onSelectView: (view: string) => void
@@ -37,155 +10,107 @@ interface AppSidebarProps extends React.ComponentProps<typeof Sidebar> {
 
 const data = {
   navMain: [
-    { 
-      title: "Dashboard", 
-      href: "/", 
-      icon: IconDashboard,
-      view: "dashboard"
-    },
-    { 
-      title: "Savings", 
-      href: "/savings", 
-      icon: IconUsers,
-      view: "savings"
-    },
-    { 
-      title: "Wallet balance", 
-      href: "/wallet", 
-      icon: IconListDetails,
-      view: "wallet"
-    },
-    { 
-      title: "Transactions", 
-      href: "/transactions-view", 
-      icon: IconListDetails,
-      view: "transactions"
-    },
-    { 
-      title: "Progress", 
-      href: "/Progress", 
-      icon: IconFolder,
-      view: "progress"
-    },
+    { title: "Dashboard", href: "/", view: "dashboard" },
+    { title: "Savings", href: "/savings", view: "savings" },
+    { title: "Wallet balance", href: "/wallet", view: "wallet" },
+    { title: "Transactions", href: "/transactions-view", view: "transactions" },
+    { title: "Progress", href: "/Progress", view: "progress" },
   ],
   navSecondary: [
-      { 
-      title: "Transactions", 
-      href: "/transactions-view", 
-      icon: IconListDetails,
-      view: "transactions"
-    },
-    { 
-      title: "Setting", 
-      href: "/Setting", 
-      icon: IconSettings,
-      view: "setting"
-    },
-    { 
-      title: "Get Help", 
-      href: "/help", 
-      icon: IconHelp,
-      view: "help"
-    },
-    { 
-      title: "Search", 
-      href: "/search", 
-      icon: IconSearch,
-      view: "search"
-    },
+    { title: "Setting", href: "/Setting", view: "setting" },
+    { title: "Get Help", href: "/help", view: "help" },
+    { title: "Search", href: "/search", view: "search" },
   ],
 }
 
-export function AppSidebar({ 
-  users, 
-  selectedUser, 
-  onSelectView, 
-  onUserChange, 
-  ...props 
+export function AppSidebar({
+  users,
+  selectedUser,
+  onSelectView,
+  onUserChange,
 }: AppSidebarProps) {
-
-  const handleSelectView = (view: string) => {
+  const handleNavClick = (view: string, event: React.MouseEvent) => {
+    event.preventDefault()
     onSelectView(view)
   }
 
-  // ✅ Handle user change
-  const handleUserChange = (userId: string) => {
-    const user = users.find(u => u.id.toString() === userId)
-    if (user) {
-      onUserChange(user)
-    }
-  }
-
-  // ✅ Handle nav item click
-  const handleNavClick = (item: any, event: React.MouseEvent) => {
-    event.preventDefault() 
-    handleSelectView(item.view || item.title.toLowerCase())
-  }
-
   return (
-    <Sidebar collapsible="offcanvas" {...props}>
-      <SidebarHeader>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton
-              asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
-            >
-              <a href="#" onClick={(e) => {
-                e.preventDefault()
-                handleSelectView('dashboard')
-              }}>
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">
-                  SafePocket Inc.
-                </span>
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-      </SidebarHeader>
+    <aside className="flex w-full max-w-xs flex-col gap-6 border-r border-black/10 bg-lime-50 p-4 text-slate-900 max-lg:max-w-none max-lg:border-r-0 max-lg:border-b">
+      <a
+        href="#"
+        onClick={(e) => handleNavClick("dashboard", e)}
+        className="flex items-center gap-3 rounded-lg px-2 py-1 font-semibold text-slate-900"
+      >
+        <img src="/image.png" alt="SafePocket logo" className="h-10 w-10 rounded-full object-cover" />
+        <span>SafePocket Inc.</span>
+      </a>
 
-      <SidebarContent>
-        {/* ✅ Updated NavMain with click handlers */}
-        <NavMain 
-          items={data.navMain} 
-          onItemClick={handleNavClick}
-        />
+      <nav className="grid gap-1">
+        <p className="px-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+          Main
+        </p>
+        {data.navMain.map((item) => (
+          <a
+            key={item.title}
+            href={item.href}
+            onClick={(e) => handleNavClick(item.view ?? "dashboard", e)}
+            className="rounded-md px-3 py-2 text-sm font-medium hover:bg-lime-100"
+          >
+            {item.title}
+          </a>
+        ))}
+      </nav>
 
-        <NavSecondary 
-          items={data.navSecondary} 
-          //onItemClick={handleNavClick}
-          className="mt-auto" 
-        />
-      </SidebarContent>
+      <nav className="grid gap-1">
+          <p className="px-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+          More
+        </p>
+        {data.navSecondary.map((item) => (
+          <a
+            key={item.title}
+            href={item.href}
+            onClick={(e) => handleNavClick(item.view ?? "dashboard", e)}
+            className="rounded-md px-3 py-2 text-sm font-medium hover:bg-lime-100"
+          >
+            {item.title}
+          </a>
+        ))}
+      </nav>
 
-      {/* ✅ User Switcher */}
-      <SidebarFooter>
-        {selectedUser && (
-          <div className="flex flex-col gap-2">
-            {/* ✅ Provide fallback avatar */}
-            <NavUser user={{
-              ...selectedUser,
-              avatar: (selectedUser as any).avatar || "/avatars/default-avatar.png"
-            }} />
-
-            {/* Dropdown to switch users */}
-            {users.length > 1 && (
-              <select
-                className="mt-2 rounded-md border p-1 text-sm"
-                value={selectedUser?.id?.toString() ?? ""}
-                onChange={(e) => handleUserChange(e.target.value)}
-              >
-                {users.map((u) => (
-                  <option key={u.id} value={u.id}>
-                    {u.name}
-                  </option>
-                ))}
-              </select>
-            )}
+      {selectedUser && (
+        <div className="mt-auto rounded-xl bg-white p-3 shadow-sm">
+          <div className="flex items-center gap-3">
+            <img
+              src={(selectedUser as any).avatar || "/avatars/default-avatar.png"}
+              alt={selectedUser.name}
+              className="h-10 w-10 rounded-lg object-cover"
+            />
+            <div className="min-w-0">
+              <p className="truncate text-sm font-medium">{selectedUser.name}</p>
+              <p className="truncate text-xs text-slate-500">{selectedUser.email}</p>
+            </div>
           </div>
-        )}
-      </SidebarFooter>
-    </Sidebar>
+
+          {users.length > 1 && (
+            <select
+              className="mt-3 w-full rounded-md border border-black/10 bg-white p-2 text-sm"
+              value={selectedUser.id?.toString() ?? ""}
+              onChange={(e) => {
+                const user = users.find((u) => u.id.toString() === e.target.value)
+                if (user) onUserChange(user)
+              }}
+            >
+              {users.map((user) => (
+                <option key={user.id} value={user.id}>
+                  {user.name}
+                </option>
+              ))}
+            </select>
+          )}
+        </div>
+      )}
+    </aside>
   )
 }
+
+export default AppSidebar
