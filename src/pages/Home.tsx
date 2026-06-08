@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-b from-lime-50 via-white to-lime-100 relative">
       {/* Hero Section */}
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="text-center">
-          <h1 className="text-5xl font-semibold tracking-tight  text-gray-900 sm:text-7xl">
+      <div className="mx-auto max-w-2xl mb-16 py-32 sm:py-48 md:py-56">
+        <div className="text-center ">
+          <h1 className="text-4xl font-semibold tracking-tight  text-gray-900 sm:text-3xl">
             Save Smart. Live Better.
           </h1>
           <p className="mt-4 text-md text-gray-500 sm:text-xl">
